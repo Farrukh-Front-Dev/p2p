@@ -1,108 +1,76 @@
-# PeerLearn Bot — Backend
+# P2P Platform
 
-School 21 talabalari uchun anonim peer-to-peer bilim almashish Telegram boti.
+School21 peer-to-peer o'qitish tizimi. Talabalar bir-birlarini slotlar orqali
+o'qitadi; XP, Level, Peer Points va Peer Coins — to'liq platforma ichki tizim
+(School21 API dan mustaqil).
 
-Foydalanuvchilar bilim ulashish uchun **slot ochadi** (mentor) yoki o'rganish uchun **slot band qiladi** (mentee). Bot ikki tarafni anonim birlashtiradi va sessiyadan 15 daqiqa oldin kimligini oshkor qiladi. Coin va XP tizimi orqali adolatli almashinuv ta'minlanadi.
+## Stack
 
-## Texnologiyalar
+- **Backend:** Python 3.11+ · FastAPI · SQLAlchemy 2.0 async · Alembic
+- **Real-time:** FastAPI WebSocket (native ASGI) + Redis Pub/Sub
+- **Background:** Celery + Celery Beat · Redis broker
+- **DB:** PostgreSQL 15 · Redis 7
+- **Bot:** python-telegram-bot 21.x
+- **Admin:** SQLAdmin
 
-- Python 3.11+, aiogram 3.x
-- FastAPI (webhook), SQLAlchemy 2.x async, Alembic
-- PostgreSQL, Redis, APScheduler
-- School 21 integratsiyasi: **Keycloak (password grant) + REST API**
-
-## Arxitektura
+## Loyiha strukturasi
 
 ```
-Handlers → Services → Repositories → Models (SQLAlchemy)
-              │
-              ├── School21Client (Keycloak + REST)
-              ├── CoinService / XPService (atomik, idempotent)
-              ├── SlotService / SessionService
-              ├── ChatService (abstrakt): RelayChatService (MVP) | UserBotChatService (kelajak)
-              └── SchedulerService (APScheduler: eslatma + sessiya boshlash)
+peer_learn/
+├── app/
+│   ├── main.py                 # FastAPI app, lifespan, router mount
+│   ├── core/                   # config, security, dependencies
+│   ├── db/                     # async engine + models (1 fayl = 1 model)
+│   ├── api/v1/                 # REST endpointlar
+│   ├── schemas/                # Pydantic schemas
+│   ├── services/               # biznes logika (slot, matching, xp, points, ...)
+│   ├── tasks/                  # Celery app + scheduled tasks
+│   └── ws/                     # WebSocket handler + connection manager
+├── admin/setup.py              # SQLAdmin views
+├── bot/                        # Telegram bot
+├── alembic/                    # migratsiyalar
+└── docker/                     # Dockerfile, compose, nginx
 ```
 
-To'liq spec: `.kiro/specs/peerlearn-bot-backend/` (requirements, design, tasks).
-
-## Ishga tushirish (Docker)
-
-```bash
-# 1. .env yaratish
-cp .env.example .env
-# .env ni to'ldiring (BOT_TOKEN, SECRET_KEY, ...)
-
-# 2. Docker bilan ishga tushirish
-docker compose up -d --build
-
-# 3. Migratsiya
-docker compose exec bot alembic upgrade head
-
-# 4. Loglar
-docker compose logs -f bot
-```
-
-## Lokal ishga tushirish (development)
+## Local ishga tushirish
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements-dev.txt
+pip install -r requirements.txt
+cp .env.example .env          # qiymatlarni to'ldiring (FERNET_KEY, JWT_SECRET_KEY, ...)
 
-# PostgreSQL va Redis ishlab turishi kerak (yoki docker compose up postgres redis)
-cp .env.example .env   # DEBUG=True qo'ying (polling rejimi)
+# FERNET_KEY yaratish:
+python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
+
+# Migratsiya yaratish va qo'llash (postgres ishga tushgan bo'lsin):
+alembic revision --autogenerate -m "initial"
 alembic upgrade head
+
+# API:
+uvicorn app.main:app --reload
+
+# Celery worker / beat (alohida terminallarda):
+celery -A app.tasks.celery_app.celery_app worker --loglevel=info
+celery -A app.tasks.celery_app.celery_app beat --loglevel=info
+
+# Bot:
 python -m bot.main
 ```
 
-`DEBUG=True` → polling rejimi (development).
-`DEBUG=False` → webhook rejimi (FastAPI, `:8080`).
-
-## Testlar
+## Docker
 
 ```bash
-pytest                 # barcha testlar
-pytest -m "not slow"   # tez testlar
+cd docker
+docker compose up --build
 ```
 
-Testlarda PostgreSQL o'rniga SQLite (in-memory), Redis o'rniga fakeredis, School 21 API esa respx orqali mock qilinadi — tashqi xizmatlar shart emas.
+## API
 
-## Kod sifati (linting & formatting)
+Swagger UI: `http://localhost:8000/docs`. Barcha endpointlar `/api/v1/` ostida.
+Admin panel: `http://localhost:8000/admin`.
 
-Loyiha `ruff` (linter + formatter) bilan boshqariladi (`ruff.toml`).
+## Eslatma
 
-```bash
-ruff check bot tests          # lint
-ruff check bot tests --fix    # avtomatik tuzatish
-ruff format bot tests         # formatlash
-```
-
-## REST API (Telegram Mini App)
-
-Mini App frontend uchun REST API mavjud (`bot/api/`):
-
-```bash
-python -m bot.api_server   # lokal API server (:8080), Swagger: /docs
-```
-
-Production'da `webhook_server.py` API + Telegram webhook'ni birga yuritadi.
-
-Asosiy endpointlar:
-- `POST /api/auth/telegram` — initData orqali kirish (JWT)
-- `POST /api/auth/register` — ro'yxatdan o'tishni yakunlash
-- `GET /api/me`, `PATCH /api/me` — profil
-- `GET /api/slots`, `POST /api/slots`, `POST /api/slots/{id}/book`, `DELETE /api/slots/{id}`
-- `GET /api/sessions/active`, `POST /api/sessions/{id}/finish`
-- `GET /api/leaderboard`, `GET /api/directions`
-
-## Coin va XP
-
-- Standart: 5 tanga, maksimal 15.
-- Slot band qilish: −1 tanga (darhol). O'rgatish: +1 tanga (sessiya tugagach).
-- O'rgatish: +50 XP, o'rganish: +25 XP. 7 darajali level tizimi.
-
-## Xavfsizlik eslatmasi
-
-- Webhook endpoint `X-Telegram-Bot-Api-Secret-Token` orqali himoyalangan.
-- School 21 paroli hech qayerda saqlanmaydi — faqat ro'yxatdan o'tishda token olish uchun ishlatiladi va xabar darhol o'chiriladi.
-- Throttling middleware anti-spam uchun.
+School21 API dan FAQAT login/profil/loyihalar/skills/coalition/location olinadi.
+XP, Level, Peer Points, Peer Coins hech qachon School21 dan olinmaydi.

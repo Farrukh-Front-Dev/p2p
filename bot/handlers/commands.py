@@ -11,7 +11,7 @@ from telegram import (
 from telegram.constants import ChatMemberStatus
 from telegram.ext import ContextTypes
 
-from app.core.config import settings
+from bot.config import settings
 
 logger = logging.getLogger(__name__)
 

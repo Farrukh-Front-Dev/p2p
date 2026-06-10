@@ -5,7 +5,7 @@ import logging
 
 from telegram.ext import Application, CommandHandler
 
-from app.core.config import settings
+from bot.config import settings
 from bot.handlers import commands
 
 logging.basicConfig(level=logging.INFO)

@@ -16,8 +16,8 @@ class User(Base, TimestampMixin):
     id: Mapped[uuid.UUID] = mapped_column(
         UUID(as_uuid=True), primary_key=True, default=uuid.uuid4
     )
-    telegram_id: Mapped[int] = mapped_column(
-        BigInteger, unique=True, nullable=False, index=True
+    telegram_id: Mapped[int | None] = mapped_column(
+        BigInteger, unique=True, nullable=True, index=True
     )
     telegram_username: Mapped[str | None] = mapped_column(String(64), nullable=True)
     school21_login: Mapped[str] = mapped_column(
@@ -47,4 +47,7 @@ class User(Base, TimestampMixin):
     is_admin: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
     onboarding_done: Mapped[bool] = mapped_column(
         Boolean, default=False, nullable=False
+    )
+    is_logged_in: Mapped[bool] = mapped_column(
+        Boolean, default=True, nullable=False
     )

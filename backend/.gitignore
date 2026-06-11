@@ -1,42 +1,11 @@
-# Python
 __pycache__/
 *.py[cod]
-*$py.class
 *.egg-info/
-.eggs/
-build/
-dist/
-.Python
-
-# Virtual env
 .venv/
 venv/
-env/
-ENV/
-
-# Env / secrets
 .env
-*.session
-*.session-journal
-
-# Test / coverage
-.pytest_cache/
-.coverage
-htmlcov/
-.hypothesis/
-
-# IDE
-.idea/
-.vscode/
-
-# Logs
-logs/
-*.log
-
-# DB
-*.sqlite3
-*.db
-
-# Local dev postgres cluster
 .pgdata/
-logfile
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.log

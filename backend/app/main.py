@@ -3,8 +3,13 @@ from __future__ import annotations
 
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
+from slowapi.util import get_remote_address
+from starlette.middleware.sessions import SessionMiddleware
 
 from app.api.v1.router import api_router
 from app.core.config import settings
@@ -12,13 +17,14 @@ from app.services.cache import close_redis
 from app.services.school21_client import school21_client
 from app.ws.slot_ws import router as ws_router
 
+# ── Rate Limiter ─────────────────────────────────────────────────────────────
+limiter = Limiter(key_func=get_remote_address, default_limits=["100/minute"])
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Startup: create the shared httpx client (connection pool).
     await school21_client.start()
     yield
-    # Shutdown: close clients.
     await school21_client.stop()
     await close_redis()
 
@@ -30,23 +36,30 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# Rate limiting
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+
+# Session middleware (SQLAdmin auth uchun kerak)
+app.add_middleware(SessionMiddleware, secret_key=settings.SECRET_KEY)
+
+# CORS — faqat whitelist domenlar
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors_origins,
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allow_headers=["Authorization", "Content-Type"],
 )
 
 app.include_router(api_router)
 app.include_router(ws_router)
 
-# Mount SQLAdmin panel.
+# SQLAdmin panel (auth bilan himoyalangan)
 try:
     from admin.setup import init_admin
-
     init_admin(app)
-except Exception:  # pragma: no cover - admin is optional at boot
+except Exception:
     pass
 
 

@@ -146,3 +146,49 @@ async def absent_slot(slot_id: uuid.UUID, user: CurrentUser, db: DbSession):
     await db.commit()
     await db.refresh(slot)
     return slot
+
+
+# ── School21 loyihalar (slot yaratish/qidirish uchun) ─────────────────────────
+
+@router.get("/my/teachable-projects")
+async def teachable_projects(user: CurrentUser):
+    """O'rgatish mumkin bo'lgan loyihalar — faqat tugatilganlar (ACCEPTED).
+
+    Slot yaratishda foydalanuvchi shu ro'yxatdan tanlaydi.
+    """
+    from app.core.security import decrypt_token
+    from app.services.school21_client import school21_client
+
+    if not user.school21_token_enc:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "School21 token yo'q")
+    token = decrypt_token(user.school21_token_enc)
+    projects = await school21_client.get_projects(token, login=user.school21_login)
+    # Faqat ACCEPTED (tugatilgan) loyihalar
+    accepted = [
+        {"title": p["title"], "id": p.get("id")}
+        for p in projects
+        if p.get("status") == "ACCEPTED" and p.get("title")
+    ]
+    return {"projects": accepted}
+
+
+@router.get("/my/in-progress-projects")
+async def in_progress_projects(user: CurrentUser):
+    """O'rganuvchining hozir davom etayotgan loyihalari (IN_PROGRESS).
+
+    Slot qidirishda foydalanuvchi shu ro'yxatdan tanlaydi.
+    """
+    from app.core.security import decrypt_token
+    from app.services.school21_client import school21_client
+
+    if not user.school21_token_enc:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, "School21 token yo'q")
+    token = decrypt_token(user.school21_token_enc)
+    projects = await school21_client.get_projects(token, login=user.school21_login)
+    # IN_PROGRESS loyihalar
+    in_progress = [
+        {"title": p["title"], "id": p.get("id")}
+        for p in projects
+        if p.get("status") == "IN_PROGRESS" and p.get("title")
+    ]
+    return {"projects": in_progress}

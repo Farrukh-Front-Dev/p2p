@@ -34,6 +34,13 @@ class Settings(BaseSettings):
     TELEGRAM_BOT_TOKEN: str = ""
     TELEGRAM_WEBHOOK_URL: str = ""
     TELEGRAM_REQUIRED_CHANNEL: str = ""
+    ADMIN_IDS: str = ""  # Comma separated Telegram IDs
+
+    @property
+    def admin_ids(self) -> list[int]:
+        if not self.ADMIN_IDS:
+            return []
+        return [int(x.strip()) for x in self.ADMIN_IDS.split(",") if x.strip().isdigit()]
 
     # Celery
     CELERY_BROKER_URL: str = "redis://localhost:6379/1"

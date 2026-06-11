@@ -13,3 +13,4 @@ redis>=5.0
 python-telegram-bot>=21.0
 sqladmin>=0.16
 python-multipart
+slowapi

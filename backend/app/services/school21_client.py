@@ -141,23 +141,40 @@ class School21Client:
     async def get_projects(
         self,
         token: str,
-        status_filter: str,
+        status_filter: str | None = None,
         login: str | None = None,
     ) -> list[dict[str, Any]]:
-        """GET /participants/{login}/projects?statusList=FINISHED|IN_PROGRESS"""
+        """GET /participants/{login}/projects — pagination bilan barcha loyihalar.
+
+        status_filter: API parametri sifatida yuboriladi, lekin ishlamasligi mumkin.
+        Shuning uchun natijani qaytarishdan oldin qo'shimcha filtr qilinmaydi —
+        detect_main_track o'zi filtr qiladi.
+        """
         if not login:
             raise ValueError("login required for get_projects")
-        resp = await self.client.get(
-            f"/participants/{login}/projects",
-            params={"statusList": status_filter},
-            headers={"Authorization": f"Bearer {token}"},
-        )
-        if resp.status_code in (404, 400):
-            return []
-        resp.raise_for_status()
-        data = resp.json()
-        # Response: {"projects": [...]} yoki to'g'ridan-to'g'ri list
-        return data.get("projects", []) if isinstance(data, dict) else data
+        all_projects: list[dict[str, Any]] = []
+        offset = 0
+        while True:
+            params: dict[str, Any] = {"offset": offset, "limit": 50}
+            if status_filter:
+                params["statusList"] = status_filter
+            resp = await self.client.get(
+                f"/participants/{login}/projects",
+                params=params,
+                headers={"Authorization": f"Bearer {token}"},
+            )
+            if resp.status_code in (404, 400):
+                return all_projects
+            resp.raise_for_status()
+            data = resp.json()
+            projects = data.get("projects", []) if isinstance(data, dict) else data
+            if not projects:
+                break
+            all_projects.extend(projects)
+            if len(projects) < 50:
+                break
+            offset += 50
+        return all_projects
 
     # ── Skills ────────────────────────────────────────────────────────────────
 
@@ -188,34 +205,46 @@ class School21Client:
 # ── main_track detection ──────────────────────────────────────────────────────
 
 def detect_main_track(finished_projects: list[dict[str, Any]]) -> str | None:
-    """Oxirgi 3 ta tugallangan loyiha prefiks bo'yicha asosiy yo'nalishni aniqlaydi.
+    """Tugatilgan loyihalar prefiks bo'yicha asosiy yo'nalishni aniqlaydi.
 
-    Projects endpoint: {"title": "C6_simple_shell", "completionDateTime": ..., "status": "FINISHED"}
+    School21 da tugatilgan = status 'ACCEPTED' yoki 'FINISHED'.
+    Eng ko'p takrorlangan prefiks = main_track.
     """
     if not finished_projects:
         return None
 
-    # Faqat FINISHED statuslilarni olish
-    finished = [p for p in finished_projects if p.get("status") == "FINISHED"]
-    if not finished:
-        # Agar filtr ishlasa barcha kelganlar FINISHED — hammasini ishlatamiz
-        finished = finished_projects
+    # Tugatilgan statuslar (School21 da "ACCEPTED" = tugatilgan)
+    COMPLETED_STATUSES = {"FINISHED", "ACCEPTED"}
 
-    def sort_key(p: dict[str, Any]) -> str:
-        return p.get("completionDateTime") or p.get("deadline") or ""
+    completed = [
+        p for p in finished_projects
+        if p.get("status") in COMPLETED_STATUSES
+    ]
+    if not completed:
+        return None
 
-    recent = sorted(finished, key=sort_key, reverse=True)[:3]
+    # Prefiks ajratish — raqamlarni olib tashlash (DSB1, DSB2 → DSB; C3, C6 → C)
+    import re
     prefixes: list[str] = []
-    for proj in recent:
-        # Haqiqiy field: "title" (masalan "C6_simple_shell" yoki "APP1 Bootcamp. Day00")
+    for proj in completed:
         name = proj.get("title") or proj.get("name") or ""
         if "_" in name:
-            prefixes.append(name.split("_", 1)[0])
+            raw = name.split("_", 1)[0]
+        elif " " in name:
+            raw = name.split(" ", 1)[0]
         elif name:
-            prefixes.append(name.split(".")[0].strip())
+            raw = name
+        else:
+            continue
+        # Oxiridagi raqamlarni olib tashlash: "DSB7" → "DSB", "C3" → "C", "ML10" → "ML"
+        clean = re.sub(r"\d+$", "", raw)
+        if clean:
+            prefixes.append(clean)
 
     if not prefixes:
         return None
+
+    # Eng ko'p takrorlangan prefiks = asosiy yo'nalish
     return Counter(prefixes).most_common(1)[0][0]
 
 

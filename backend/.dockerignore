@@ -1,0 +1,16 @@
+__pycache__
+*.pyc
+*.pyo
+.env
+.env.*
+!.env.example
+.git
+.vscode
+.logs
+.pids
+docker/
+*.log
+celerybeat-schedule*
+.pytest_cache
+venv/
+.venv/

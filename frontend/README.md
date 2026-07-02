@@ -1,73 +1,67 @@
-# React + TypeScript + Vite
+# P2P Corpus — School21 Peer-to-Peer Learning Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the complete, modern cyber-minimalist frontend application for **P2P Corpus**, a peer-to-peer learning and assessment platform built for School21 students.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack & Standards
 
-## React Compiler
+- **Framework:** React 19 + Vite + TypeScript (strict mode)
+- **Styling:** Tailwind CSS v4 running optimized `@theme` tokens in `src/index.css`
+- **Queries:** `@tanstack/react-query` v5 for asynchronous server state
+- **Stores:** `zustand` with persisted client store profiles (auth, telemetry keys)
+- **Icons:** `lucide-react`
+- **Forms:** `react-hook-form` + `zod` schema verification
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Setup & Run Instructions
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Follow these simple steps to run the frontend application locally:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Install Dependencies
+Make sure you have Node.js (version 18 or above recommended) installed, and run:
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Configure Environment Variables
+Copy `.env.example` into a local configuration and set up any custom parameters:
+```bash
+cp .env.example .env
 ```
+
+### 3. Launch Development Server
+Launch the Vite development workspace:
+```bash
+npm run dev
+```
+The application will launch on port **3000** automatically (or port **5173** during vanilla local development).
+
+---
+
+## 📡 Backend API & Proxy Configuration
+
+To prevent Cross-Origin Resource Sharing (CORS) blocks, Vite is configured with a built-in reverse proxy forwarding:
+- REST queries from `/api` to the FastAPI backend origin (`http://localhost:8000`).
+- Real-time updates from `/ws` via secure WebSockets.
+
+Refer to `vite.config.ts` for exact settings:
+```ts
+server: {
+  port: 3000,
+  host: "0.0.0.0",
+  proxy: {
+    '/api': { target: 'http://localhost:8000', changeOrigin: true },
+    '/ws':  { target: 'ws://localhost:8000', ws: true },
+  },
+}
+```
+
+---
+
+## 🎯 Guest Bypass Mode (Demo / Admin Bypasses)
+
+For rapid evaluations or if the backend servers are unavailable, the application contains a fully featured offline sandbox mode.
+- Log in using `demo` or `admin` as the School21 username on the login screen.
+- This triggers our Custom Axios Adapter (offline sandbox) built within `src/lib/axios.ts` to seamlessly populate mock data representing dashboards, active slot countdowns, user achievements, leaderboard logs, and notifications.

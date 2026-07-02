@@ -152,20 +152,44 @@ class School21Client:
         """
         if not login:
             raise ValueError("login required for get_projects")
+
+        # Redis cache — teachable/in-progress endpointlari bir vaqtda chaqiradi;
+        # School21 ni takroran hammalab 429 olmaslik uchun natijani cache qilamiz.
+        import json
+        from app.services.cache import redis_client
+        cache_key = f"s21:projects:{login}"
+        try:
+            cached = await redis_client.get(cache_key)
+            if cached:
+                return json.loads(cached)
+        except Exception:
+            pass
+
         all_projects: list[dict[str, Any]] = []
         offset = 0
         while True:
             params: dict[str, Any] = {"offset": offset, "limit": 50}
             if status_filter:
                 params["statusList"] = status_filter
-            resp = await self.client.get(
-                f"/participants/{login}/projects",
-                params=params,
-                headers={"Authorization": f"Bearer {token}"},
-            )
+            try:
+                resp = await self.client.get(
+                    f"/participants/{login}/projects",
+                    params=params,
+                    headers={"Authorization": f"Bearer {token}"},
+                )
+            except Exception as exc:
+                logger.warning("S21 projects so'rovi xato (%s) — qisman qaytarilmoqda (%d ta)", exc, len(all_projects))
+                break
             if resp.status_code in (404, 400):
-                return all_projects
-            resp.raise_for_status()
+                break
+            if resp.status_code == 429:
+                logger.warning("S21 429 rate-limit (projects) — qisman natija (%d ta)", len(all_projects))
+                break
+            try:
+                resp.raise_for_status()
+            except httpx.HTTPStatusError:
+                logger.warning("S21 projects HTTP %s — qisman qaytarilmoqda", resp.status_code)
+                break
             data = resp.json()
             projects = data.get("projects", []) if isinstance(data, dict) else data
             if not projects:
@@ -174,6 +198,12 @@ class School21Client:
             if len(projects) < 50:
                 break
             offset += 50
+
+        # Natijani 5 daqiqa cache qilamiz (qisman bo'lsa ham — qayta hammalashning oldini oladi).
+        try:
+            await redis_client.setex(cache_key, 300, json.dumps(all_projects))
+        except Exception:
+            pass
         return all_projects
 
     # ── Skills ────────────────────────────────────────────────────────────────

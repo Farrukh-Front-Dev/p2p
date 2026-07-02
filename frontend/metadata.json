@@ -1,0 +1,8 @@
+{
+  "name": "P2P Corpus",
+  "description": "School21 peer-to-peer learning platform supporting slot bookings, reviews, and a cyber-minimalist design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

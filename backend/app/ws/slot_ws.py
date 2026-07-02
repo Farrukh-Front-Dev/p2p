@@ -1,6 +1,7 @@
 """WebSocket endpoint for live slot sessions."""
 from __future__ import annotations
 
+import asyncio
 import uuid
 
 from fastapi import APIRouter, Query, WebSocket, WebSocketDisconnect
@@ -10,6 +11,7 @@ from app.db.base import AsyncSessionLocal
 from app.db.models.slot import Slot
 from app.db.models.user import User
 from app.services import slot_service
+from app.services.cache import redis_client
 from app.ws.manager import manager
 
 router = APIRouter()
@@ -28,6 +30,49 @@ async def _authenticate(token: str | None) -> User | None:
     async with AsyncSessionLocal() as db:
         user = await db.get(User, user_id)
         return user if user and user.is_active else None
+
+
+@router.websocket("/ws/slots")
+async def slots_feed_websocket(
+    websocket: WebSocket,
+    token: str | None = Query(None),
+):
+    """Global real-time feed — foydalanuvchi kanaliga (`user:{id}`) ulanadi.
+
+    Slot yangilanishlari / bildirishnomalar shu kanalga publish qilinsa,
+    frontend darhol qabul qiladi. Hozircha ulanish ochiq turadi (xatosiz).
+    """
+    user = await _authenticate(token)
+    if user is None:
+        await websocket.close(code=4401)
+        return
+
+    await websocket.accept()
+    channel = f"user:{user.id}"
+    pubsub = redis_client.pubsub()
+    await pubsub.subscribe(channel)
+
+    async def _forward() -> None:
+        async for message in pubsub.listen():
+            if message.get("type") == "message":
+                await websocket.send_text(message["data"])
+
+    forward_task = asyncio.create_task(_forward())
+    try:
+        # Klient odatda hech narsa yubormaydi; bu disconnect'ni aniqlaydi.
+        while True:
+            await websocket.receive_text()
+    except WebSocketDisconnect:
+        pass
+    except Exception:
+        pass
+    finally:
+        forward_task.cancel()
+        try:
+            await pubsub.unsubscribe(channel)
+            await pubsub.aclose()
+        except Exception:
+            pass
 
 
 @router.websocket("/ws/slot/{slot_id}")

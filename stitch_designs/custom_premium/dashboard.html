@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduPulse Dashboard</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config for Neo-Brutalist Theme -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#1E2A38",
+                        surface: "#2A3442",
+                        primary: "#38C9E6",
+                        secondary: "#43E8A0",
+                        black: "#000000",
+                        white: "#FFFFFF"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Montserrat", "sans-serif"],
+                        "display": ["Montserrat", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Montserrat", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-[#1E2A38] text-white font-body h-screen flex overflow-hidden selection:bg-[#38C9E6] selection:text-black">
+<!-- SideNavBar (from JSON) -->
+<nav class="bg-[#1E2A38] h-screen w-64 border-r-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col p-4 gap-4 shrink-0 z-10 relative">
+<!-- Header -->
+<div class="flex items-center gap-3 mb-8 pl-2">
+<div class="w-10 h-10 rounded-full border-2 border-black overflow-hidden bg-[#2A3442] shrink-0">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="A detailed digital illustration of a stylized, abstract geometric user avatar. It features sharp angles, vibrant cyan and mint green colors set against a dark navy blue background. The aesthetic is modern tech, neo-brutalist, and slightly cyberpunk, creating a strong, recognizable identity marker." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_Ui5ajsjmIBAveBMjrjRMds9Povaa4xX-wU7M4OAylL_5D7tg9snZLKQXhEEuGUl7KHh6xn3M3vyAYD5OqznWgLWOcTgp2qJ10sZ1Ief3zpl4CSW212mVYREQjtxfOsEd4X6DWMZj7mRwIoWhRZ-_v2YMwIY_ptV77KOgWB6nbIGJEWvnYqyWSk4Kgr1lo_HXXAQwAmVs-SGjYRQRmiFehCSYcX8y3Btm6w2YAXJJEwWiinvB71OBoLGQPW9eJulDlK38mqvSQ4s"/>
+</div>
+<div>
+<h1 class="text-2xl font-black text-[#38C9E6] uppercase tracking-tighter leading-none">EduPulse</h1>
+<p class="text-xs font-bold text-[#43E8A0] uppercase tracking-widest mt-1">P2P Learning</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex flex-col gap-3">
+<!-- Active: Dashboard -->
+<a class="font-headline text-label-lg font-bold bg-[#38C9E6] text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] translate-x-[1px] translate-y-[1px] flex items-center gap-3 p-3 rounded-lg hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+                Dashboard
+            </a>
+<!-- Inactive -->
+<a class="font-headline text-label-lg font-bold text-white hover:text-[#43E8A0] flex items-center gap-3 p-3 rounded-lg border-2 border-transparent hover:border-black hover:bg-[#2A3442] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" href="#">
+<span class="material-symbols-outlined text-xl">event_seat</span>
+                Slots
+            </a>
+<a class="font-headline text-label-lg font-bold text-white hover:text-[#43E8A0] flex items-center gap-3 p-3 rounded-lg border-2 border-transparent hover:border-black hover:bg-[#2A3442] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" href="#">
+<span class="material-symbols-outlined text-xl">search</span>
+                Search
+            </a>
+<a class="font-headline text-label-lg font-bold text-white hover:text-[#43E8A0] flex items-center gap-3 p-3 rounded-lg border-2 border-transparent hover:border-black hover:bg-[#2A3442] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" href="#">
+<span class="material-symbols-outlined text-xl">leaderboard</span>
+                Leaderboard
+            </a>
+<a class="font-headline text-label-lg font-bold text-white hover:text-[#43E8A0] flex items-center gap-3 p-3 rounded-lg border-2 border-transparent hover:border-black hover:bg-[#2A3442] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" href="#">
+<span class="material-symbols-outlined text-xl">person</span>
+                Profile
+            </a>
+</div>
+<div class="mt-auto">
+<a class="font-headline text-label-lg font-bold text-white hover:text-[#43E8A0] flex items-center gap-3 p-3 rounded-lg border-2 border-transparent hover:border-black hover:bg-[#2A3442] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+                Settings
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto p-8 relative">
+<div class="max-w-6xl mx-auto space-y-8 pb-12">
+<!-- Profile Header -->
+<section class="bg-[#2A3442] border-2 border-black p-8 rounded-lg shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] relative z-10 flex flex-col md:flex-row items-center gap-8 group">
+<div class="w-40 h-40 rounded-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] overflow-hidden shrink-0 bg-[#1E2A38]">
+<img alt="ABDURAHMON Profile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A highly detailed, professional yet edgy headshot of a young male software developer. He has a confident expression, wearing dark tech-wear clothing. The background features deep shadows with vibrant cyan and mint green lighting accents, reflecting a modern, neo-brutalist hacker aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBPcUaIG5bL3FZUIYtpaQos1Qsvcpda2Tu8VcIUJRLPdh4BpYVduQEaTkYKiPk22sk6M-EDeJm43SKKqKM_KPd80mZRkB11lQhzz5jO-jExM3ejJlRGu4MpLgUGEVuRXeB7GLBdKvqtv2Jzacf7u3SI4TIozih3kfPNq8M95pzsyS97OI-QhmFalPoCN1l5jQ1G1yPcTbfrii28SDgnKPLLfJAsT9rEaUMYVKJAFt-ZHqjynQfpzYOslU9hiABPWkjJNOSYtquEaA"/>
+</div>
+<div class="flex-1 w-full">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h2 class="font-headline font-black text-4xl md:text-5xl text-white tracking-tight uppercase">ABDURAHMON</h2>
+<p class="font-body font-bold text-lg text-[#43E8A0] tracking-widest mt-1">FULL-STACK CADET</p>
+</div>
+<div class="bg-black text-[#38C9E6] font-headline font-black text-2xl px-4 py-2 border-2 border-[#38C9E6] shadow-[4px_4px_0px_0px_rgba(56,201,230,1)] transform rotate-2">
+                            Lvl 4
+                        </div>
+</div>
+<div class="mt-6">
+<div class="flex justify-between font-headline font-bold text-sm mb-2 text-white">
+<span>Level Progress</span>
+<span class="text-[#38C9E6]">12,450 / 15,000 XP</span>
+</div>
+<div class="w-full h-8 bg-[#1E2A38] border-2 border-black rounded-sm overflow-hidden relative shadow-inner">
+<div class="h-full bg-[#38C9E6] w-[83%] border-r-2 border-black relative overflow-hidden">
+<!-- Striped pattern for progress -->
+<div class="absolute inset-0 opacity-20" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #000 10px, #000 20px);"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Stat Card 1 -->
+<div class="bg-[#2A3442] border-2 border-black p-6 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all flex flex-col relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 text-black/10 group-hover:text-black/20 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 100px;">groups</span>
+</div>
+<p class="font-headline font-bold text-sm text-[#43E8A0] uppercase tracking-wider mb-2 relative z-10">Coalition</p>
+<p class="font-headline font-black text-3xl text-white relative z-10 mt-auto">Piscine</p>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-[#2A3442] border-2 border-black p-6 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all flex flex-col relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 text-black/10 group-hover:text-black/20 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 100px;">toll</span>
+</div>
+<p class="font-headline font-bold text-sm text-[#38C9E6] uppercase tracking-wider mb-2 relative z-10">Peer Points</p>
+<p class="font-headline font-black text-4xl text-white relative z-10 mt-auto">42</p>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-[#38C9E6] border-2 border-black p-6 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all flex flex-col relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 text-black/10 group-hover:text-white/20 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 100px;">bolt</span>
+</div>
+<p class="font-headline font-bold text-sm text-black uppercase tracking-wider mb-2 relative z-10">Current XP</p>
+<p class="font-headline font-black text-4xl text-black relative z-10 mt-auto">12,450</p>
+</div>
+<!-- Stat Card 4 -->
+<div class="bg-[#2A3442] border-2 border-black p-6 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all flex flex-col relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 text-black/10 group-hover:text-black/20 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 100px;">location_on</span>
+</div>
+<p class="font-headline font-bold text-sm text-white/70 uppercase tracking-wider mb-2 relative z-10">Location</p>
+<p class="font-headline font-black text-2xl text-white relative z-10 mt-auto">Lab 1-04</p>
+</div>
+</section>
+<!-- Activity Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4">
+<!-- Left: Mening Slotlarim -->
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-3 h-8 bg-[#38C9E6] border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"></div>
+<h3 class="font-headline font-black text-2xl text-white uppercase tracking-tight">Mening Slotlarim</h3>
+</div>
+<div class="space-y-4">
+<!-- Slot Card 1 -->
+<div class="bg-[#2A3442] border-2 border-black p-5 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex justify-between items-center hover:-translate-y-1 transition-transform group">
+<div>
+<h4 class="font-headline font-bold text-lg text-[#38C9E6] mb-1">C++ Project Review</h4>
+<div class="flex items-center gap-2 text-white/80 font-mono text-sm">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>Today @ 14:00</span>
+</div>
+</div>
+<button class="w-12 h-12 bg-[#1E2A38] border-2 border-black rounded-lg flex items-center justify-center text-white group-hover:bg-[#43E8A0] group-hover:text-black transition-colors shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-y-[2px] active:translate-x-[2px]">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Slot Card 2 -->
+<div class="bg-[#2A3442] border-2 border-black p-5 rounded-lg shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex justify-between items-center hover:-translate-y-1 transition-transform group">
+<div>
+<h4 class="font-headline font-bold text-lg text-white mb-1">Transcendence Eval</h4>
+<div class="flex items-center gap-2 text-[#43E8A0] font-mono text-sm">
+<span class="material-symbols-outlined text-sm">event</span>
+<span>Tomorrow @ 10:00</span>
+</div>
+</div>
+<button class="w-12 h-12 bg-[#1E2A38] border-2 border-black rounded-lg flex items-center justify-center text-white group-hover:bg-[#43E8A0] group-hover:text-black transition-colors shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-y-[2px] active:translate-x-[2px]">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Book New Slot Button -->
+<button class="w-full bg-transparent border-4 border-dashed border-[#43E8A0] text-[#43E8A0] font-headline font-bold text-lg py-5 rounded-lg uppercase tracking-wider flex items-center justify-center gap-3 hover:bg-[#43E8A0] hover:text-black hover:border-solid hover:border-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none mt-2">
+<span class="material-symbols-outlined font-bold">add</span>
+                            Book a new slot
+                        </button>
+</div>
+</div>
+<!-- Right: Bildirishnomalar -->
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-3 h-8 bg-[#43E8A0] border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"></div>
+<h3 class="font-headline font-black text-2xl text-white uppercase tracking-tight">Bildirishnomalar</h3>
+</div>
+<div class="space-y-4">
+<!-- Notification 1 -->
+<div class="bg-[#1E2A38] border-2 border-black p-4 rounded-lg flex items-start gap-4 hover:bg-[#2A3442] transition-colors">
+<div class="bg-[#43E8A0] text-black w-10 h-10 rounded border-2 border-black flex items-center justify-center shrink-0 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div class="flex-1 pt-1">
+<h4 class="font-headline font-bold text-white mb-1 leading-none">Evaluation finished</h4>
+<p class="font-body text-xs text-[#38C9E6] font-medium">10 mins ago</p>
+</div>
+</div>
+<!-- Notification 2 -->
+<div class="bg-[#1E2A38] border-2 border-black p-4 rounded-lg flex items-start gap-4 hover:bg-[#2A3442] transition-colors">
+<div class="bg-[#38C9E6] text-black w-10 h-10 rounded border-2 border-black flex items-center justify-center shrink-0 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+<div class="flex-1 pt-1">
+<h4 class="font-headline font-bold text-white mb-1 leading-none">New message from peer</h4>
+<p class="font-body text-xs text-white/60 font-medium">1 hour ago</p>
+</div>
+</div>
+<!-- Notification 3 -->
+<div class="bg-[#1E2A38] border-2 border-black p-4 rounded-lg flex items-start gap-4 hover:bg-[#2A3442] transition-colors opacity-75">
+<div class="bg-white text-black w-10 h-10 rounded border-2 border-black flex items-center justify-center shrink-0 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+<span class="material-symbols-outlined">build</span>
+</div>
+<div class="flex-1 pt-1">
+<h4 class="font-headline font-bold text-white mb-1 leading-none">System Maintenance</h4>
+<p class="font-body text-xs text-white/60 font-medium">Yesterday</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>

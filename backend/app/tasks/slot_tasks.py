@@ -1,7 +1,6 @@
 """Slot-related background tasks: reminders, reveal, absence checks."""
 from __future__ import annotations
 
-import asyncio
 from datetime import datetime, timedelta, timezone
 
 from sqlalchemy import select
@@ -9,6 +8,7 @@ from sqlalchemy import select
 from app.db.base import AsyncSessionLocal
 from app.db.models.slot import Slot, SlotStatus
 from app.services.notification_service import create_notification
+from app.tasks.async_utils import run_async
 from app.tasks.celery_app import celery_app
 
 REMINDER_LEAD_MINUTES = 15
@@ -17,7 +17,7 @@ ABSENT_GRACE_MINUTES = 15
 
 @celery_app.task(name="app.tasks.slot_tasks.send_slot_reminders")
 def send_slot_reminders() -> int:
-    return asyncio.run(_send_slot_reminders())
+    return run_async(_send_slot_reminders())
 
 
 async def _send_slot_reminders() -> int:
@@ -55,7 +55,7 @@ async def _send_slot_reminders() -> int:
 
 @celery_app.task(name="app.tasks.slot_tasks.check_absences")
 def check_absences() -> int:
-    return asyncio.run(_check_absences())
+    return run_async(_check_absences())
 
 
 async def _check_absences() -> int:

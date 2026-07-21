@@ -3,9 +3,11 @@ import { useQuery } from '@tanstack/react-query';
 import { profileService } from '@/features/profile/api';
 import { reviewsService } from '@/features/reviews/api';
 import { Card, Avatar, Spinner, Badge, Skeleton } from '@/shared/ui';
+import { useTranslation } from 'react-i18next';
 import { ChevronLeft, ThumbsUp, ThumbsDown, MessageSquare, ShieldAlert } from 'lucide-react';
 
 export default function UserProfilePage() {
+  const { t } = useTranslation();
   const { username } = useParams<{ username: string }>();
 
   // Fetch public representation
@@ -66,9 +68,9 @@ export default function UserProfilePage() {
   if (isErrorPublic || !userPublic) {
     return (
       <div className="py-12 text-center flex flex-col items-center gap-4 font-ibm-plex-mono text-white">
-        <p className="text-[#FF9B9B] font-bold">Ushbu talaba topilmadi yoki ma‘lumotlarni yuklab bo‘lmadi.</p>
+        <p className="text-[#FF9B9B] font-bold">{t('profile.public.not_found', 'Ushbu talaba topilmadi yoki ma‘lumotlarni yuklab bo‘lmadi.')}</p>
         <Link to="/leaderboard" className="text-xs uppercase tracking-wider text-[#38C9E6] underline font-montserrat">
-          Reyting ro‘yxatiga qaytish
+          {t('profile.public.back_to_leaderboard', 'Reyting ro‘yxatiga qaytish')}
         </Link>
       </div>
     );
@@ -82,7 +84,7 @@ export default function UserProfilePage() {
           to="/leaderboard"
           className="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-[#B0BEC5] hover:text-white transition-colors font-montserrat"
         >
-          <ChevronLeft className="h-4 w-4" /> Reytingga qaytish
+          <ChevronLeft className="h-4 w-4" /> {t('profile.public.back_to_leaderboard', 'Reytingga qaytish')}
         </Link>
       </div>
 
@@ -113,14 +115,14 @@ export default function UserProfilePage() {
       {/* Reviews about this user list */}
       <div className="flex flex-col gap-4">
         <span className="text-sm font-extrabold text-white flex items-center gap-2 border-b-2 border-black pb-3 font-montserrat uppercase tracking-wider">
-          <MessageSquare className="h-5 w-5 text-[#38C9E6]" /> Ushbu talaba haqida fikrlar (Reviews)
+          <MessageSquare className="h-5 w-5 text-[#38C9E6]" /> {t('profile.reviews.title', 'Ushbu talaba haqida fikrlar (Reviews)')}
         </span>
 
         {isLoadingReviews ? (
           <Spinner size="sm" />
         ) : reviews.length === 0 ? (
           <Card className="p-8 text-center bg-[#2A3442]/50 text-[#B0BEC5] text-xs border-2 border-black rounded-2xl">
-            Hali bu talaba haqida hech qanday fikr-mulohazalar yozib qoldirilmagan.
+            {t('profile.reviews.empty', 'Hali bu talaba haqida hech qanday fikr-mulohazalar yozib qoldirilmagan.')}
           </Card>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -134,18 +136,18 @@ export default function UserProfilePage() {
                       <ThumbsDown className="h-5 w-5 text-[#FF9B9B] bg-[#FF9B9B]/10 p-1 rounded" />
                     )}
                     <span className={`text-xs font-black uppercase tracking-wider font-montserrat ${rev.is_positive ? 'text-[#43E8A0]' : 'text-[#FF9B9B]'}`}>
-                      {rev.is_positive ? 'Ijobiy Fikr' : 'Salbiy Fikr'}
+                      {rev.is_positive ? t('profile.reviews.positive', 'Ijobiy Fikr') : t('profile.reviews.negative', 'Salbiy Fikr')}
                     </span>
                   </div>
                 </div>
 
                 <p className="text-xs text-[#B0BEC5] leading-relaxed italic">
-                  "{rev.comment || 'Tavsif qoldirilmagan'}"
+                  "{rev.comment || t('profile.reviews.no_comment', 'Tavsif qoldirilmagan')}"
                 </p>
 
                 <div className="text-[9px] text-[#B0BEC5] uppercase tracking-wider font-bold border-t-2 border-black/30 pt-3 flex justify-between font-montserrat">
-                  <span>Baholovchi a‘zo</span>
-                  <span className="text-[#43E8A0] font-black">SAQLANGAN</span>
+                  <span>{t('profile.reviews.reviewer', "Baholovchi a'zo")}</span>
+                  <span className="text-[#43E8A0] font-black">{t('profile.reviews.saved', 'SAQLANGAN')}</span>
                 </div>
               </Card>
             ))}

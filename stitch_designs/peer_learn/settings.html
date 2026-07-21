@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings | Peer Learn</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffe17b",
+                    "outline": "#85948f",
+                    "on-primary-container": "#00473c",
+                    "on-tertiary": "#3b2f00",
+                    "on-error-container": "#ffdad6",
+                    "surface": "#0e1513",
+                    "secondary-fixed": "#e8deff",
+                    "on-background": "#dde4e0",
+                    "tertiary-container": "#caa600",
+                    "surface-variant": "#2f3634",
+                    "surface-container-low": "#161d1b",
+                    "on-tertiary-fixed-variant": "#564500",
+                    "on-secondary-fixed-variant": "#4f00d0",
+                    "on-surface-variant": "#bbcac4",
+                    "on-primary": "#00382f",
+                    "on-secondary-container": "#c0acff",
+                    "inverse-on-surface": "#2b3230",
+                    "on-surface": "#dde4e0",
+                    "secondary-container": "#5203d5",
+                    "on-primary-fixed-variant": "#005145",
+                    "surface-container": "#1a211f",
+                    "error": "#ffb4ab",
+                    "secondary": "#cdbdff",
+                    "inverse-surface": "#dde4e0",
+                    "primary-fixed-dim": "#44ddc1",
+                    "surface-tint": "#44ddc1",
+                    "on-primary-fixed": "#00201a",
+                    "on-secondary-fixed": "#20005f",
+                    "primary": "#44ddc1",
+                    "tertiary": "#eac32b",
+                    "surface-container-lowest": "#09100e",
+                    "on-tertiary-container": "#4b3d00",
+                    "secondary-fixed-dim": "#cdbdff",
+                    "surface-container-highest": "#2f3634",
+                    "on-tertiary-fixed": "#231b00",
+                    "on-secondary": "#370096",
+                    "surface-dim": "#0e1513",
+                    "background": "#0e1513",
+                    "outline-variant": "#3c4a46",
+                    "surface-container-high": "#242b29",
+                    "surface-bright": "#343b38",
+                    "primary-container": "#00bfa5",
+                    "inverse-primary": "#006b5c",
+                    "primary-fixed": "#68fadd",
+                    "on-error": "#690005",
+                    "tertiary-fixed-dim": "#eac32b",
+                    "error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "xs": "4px",
+                    "md": "16px",
+                    "unit": "4px",
+                    "xl": "32px",
+                    "sm": "8px",
+                    "lg": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-sm": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-sm": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #00bfa5;
+        }
+        .toggle-checkbox:checked + .toggle-label .toggle-dot {
+            transform: translateX(100%);
+        }
+        .glow-hover:hover {
+            box-shadow: 0px 0px 12px 0px rgba(0, 191, 165, 0.2);
+        }
+        body {
+            background-color: #0f1923;
+            color: #dde4e0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container border-r border-outline-variant hidden lg:flex flex-col py-xl">
+<div class="px-lg mb-xl">
+<h1 class="font-display-sm text-display-sm font-bold text-primary">Peer Learn</h1>
+<p class="font-body-sm text-on-surface-variant">P2P Academy</p>
+</div>
+<nav class="flex-1 space-y-xs">
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body-md text-body-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">event_seat</span>
+<span class="font-body-md text-body-md">Slots</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-body-md text-body-md">Search</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-body-md text-body-md">Leaderboard</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-body-md text-body-md">Profile</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-primary bg-surface-container-high border-l-4 border-primary" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-lg">
+<button class="flex items-center gap-md py-md text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-body-md text-body-md">Logout</span>
+</button>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-40 bg-surface-container-low border-b border-outline-variant flex justify-between items-center h-16 px-margin-mobile lg:px-margin-desktop ml-0 lg:ml-[260px] lg:w-[calc(100%-260px)]">
+<h2 class="font-headline-lg-mobile lg:font-headline-md text-primary font-bold">Settings</h2>
+<div class="flex items-center gap-md">
+<button class="hover:bg-surface-variant rounded-full p-2 transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="A professional headshot of a young tech-savvy individual with a confident smile, wearing minimalist modern streetwear. The lighting is soft and cinematic with subtle cyan and purple rim lights that reflect a high-performance gaming environment aesthetic. The background is a blurred, technical workspace with glowing interface elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7WTy24IzU3wRjccMj55-AE2Dco6suzgUq1YMHMkj_5y0vWTk1mgli_XsDtNcQyaNKLfWiFpAOOcHiYHQ9yVBHwkledKP4_OOK3J3_t_je3R0RKhyTSUlY5EIGBIzhd6gElRw6Oxo6ybWIDlYtItK8dCJimXVgAl6D1ZwdiNzyYUHLOzDvOvxQthAaRAgFUfKsiYaMX29-ZjhOUhS0ulxBfWl86UM2Xp-0ogFoeSkEsXs8WsojNcespRatf9EqcYTtrL30GLomCd_I"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 px-margin-mobile lg:px-margin-desktop ml-0 lg:ml-[260px] min-h-screen">
+<div class="max-w-4xl mx-auto space-y-xl">
+<!-- Theme Selection Section -->
+<section class="space-y-lg">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Appearance</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Light Card -->
+<div class="relative bg-surface-container border border-outline-variant rounded-xl p-md cursor-pointer glow-hover transition-all group">
+<div class="h-24 bg-white rounded-lg mb-sm border border-outline-variant flex items-center justify-center">
+<div class="w-16 h-2 bg-slate-200 rounded-full"></div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md">Light</span>
+<div class="w-5 h-5 rounded-full border border-outline-variant"></div>
+</div>
+</div>
+<!-- Dark Card (Active) -->
+<div class="relative bg-surface-container border-2 border-primary rounded-xl p-md cursor-pointer glow-hover transition-all">
+<div class="h-24 bg-[#0f1923] rounded-lg mb-sm border border-outline-variant flex items-center justify-center">
+<div class="w-16 h-2 bg-surface-container-highest rounded-full"></div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary">Dark</span>
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-on-primary">check</span>
+</div>
+</div>
+</div>
+<!-- System Card -->
+<div class="relative bg-surface-container border border-outline-variant rounded-xl p-md cursor-pointer glow-hover transition-all">
+<div class="h-24 bg-gradient-to-r from-white to-[#0f1923] rounded-lg mb-sm border border-outline-variant flex items-center justify-center">
+<div class="w-16 h-2 bg-gray-400 rounded-full opacity-50"></div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md">System</span>
+<div class="w-5 h-5 rounded-full border border-outline-variant"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Settings Categories -->
+<div class="space-y-lg">
+<!-- Account Section -->
+<section class="bg-surface-container border border-outline-variant rounded-xl overflow-hidden">
+<div class="p-lg border-b border-outline-variant">
+<h4 class="font-headline-md text-headline-md">Account Settings</h4>
+</div>
+<div class="divide-y divide-outline-variant">
+<div class="p-lg flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">mail</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">Email Address</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">alex.tech@peerlearn.io</p>
+</div>
+</div>
+<button class="text-primary font-label-md text-label-md px-md py-sm rounded-full border border-primary hover:bg-primary/10 transition-all">CHANGE</button>
+</div>
+<div class="p-lg flex items-center justify-between">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">security</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">Two-Factor Authentication</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Secure your account with 2FA</p>
+</div>
+</div>
+<div class="relative inline-block w-12 h-6 transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-surface-container-highest border-4 border-transparent appearance-none cursor-pointer z-10 checked:right-0 right-6 duration-200" id="toggle2fa" name="toggle2fa" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-lowest cursor-pointer" for="toggle2fa"></label>
+</div>
+</div>
+</div>
+</section>
+<!-- Privacy Section -->
+<section class="bg-surface-container border border-outline-variant rounded-xl overflow-hidden">
+<div class="p-lg border-b border-outline-variant">
+<h4 class="font-headline-md text-headline-md">Privacy & Safety</h4>
+</div>
+<div class="divide-y divide-outline-variant">
+<div class="p-lg flex items-center justify-between">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">visibility</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">Public Profile</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Allow others to see your learning progress</p>
+</div>
+</div>
+<div class="relative inline-block w-12 h-6">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-surface-container-highest border-4 border-transparent appearance-none cursor-pointer z-10 right-6 checked:right-0 duration-200" id="togglePrivacy" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-lowest cursor-pointer" for="togglePrivacy"></label>
+</div>
+</div>
+<div class="p-lg flex items-center justify-between">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">group</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">Activity Status</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Show when you're online in slots</p>
+</div>
+</div>
+<div class="relative inline-block w-12 h-6">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-surface-container-highest border-4 border-transparent appearance-none cursor-pointer z-10 right-6 checked:right-0 duration-200" id="toggleActivity" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-lowest cursor-pointer" for="toggleActivity"></label>
+</div>
+</div>
+</div>
+</section>
+<!-- Notifications Section -->
+<section class="bg-surface-container border border-outline-variant rounded-xl overflow-hidden">
+<div class="p-lg border-b border-outline-variant">
+<h4 class="font-headline-md text-headline-md">Notification Preferences</h4>
+</div>
+<div class="divide-y divide-outline-variant">
+<div class="p-lg flex items-center justify-between">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">notifications_active</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">Desktop Push Notifications</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Get alerts for upcoming learning slots</p>
+</div>
+</div>
+<div class="relative inline-block w-12 h-6">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-surface-container-highest border-4 border-transparent appearance-none cursor-pointer z-10 right-6 checked:right-0 duration-200" id="togglePush" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-lowest cursor-pointer" for="togglePush"></label>
+</div>
+</div>
+<div class="p-lg flex items-center justify-between">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface">Email Summaries</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Weekly leaderboard and progress reports</p>
+</div>
+</div>
+<div class="relative inline-block w-12 h-6">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-surface-container-highest border-4 border-transparent appearance-none cursor-pointer z-10 right-6 checked:right-0 duration-200" id="toggleEmail" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-lowest cursor-pointer" for="toggleEmail"></label>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Dangerous Zone -->
+<section class="pt-xl border-t border-outline-variant/30">
+<div class="bg-error-container/10 border border-error/20 rounded-xl p-lg flex flex-col md:flex-row md:items-center justify-between gap-lg">
+<div>
+<h4 class="font-headline-md text-headline-md text-error">Delete Account</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Permanently delete your profile and learning history. This action cannot be undone.</p>
+</div>
+<button class="bg-error text-on-error font-label-md text-label-md px-lg py-md rounded-lg hover:bg-error/90 transition-all active:scale-95">DELETE ACCOUNT</button>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="lg:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface/80 backdrop-blur-md border-t border-outline-variant shadow-lg flex justify-around items-center h-16 pb-safe">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">event_seat</span>
+<span class="font-label-md text-label-md">Slots</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-md text-label-md">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-label-md text-label-md">Leader</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</nav>
+<script>
+        // Simple Interaction logic for theme cards
+        const themeCards = document.querySelectorAll('.glow-hover');
+        themeCards.forEach(card => {
+            card.addEventListener('click', () => {
+                themeCards.forEach(c => {
+                    c.classList.remove('border-primary', 'border-2');
+                    c.classList.add('border-outline-variant', 'border');
+                    const indicator = c.querySelector('.bg-primary');
+                    if (indicator) indicator.remove();
+                    const label = c.querySelector('span');
+                    if(label) label.classList.remove('text-primary');
+                    const outlineCircle = c.querySelector('.w-5.h-5');
+                    if(outlineCircle) outlineCircle.classList.add('border', 'border-outline-variant');
+                });
+                
+                card.classList.add('border-primary', 'border-2');
+                card.classList.remove('border-outline-variant', 'border');
+                const label = card.querySelector('span');
+                if(label) label.classList.add('text-primary');
+                
+                const circle = card.querySelector('.w-5.h-5');
+                circle.classList.remove('border', 'border-outline-variant');
+                circle.innerHTML = `<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[14px] text-on-primary">check</span>
+                </div>`;
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard - P2P Learning</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {},
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Montserrat", "sans-serif"],
+                        "display": ["Montserrat", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Montserrat", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Neo-brutalist custom utilities */
+        .shadow-brutal {
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+        .hover-brutal:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px 0px #000000;
+        }
+        .active-brutal:active {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px 0px #000000;
+        }
+    </style>
+</head>
+<body class="bg-[#1E2A38] text-white font-body min-h-screen flex selection:bg-[#38C9E6] selection:text-black">
+<!-- SideNavBar -->
+<nav class="hidden md:flex h-screen w-64 border-r-2 border-black flex-col fixed left-0 top-0 bg-[#1E2A38] z-50">
+<div class="p-6 border-b-2 border-black">
+<h1 class="font-headline font-black text-2xl text-[#38C9E6]">Learning Hub</h1>
+</div>
+<div class="flex-1 overflow-y-auto py-6 flex flex-col gap-2 px-4">
+<!-- Active Tab -->
+<a class="flex items-center gap-3 px-4 py-3 bg-[#38C9E6] text-black border-2 border-black shadow-brutal translate-x-1 translate-y-1 !shadow-none font-bold font-label transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!-- Inactive Tabs -->
+<a class="flex items-center gap-3 px-4 py-3 text-[#43E8A0] border-2 border-transparent hover:bg-[#43E8A0] hover:text-black hover:border-2 hover:border-black hover:translate-x-1 hover:translate-y-1 transition-all font-label" href="#">
+<span class="material-symbols-outlined">event_seat</span>
+<span>Slots</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#43E8A0] border-2 border-transparent hover:bg-[#43E8A0] hover:text-black hover:border-2 hover:border-black hover:translate-x-1 hover:translate-y-1 transition-all font-label" href="#">
+<span class="material-symbols-outlined">search</span>
+<span>Search</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#43E8A0] border-2 border-transparent hover:bg-[#43E8A0] hover:text-black hover:border-2 hover:border-black hover:translate-x-1 hover:translate-y-1 transition-all font-label" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span>Leaderboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#43E8A0] border-2 border-transparent hover:bg-[#43E8A0] hover:text-black hover:border-2 hover:border-black hover:translate-x-1 hover:translate-y-1 transition-all font-label mt-auto" href="#">
+<span class="material-symbols-outlined">person</span>
+<span>Profile</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#43E8A0] border-2 border-transparent hover:bg-[#43E8A0] hover:text-black hover:border-2 hover:border-black hover:translate-x-1 hover:translate-y-1 transition-all font-label" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</div>
+<div class="p-4 border-t-2 border-black">
+<button class="w-full bg-[#38C9E6] text-black font-bold font-headline py-3 px-4 border-2 border-black shadow-brutal hover-brutal transition-all">
+                Book New Slot
+            </button>
+</div>
+</nav>
+<!-- Mobile TopBar -->
+<header class="md:hidden flex justify-between items-center px-6 py-4 border-b-2 border-black sticky top-0 z-40 bg-[#1E2A38] w-full">
+<h1 class="font-headline font-black text-xl text-[#38C9E6] uppercase">P2P Learning</h1>
+<button class="text-[#38C9E6]">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-1 md:ml-64 p-4 md:p-8 overflow-y-auto">
+<div class="max-w-7xl mx-auto space-y-8">
+<!-- Profile Header -->
+<section class="bg-[#2A3442] border-2 border-black shadow-brutal p-6 md:p-8 flex flex-col md:flex-row items-center md:items-start gap-6 rounded-sm">
+<div class="w-24 h-24 rounded-full border-2 border-black overflow-hidden flex-shrink-0 bg-[#1E2A38]">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="A stylized digital portrait of a modern student in a high-tech learning environment, illuminated by neon cyan and mint lighting. The scene uses a neo-brutalist aesthetic with deep #1E2A38 dark blue backgrounds and bold contrast. The character wears casual streetwear with subtle glowing elements. High contrast, sharp edges." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwnbjW4e-9JVTxljVfTeHJVeZ5Wx6fpXUXNkcycbpPWf8G8ghVOWjPBLI9HWPHOy5G-Oh2LvXePZxsTA8vakgzUc1rYw729gjEGrIu0uRLnV2fv3EmEDkNcUrHgJEE9JWDZDQvBBMlgbzCuNY1PZz94kN7orXHE5ePsOPrU-7YHjwqlk6EUZb9EK6xTzJifoPHhXycWbCJpjvLnM24pbALFDWKLdYqR_Xd56Ut8WQnsEeiSgighywEFM3uOyfgz_B2u8hCdvdh807E"/>
+</div>
+<div class="flex-1 text-center md:text-left space-y-4">
+<div>
+<h2 class="font-headline font-black text-3xl text-white mb-1">Alex Chen</h2>
+<p class="text-[#43E8A0] font-label font-bold text-lg">Level 12</p>
+</div>
+<div class="w-full max-w-md mx-auto md:mx-0">
+<div class="flex justify-between text-sm font-label mb-2">
+<span class="text-gray-400">XP Progress</span>
+<span class="text-[#38C9E6] font-bold">4,200 / 5,000</span>
+</div>
+<div class="h-4 w-full border-2 border-black bg-[#1E2A38] rounded-full overflow-hidden">
+<div class="h-full bg-[#43E8A0] w-[84%] border-r-2 border-black"></div>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 bg-[#2A3442] border-2 border-black text-[#38C9E6] flex items-center justify-center shadow-brutal hover-brutal transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Stat 1 -->
+<div class="bg-[#2A3442] border-2 border-black p-6 shadow-brutal flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="text-gray-400 font-label font-bold text-sm uppercase">Coalition</span>
+<span class="material-symbols-outlined text-[#38C9E6]">group_work</span>
+</div>
+<div class="mt-auto">
+<h3 class="font-headline font-black text-2xl text-white">Aurora</h3>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-[#2A3442] border-2 border-black p-6 shadow-brutal flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="text-gray-400 font-label font-bold text-sm uppercase">Peer Points</span>
+<span class="material-symbols-outlined text-[#43E8A0]">toll</span>
+</div>
+<div class="mt-auto">
+<h3 class="font-headline font-black text-2xl text-[#43E8A0]">450</h3>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-[#2A3442] border-2 border-black p-6 shadow-brutal flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<span class="text-gray-400 font-label font-bold text-sm uppercase">Total XP</span>
+<span class="material-symbols-outlined text-[#38C9E6]">trending_up</span>
+</div>
+<div class="mt-auto">
+<h3 class="font-headline font-black text-2xl text-white">12.4k</h3>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="bg-[#2A3442] border-2 border-black p-6 shadow-brutal flex flex-col relative overflow-hidden group">
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="bg-cover bg-center w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A highly stylized, minimalist architectural view of Paris in a dark neo-brutalist aesthetic. The Eiffel tower is subtly silhouetted against a #1E2A38 sky, with stark cyan (#38C9E6) and mint (#43E8A0) geometric lighting accents illuminating the harsh structural lines. High contrast, vector-like digital art style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATMk05WrBlx-qPE8qIY3xpsNCgnkh84YwvKs7gixwMRuzdkzjzTI3Sx2ZTT7f8VxeLj1BeM2ie8fu27lpLI9APuXNQLdZXZQPEtRAhAH3aCzYoazcJK7x5-Q4bmwTG5L-pSNVl0-lvGqG6-OrPuM5FRabiEibKzZphWoVUtmh-Ktx_hZg-Qlz54B18mlM5dbm7mx187CIu0Ktxe7TtnInjci6fasSJKhFgww0jONpOSkrOr3qNGh9Dj7yLnqcUoGrfGIVaL07fTA00')"></div>
+</div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="flex justify-between items-start mb-4">
+<span class="text-white bg-black px-2 py-1 border border-black font-label font-bold text-sm uppercase">Location</span>
+<span class="material-symbols-outlined text-[#38C9E6] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">location_on</span>
+</div>
+<div class="mt-auto">
+<h3 class="font-headline font-black text-2xl text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Paris</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Split Bottom Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: My Slots (60%) -->
+<div class="lg:col-span-7 space-y-6">
+<div class="flex justify-between items-end border-b-2 border-black pb-4">
+<h2 class="font-headline font-black text-2xl text-[#38C9E6]">Mening Slotlarim</h2>
+<a class="text-[#43E8A0] font-label font-bold text-sm hover:underline" href="#">View All</a>
+</div>
+<div class="space-y-4">
+<!-- Slot Card 1 -->
+<div class="bg-[#2A3442] border-2 border-black shadow-brutal p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover-brutal transition-all cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-[#38C9E6] border-2 border-black flex items-center justify-center text-black font-black font-headline text-xl">
+                                    S
+                                </div>
+<div>
+<h4 class="font-headline font-bold text-lg text-white">Sarah Jenkins</h4>
+<p class="text-sm font-label text-[#43E8A0]">ft_printf</p>
+</div>
+</div>
+<div class="flex flex-row sm:flex-col items-center sm:items-end w-full sm:w-auto justify-between sm:justify-center gap-2">
+<div class="bg-black text-[#38C9E6] px-3 py-1 font-mono text-sm font-bold border border-black">
+                                    14:30 - 15:30
+                                </div>
+<span class="text-xs text-gray-400 font-label uppercase font-bold tracking-wider">Today</span>
+</div>
+</div>
+<!-- Slot Card 2 -->
+<div class="bg-[#2A3442] border-2 border-black shadow-brutal p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover-brutal transition-all cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-[#43E8A0] border-2 border-black flex items-center justify-center text-black font-black font-headline text-xl">
+                                    M
+                                </div>
+<div>
+<h4 class="font-headline font-bold text-lg text-white">Marcus Cole</h4>
+<p class="text-sm font-label text-[#38C9E6]">cub3d</p>
+</div>
+</div>
+<div class="flex flex-row sm:flex-col items-center sm:items-end w-full sm:w-auto justify-between sm:justify-center gap-2">
+<div class="bg-black text-[#43E8A0] px-3 py-1 font-mono text-sm font-bold border border-black">
+                                    09:00 - 11:00
+                                </div>
+<span class="text-xs text-gray-400 font-label uppercase font-bold tracking-wider">Tomorrow</span>
+</div>
+</div>
+<!-- Slot Card 3 -->
+<div class="bg-[#2A3442] border-2 border-black shadow-brutal p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 hover-brutal transition-all cursor-pointer opacity-75">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-[#1E2A38] border-2 border-black flex items-center justify-center text-gray-400 font-black font-headline text-xl">
+                                    E
+                                </div>
+<div>
+<h4 class="font-headline font-bold text-lg text-gray-300">Elena Rostova</h4>
+<p class="text-sm font-label text-gray-500">minishell</p>
+</div>
+</div>
+<div class="flex flex-row sm:flex-col items-center sm:items-end w-full sm:w-auto justify-between sm:justify-center gap-2">
+<div class="bg-black text-gray-400 px-3 py-1 font-mono text-sm font-bold border border-black">
+                                    16:00 - 17:00
+                                </div>
+<span class="text-xs text-gray-500 font-label uppercase font-bold tracking-wider">Nov 12</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Notifications (40%) -->
+<div class="lg:col-span-5 space-y-6">
+<div class="flex justify-between items-end border-b-2 border-black pb-4">
+<h2 class="font-headline font-black text-2xl text-[#43E8A0]">Bildirishnomalar</h2>
+</div>
+<div class="bg-[#2A3442] border-2 border-black shadow-brutal p-4 space-y-4">
+<!-- Notification Item 1 -->
+<div class="flex gap-4 pb-4 border-b-2 border-black/30 last:border-0 last:pb-0">
+<div class="w-10 h-10 rounded-full bg-[#38C9E6] border-2 border-black flex-shrink-0 flex items-center justify-center text-black">
+<span class="material-symbols-outlined text-lg">military_tech</span>
+</div>
+<div>
+<p class="text-sm text-white font-body leading-tight mb-1">
+                                    You received <span class="font-bold text-[#38C9E6]">50 XP</span> for completing the ft_printf evaluation.
+                                </p>
+<span class="text-xs text-gray-400 font-mono">2 hours ago</span>
+</div>
+</div>
+<!-- Notification Item 2 -->
+<div class="flex gap-4 pb-4 border-b-2 border-black/30 last:border-0 last:pb-0">
+<div class="w-10 h-10 rounded-full bg-[#43E8A0] border-2 border-black flex-shrink-0 flex items-center justify-center text-black">
+<span class="material-symbols-outlined text-lg">event_available</span>
+</div>
+<div>
+<p class="text-sm text-white font-body leading-tight mb-1">
+<span class="font-bold text-[#43E8A0]">Marcus Cole</span> booked a slot for your cub3d project.
+                                </p>
+<span class="text-xs text-gray-400 font-mono">5 hours ago</span>
+</div>
+</div>
+<!-- Notification Item 3 -->
+<div class="flex gap-4 pb-4 border-b-2 border-black/30 last:border-0 last:pb-0">
+<div class="w-10 h-10 rounded-full bg-[#1E2A38] border-2 border-black flex-shrink-0 flex items-center justify-center text-[#38C9E6]">
+<span class="material-symbols-outlined text-lg">group_work</span>
+</div>
+<div>
+<p class="text-sm text-white font-body leading-tight mb-1">
+                                    Aurora coalition moved to <span class="font-bold text-white">#2</span> on the leaderboard!
+                                </p>
+<span class="text-xs text-gray-400 font-mono">1 day ago</span>
+</div>
+</div>
+<!-- Notification Item 4 -->
+<div class="flex gap-4 pb-4 border-b-2 border-black/30 last:border-0 last:pb-0">
+<div class="w-10 h-10 rounded-full bg-red-500 border-2 border-black flex-shrink-0 flex items-center justify-center text-black">
+<span class="material-symbols-outlined text-lg">warning</span>
+</div>
+<div>
+<p class="text-sm text-white font-body leading-tight mb-1">
+                                    Evaluation required for <span class="font-bold text-red-400">libft</span> within 24 hours to avoid penalty.
+                                </p>
+<span class="text-xs text-gray-400 font-mono">1 day ago</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>

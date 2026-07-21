@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSlots } from '@/features/slots/hooks';
 import { useAuth } from '@/features/auth/hooks';
@@ -19,6 +20,7 @@ import {
 } from 'lucide-react';
 
 export function Dashboard() {
+  const { t } = useTranslation();
   const { user: authUser } = useAuth();
   const navigate = useNavigate();
 
@@ -54,17 +56,17 @@ export function Dashboard() {
     return (
       <div className="flex flex-col gap-4 sm:gap-6 animate-fade-in font-ibm-plex-mono text-white">
         <PageHeader
-          title="Boshqaruv Paneli"
-          subtitle="Shaxsiy statistika, dars jadvali va bildirishnomalar."
+          title={t('dashboard.title')}
+          subtitle={t('dashboard.subtitle')}
           icon={LayoutDashboard}
         />
         <Card className="flex flex-col items-center justify-center py-12 gap-4 text-center">
           <AlertTriangle className="h-10 w-10 text-[#FF9B9B]" />
           <h3 className="text-sm font-extrabold text-[#FF9B9B] font-montserrat uppercase">
-            Ma'lumotlarni yuklashda xatolik
+            {t('dashboard.errors.loadTitle')}
           </h3>
           <p className="text-xs text-[#B0BEC5]">
-            Server bilan aloqa o'rnatilmadi. Iltimos qayta urinib ko'ring.
+            {t('dashboard.errors.loadDesc')}
           </p>
           <Button
             variant="primary"
@@ -73,7 +75,7 @@ export function Dashboard() {
               refetchSlots();
             }}
           >
-            <RefreshCw className="h-4 w-4" /> Qayta yuklash
+            <RefreshCw className="h-4 w-4" /> {t('dashboard.reload')}
           </Button>
         </Card>
       </div>
@@ -85,8 +87,8 @@ export function Dashboard() {
     return (
       <div className="flex flex-col gap-4 sm:gap-6 animate-fade-in font-ibm-plex-mono text-white">
         <PageHeader
-          title="Boshqaruv Paneli"
-          subtitle="Shaxsiy statistika, dars jadvali va bildirishnomalar."
+          title={t('dashboard.title')}
+          subtitle={t('dashboard.subtitle')}
           icon={LayoutDashboard}
         />
         {/* Profile skeleton */}
@@ -125,8 +127,8 @@ export function Dashboard() {
   return (
     <div className="flex flex-col gap-4 sm:gap-6 animate-fade-in font-ibm-plex-mono text-white">
       <PageHeader
-        title="Boshqaruv Paneli"
-        subtitle="Shaxsiy statistika, dars jadvali va bildirishnomalar."
+        title={t('dashboard.title')}
+        subtitle={t('dashboard.subtitle')}
         icon={LayoutDashboard}
       />
 
@@ -154,10 +156,10 @@ export function Dashboard() {
 
             <div className="min-w-0">
               <h2 className="text-lg sm:text-xl font-black text-white font-montserrat tracking-tight leading-none truncate">
-                {currentUser?.first_name || currentUser?.school21_login || 'Talaba'}
+                {currentUser?.first_name || currentUser?.school21_login || t('dashboard.profile.student')}
               </h2>
               <p className="text-xs text-[#B0BEC5] flex items-center gap-1.5 mt-1.5 leading-none flex-wrap">
-                <span className="truncate">{currentUser?.core_program || 'Asosiy dastur'}</span>
+                <span className="truncate">{currentUser?.core_program || t('dashboard.profile.coreProgram')}</span>
                 <span>·</span>
                 <span className="text-[#43E8A0] font-bold truncate">{currentUser?.main_track || 'Yo\'nalish'}</span>
               </p>
@@ -167,7 +169,7 @@ export function Dashboard() {
           {/* Level XP Progress Bar */}
           <div className="w-full sm:w-[240px] flex flex-col gap-1.5">
             <div className="flex items-center justify-between text-[10px] font-bold">
-              <span className="text-[#B0BEC5]">Daraja Progressi</span>
+              <span className="text-[#B0BEC5]">{t('dashboard.profile.levelProgress')}</span>
               <span className="text-[#43E8A0] font-black">{levelProgress}%</span>
             </div>
             <div className="w-full h-2 rounded-lg bg-[#34495E] border-2 border-black overflow-hidden shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
@@ -183,10 +185,10 @@ export function Dashboard() {
       {/* ── KEY PERFORMANCE STATS ROW ── */}
       <section className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
         {[
-          { label: 'Koalitsiya', value: currentUser?.coalition_name || 'Koalitsiyasiz' },
-          { label: 'Peer Ball', value: `${currentUser?.peer_points ?? 0} PRP` },
-          { label: 'Tajriba', value: `${currentUser?.xp ?? 0} XP` },
-          { label: 'Joylashuv', value: currentUser?.current_location || 'Oflayn' },
+          { label: t('dashboard.stats.coalition'), value: currentUser?.coalition_name || t('dashboard.stats.noCoalition') },
+          { label: t('dashboard.stats.peerPoints'), value: `${currentUser?.peer_points ?? 0} PRP` },
+          { label: t('dashboard.stats.experience'), value: `${currentUser?.xp ?? 0} XP` },
+          { label: t('dashboard.stats.location'), value: currentUser?.current_location || t('dashboard.stats.offline') },
         ].map((stat, idx) => (
           <div
             key={idx}
@@ -208,13 +210,13 @@ export function Dashboard() {
           <div className="flex items-center justify-between border-b-2 border-black/20 pb-2">
             <h2 className="text-xs font-black text-[#B0BEC5] uppercase tracking-wider font-montserrat flex items-center gap-1.5">
               <CalendarDays className="h-4 w-4 text-[#38C9E6]" />
-              Mening darslarim
+              {t('dashboard.schedule.title')}
             </h2>
             <Link
               to="/slots"
               className="text-[10px] font-black text-[#38C9E6] hover:text-[#43E8A0] transition-colors uppercase font-montserrat"
             >
-              Barchasi ➜
+              {t('dashboard.schedule.viewAll')}
             </Link>
           </div>
 
@@ -227,12 +229,12 @@ export function Dashboard() {
               </div>
             ) : mySchedule.length === 0 ? (
               <div className="py-8 px-4 rounded-3xl border-2 border-black bg-[#2A3442] flex flex-col items-center justify-center text-center gap-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                <p className="text-xs text-[#B0BEC5]">Yaqin orada darslaringiz yo'q.</p>
+                <p className="text-xs text-[#B0BEC5]">{t('dashboard.schedule.empty')}</p>
                 <Button
                   variant="primary"
                   onClick={() => navigate('/slots')}
                 >
-                  Dars ochish +
+                  {t('dashboard.schedule.addSlot')}
                 </Button>
               </div>
             ) : (
@@ -249,14 +251,14 @@ export function Dashboard() {
                     <div className="flex items-start justify-between gap-2 sm:gap-4">
                       <div className="flex flex-col min-w-0 flex-1">
                         <span className="text-[8px] font-black text-[#B0BEC5] tracking-widest uppercase">
-                          {isReviewer ? 'Reviewer (Siz)' : 'Reviewee (Siz)'}
+                          {isReviewer ? t('dashboard.schedule.reviewer') : t('dashboard.schedule.reviewee')}
                         </span>
                         <h3 className="text-sm font-black text-white font-montserrat truncate mt-1">
                           {slot.reviewer_project}
                         </h3>
                       </div>
                       <Badge type={statusType}>
-                        {slot.status === 'open' ? 'Ochiq' : slot.status === 'booked' ? 'Band' : 'Faol'}
+                        {slot.status === 'open' ? t('dashboard.schedule.statusOpen') : slot.status === 'booked' ? t('dashboard.schedule.statusBooked') : t('dashboard.schedule.statusActive')}
                       </Badge>
                     </div>
 
@@ -278,14 +280,14 @@ export function Dashboard() {
           <div className="flex items-center justify-between border-b-2 border-black/20 pb-2">
             <h2 className="text-xs font-black text-[#B0BEC5] uppercase tracking-wider font-montserrat flex items-center gap-1.5">
               <Bell className="h-4 w-4 text-[#38C9E6]" />
-              Bildirishnomalar
+              {t('dashboard.notifications.title')}
             </h2>
           </div>
 
           <div className="flex flex-col gap-3">
             {notifications.slice(0, 3).length === 0 ? (
               <div className="py-8 px-4 rounded-3xl border-2 border-black bg-[#2A3442] flex items-center justify-center text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                <p className="text-xs text-[#B0BEC5]">Yangi xabarlar yo'q.</p>
+                <p className="text-xs text-[#B0BEC5]">{t('dashboard.notifications.empty')}</p>
               </div>
             ) : (
               notifications.slice(0, 3).map((notif: Notification) => (
@@ -310,7 +312,7 @@ export function Dashboard() {
                     )}
                   </div>
                   <h4 className="text-xs font-extrabold text-white mt-1.5 font-montserrat">
-                    {notif.title || 'Bildirishnoma'}
+                    {notif.title || t('dashboard.notifications.defaultTitle')}
                   </h4>
                   <p className="text-[11px] text-[#B0BEC5] mt-1 line-clamp-1">
                     {notif.body}
@@ -328,15 +330,15 @@ export function Dashboard() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div className="flex flex-col">
             <h2 className="text-xs font-black text-[#B0BEC5] uppercase tracking-wider font-montserrat">
-              Mavjud Peer Slotlari
+              {t('dashboard.available.title')}
             </h2>
-            <p className="text-[11px] text-[#B0BEC5] mt-0.5">Baholash uchun boshqa talabalar ochgan bo'sh uchrashuvlar</p>
+            <p className="text-[11px] text-[#B0BEC5] mt-0.5">{t('dashboard.available.desc')}</p>
           </div>
           <Link
             to="/slots"
             className="text-[10px] font-black text-[#38C9E6] hover:text-[#43E8A0] transition-colors uppercase font-montserrat"
           >
-            Barchasini ko'rish ➜
+            {t('dashboard.available.viewAll')}
           </Link>
         </div>
 
@@ -347,7 +349,7 @@ export function Dashboard() {
             ))
           ) : availableSlots.length === 0 ? (
             <div className="col-span-1 sm:col-span-2 md:col-span-3 py-6 text-center border-2 border-black rounded-3xl bg-[#2A3442] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-              <p className="text-xs text-[#B0BEC5]">Hozirda bo'sh peer slotlari topilmadi.</p>
+              <p className="text-xs text-[#B0BEC5]">{t('dashboard.available.empty')}</p>
             </div>
           ) : (
             availableSlots.map((slot) => (
@@ -357,7 +359,7 @@ export function Dashboard() {
                 className="flex flex-col gap-2 justify-between"
               >
                 <div className="flex flex-col">
-                  <span className="text-[8px] font-black text-[#B0BEC5] uppercase tracking-widest leading-none">Mavjud uchrashuv</span>
+                  <span className="text-[8px] font-black text-[#B0BEC5] uppercase tracking-widest leading-none">{t('dashboard.available.availableSlot')}</span>
                   <h4 className="text-xs font-black text-white mt-1.5 font-montserrat truncate">
                     {slot.reviewer_project}
                   </h4>
@@ -376,14 +378,14 @@ export function Dashboard() {
       {/* ── QUICK ACTION FOOTER ── */}
       <footer className="border-t-2 border-black/30 pt-4 sm:pt-6 mt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-xs text-[#B0BEC5] text-center sm:text-left">
-          Loyiha baholatish yoki boshqalarni baholash uchun dars slotini boshqaring.
+          {t('dashboard.footer.desc')}
         </p>
         <Button
           variant="primary"
           onClick={() => navigate('/slots')}
           className="w-full sm:w-auto"
         >
-          Dars slotlari <ArrowRight className="h-4 w-4" />
+          {t('dashboard.footer.btn')} <ArrowRight className="h-4 w-4" />
         </Button>
       </footer>
     </div>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffe17b",
+                        "outline": "#85948f",
+                        "on-primary-container": "#00473c",
+                        "on-tertiary": "#3b2f00",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#0e1513",
+                        "secondary-fixed": "#e8deff",
+                        "on-background": "#dde4e0",
+                        "tertiary-container": "#caa600",
+                        "surface-variant": "#2f3634",
+                        "surface-container-low": "#161d1b",
+                        "on-tertiary-fixed-variant": "#564500",
+                        "on-secondary-fixed-variant": "#4f00d0",
+                        "on-surface-variant": "#bbcac4",
+                        "on-primary": "#00382f",
+                        "on-secondary-container": "#c0acff",
+                        "inverse-on-surface": "#2b3230",
+                        "on-surface": "#dde4e0",
+                        "secondary-container": "#5203d5",
+                        "on-primary-fixed-variant": "#005145",
+                        "surface-container": "#1a211f",
+                        "error": "#ffb4ab",
+                        "secondary": "#cdbdff",
+                        "inverse-surface": "#dde4e0",
+                        "primary-fixed-dim": "#44ddc1",
+                        "surface-tint": "#44ddc1",
+                        "on-primary-fixed": "#00201a",
+                        "on-secondary-fixed": "#20005f",
+                        "primary": "#44ddc1",
+                        "tertiary": "#eac32b",
+                        "surface-container-lowest": "#09100e",
+                        "on-tertiary-container": "#4b3d00",
+                        "secondary-fixed-dim": "#cdbdff",
+                        "surface-container-highest": "#2f3634",
+                        "on-tertiary-fixed": "#231b00",
+                        "on-secondary": "#370096",
+                        "surface-dim": "#0e1513",
+                        "background": "#0e1513",
+                        "outline-variant": "#3c4a46",
+                        "surface-container-high": "#242b29",
+                        "surface-bright": "#343b38",
+                        "primary-container": "#00bfa5",
+                        "inverse-primary": "#006b5c",
+                        "primary-fixed": "#68fadd",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#eac32b",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-sm": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            user-select: none;
+        }
+        body {
+            background-color: #0f1923;
+            color: #dde4e0;
+            overflow-x: hidden;
+        }
+        .tonal-stack-1 { background-color: #1a2332; border: 1px solid #2d3748; }
+        .tonal-stack-2 { background-color: #243447; }
+        .teal-glow-hover:hover {
+            border-color: #44ddc1;
+            box-shadow: 0px 0px 12px 0px rgba(68, 221, 193, 0.2);
+            transition: all 0.3s ease;
+        }
+        .active-nav-gradient {
+            background: linear-gradient(90deg, rgba(68, 221, 193, 0.1) 0%, rgba(68, 221, 193, 0) 100%);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased">
+<!-- SideNavBar (Desktop) -->
+<aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container border-r border-outline-variant hidden lg:flex flex-col h-full py-xl z-50">
+<div class="px-lg mb-xl">
+<h1 class="font-display-sm text-display-sm font-bold text-primary">Peer Learn</h1>
+<p class="font-label-md text-label-md text-on-surface-variant">P2P Academy</p>
+</div>
+<nav class="flex-1">
+<ul class="space-y-xs">
+<li><a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">dashboard</span>Dashboard</a></li>
+<li><a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">event_seat</span>Slots</a></li>
+<li><a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">search</span>Search</a></li>
+<li><a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">leaderboard</span>Leaderboard</a></li>
+<li><a class="flex items-center gap-md px-lg py-md text-primary bg-surface-container-high border-l-4 border-primary active-nav-gradient" href="#"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>Profile</a></li>
+<li><a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">settings</span>Settings</a></li>
+</ul>
+</nav>
+<div class="px-lg mt-auto">
+<button class="flex items-center gap-md px-lg py-md text-on-surface-variant w-full hover:bg-surface-container-highest hover:text-primary transition-colors">
+<span class="material-symbols-outlined">logout</span>Logout
+            </button>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-40 bg-surface-container-low border-b border-outline-variant flex justify-between items-center h-16 px-margin-mobile lg:px-margin-desktop ml-0 lg:ml-[260px] lg:w-[calc(100%-260px)]">
+<div class="flex items-center lg:hidden">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">Peer Learn</span>
+</div>
+<div class="hidden lg:block">
+<span class="font-headline-md text-headline-md font-bold">Profile Overview</span>
+</div>
+<div class="flex items-center gap-md">
+<button class="hover:bg-surface-variant rounded-full p-2 transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-variant border border-outline-variant overflow-hidden">
+<img alt="User Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb4DTOzimiB6LHxFfB5OGb5AZ4qqgARLCNUdPY8bV61GCtz-n1gJAcJI_ta3SXVhC2VZifaBfbFghdmUwNURSBIe-AC190BNB7cWTeMwksuAthaO5LQthni-GWUH-NdSI4ph8pM6xA10-c7jP99IiclWXaWcvGE2Xaz7m08YmvUORE3If1IxYfdxiU0-festJ2GX3zg2YCDJSqZoIw5DvII1juCxsEfvrQk6ipWs6LT-6T0kODTYTSoF2I9NOz4qd6HT6tWWKdwKpa"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-20 pb-24 lg:pb-12 ml-0 lg:ml-[260px] px-margin-mobile lg:px-margin-desktop min-h-screen">
+<div class="max-w-6xl mx-auto space-y-lg">
+<!-- Hero Section -->
+<section class="tonal-stack-1 rounded-xl p-lg relative overflow-hidden">
+
+<div class="relative z-10 flex flex-col md:flex-row items-center gap-lg">
+<div class="relative">
+<div class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-primary p-1 bg-surface-container">
+<img alt="Student 21 Large Avatar" class="w-full h-full rounded-full object-cover" data-alt="A stylized digital illustration of a young, professional male avatar with short hair and modern glasses. The avatar is presented as a high-fidelity vector graphic with a clean, flat aesthetic. The character is set against a dark background that emphasizes the vibrant teal and purple accent tones of the Peer Learn platform. The mood is confident, technical, and approachable, reflecting a high-performance learner in a peer-to-peer ecosystem." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfnAxY44BEt5JYbyLrngcwFe1oJUIxEBQNoAg6EtTYopGvTXLbl-tsjsY2wvu4KkVUHyC7FPYS6_wTNWW9IzFKdXMKxyTr5c9UOXHqk5A-1LwhwgjjbVQDyx0DSdJGMPkobTuo-rfOYH5ur4qXpIpMunRBe0a4rrlLfzySKab2NqpZq3-Gvb1ADv3GtoqUE0nl_EMqRejGWZUDiimLcqW36QUsUZj5JgODwupYlpK2HLz0IK6WsuX3rwR64iSI1QZz4Jr8HCFWnCWC"/>
+</div>
+<div class="absolute bottom-2 right-2 w-8 h-8 bg-primary rounded-full border-4 border-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="text-center md:text-left">
+<h2 class="font-display-sm text-display-sm font-bold text-on-surface">Student 21</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-md">@student21</p>
+<!-- Badge Row -->
+<div class="flex flex-wrap justify-center md:justify-start gap-sm mt-md">
+<span class="px-md py-xs rounded-full bg-surface-container-highest border border-outline-variant text-label-md font-label-md text-on-surface">Tashkent Campus</span>
+<span class="px-md py-xs rounded-full bg-secondary/10 text-secondary border border-secondary/20 text-label-md font-label-md">Web Track</span>
+<span class="px-md py-xs rounded-full bg-primary/10 text-primary border border-primary/20 text-label-md font-label-md">Peer Lab</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Row -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-md">
+<!-- Positive Reviews -->
+<div class="tonal-stack-1 rounded-xl p-md teal-glow-hover">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-xs">Positive</p>
+<div class="flex items-end gap-sm">
+<span class="font-headline-lg text-headline-lg text-primary">34</span>
+<span class="material-symbols-outlined text-primary mb-1">thumb_up</span>
+</div>
+</div>
+<!-- Negative Reviews -->
+<div class="tonal-stack-1 rounded-xl p-md teal-glow-hover">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-xs">Negative</p>
+<div class="flex items-end gap-sm">
+<span class="font-headline-lg text-headline-lg text-error">2</span>
+<span class="material-symbols-outlined text-error mb-1">thumb_down</span>
+</div>
+</div>
+<!-- Taught Sessions -->
+<div class="tonal-stack-1 rounded-xl p-md teal-glow-hover border-primary/30">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-xs">Taught</p>
+<div class="flex items-end gap-sm">
+<span class="font-headline-lg text-headline-lg text-primary">15</span>
+<span class="material-symbols-outlined text-primary mb-1">school</span>
+</div>
+</div>
+<!-- Learned Sessions -->
+<div class="tonal-stack-1 rounded-xl p-md teal-glow-hover border-secondary/30">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider mb-xs">Learned</p>
+<div class="flex items-end gap-sm">
+<span class="font-headline-lg text-headline-lg text-secondary">28</span>
+<span class="material-symbols-outlined text-secondary mb-1">local_library</span>
+</div>
+</div>
+</section>
+<!-- Language Pills & Asymmetric Content -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+<!-- Stack & Skills -->
+<section class="lg:col-span-1 tonal-stack-1 rounded-xl p-lg">
+<h3 class="font-headline-md text-headline-md mb-lg">Tech Stack</h3>
+<div class="flex flex-wrap gap-sm">
+<div class="px-md py-sm rounded-lg bg-surface-container-lowest border border-primary/40 text-primary font-bold flex items-center gap-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            JavaScript
+                        </div>
+<div class="px-md py-sm rounded-lg bg-surface-container-lowest border border-primary/40 text-primary font-bold flex items-center gap-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            Python
+                        </div>
+<div class="px-md py-sm rounded-lg bg-surface-container-lowest border border-primary/40 text-primary font-bold flex items-center gap-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            C++
+                        </div>
+</div>
+<div class="mt-xl space-y-md">
+<div class="p-md rounded-lg bg-surface-container-low border border-outline-variant">
+<p class="font-label-md text-label-md text-on-surface-variant mb-xs">Current Goal</p>
+<p class="font-body-md text-body-md">Mastering React Hooks &amp; Server Components</p>
+</div>
+<div class="p-md rounded-lg bg-surface-container-low border border-outline-variant">
+<p class="font-label-md text-label-md text-on-surface-variant mb-xs">Next Level</p>
+<div class="w-full bg-surface-container-highest h-2 rounded-full mt-sm">
+<div class="bg-gradient-to-r from-primary to-secondary h-full rounded-full" style="width: 75%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Activity/Bento Card 1 -->
+<section class="lg:col-span-2 tonal-stack-1 rounded-xl p-lg flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-lg">
+<h3 class="font-headline-md text-headline-md">Learning Trajectory</h3>
+<span class="material-symbols-outlined text-on-surface-variant">trending_up</span>
+</div>
+<div class="h-48 w-full bg-surface-container-lowest rounded-lg border border-outline-variant flex items-end p-md gap-xs relative overflow-hidden">
+<div class="flex-1 bg-primary/20 h-[30%] rounded-t-sm hover:bg-primary/40 transition-colors"></div>
+<div class="flex-1 bg-primary/20 h-[50%] rounded-t-sm hover:bg-primary/40 transition-colors"></div>
+<div class="flex-1 bg-primary/20 h-[45%] rounded-t-sm hover:bg-primary/40 transition-colors"></div>
+<div class="flex-1 bg-primary/20 h-[70%] rounded-t-sm hover:bg-primary/40 transition-colors"></div>
+<div class="flex-1 bg-primary/20 h-[90%] rounded-t-sm hover:bg-primary/40 transition-colors"></div>
+<div class="flex-1 bg-primary/20 h-[60%] rounded-t-sm hover:bg-primary/40 transition-colors"></div>
+<div class="flex-1 bg-primary h-[85%] rounded-t-sm"></div>
+<div class="absolute inset-0 pointer-events-none border-b border-primary/10"></div>
+</div>
+</div>
+<div class="mt-lg grid grid-cols-1 md:grid-cols-2 gap-md">
+<button class="bg-primary text-on-primary font-bold py-md rounded-lg hover:brightness-110 transition-all active:scale-95">
+                            Book a Walk (Peer Lab)
+                        </button>
+<button class="border border-outline-variant text-on-surface font-bold py-md rounded-lg hover:bg-surface-container-highest transition-all">
+                            View Certificates
+                        </button>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="lg:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface/80 backdrop-blur-md border-t border-outline-variant shadow-lg flex justify-around items-center h-16 pb-safe">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-label-md font-label-md">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">event_seat</span>
+<span class="text-label-md font-label-md">Slots</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-label-md font-label-md">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-label-md font-label-md">Rank</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-label-md font-label-md">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions and interactive glow effects
+        document.querySelectorAll('.teal-glow-hover').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Potential for JS driven micro-animations
+            });
+        });
+    </script>
+</body></html>

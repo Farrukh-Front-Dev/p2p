@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>P2P Platform - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#07006c",
+                        "tertiary": "#fbabff",
+                        "surface-container-highest": "#34343d",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-tertiary": "#580065",
+                        "inverse-on-surface": "#303038",
+                        "surface-container-high": "#292932",
+                        "on-surface-variant": "#c7c4d7",
+                        "surface-container": "#1f1f27",
+                        "on-primary-container": "#0d0096",
+                        "tertiary-fixed-dim": "#fbabff",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "surface-variant": "#34343d",
+                        "surface-dim": "#13131b",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "outline-variant": "#464554",
+                        "on-background": "#e4e1ed",
+                        "on-tertiary-fixed": "#36003e",
+                        "on-secondary": "#003640",
+                        "inverse-primary": "#494bd6",
+                        "surface-container-low": "#1b1b23",
+                        "tertiary-fixed": "#ffd6fd",
+                        "primary-container": "#8083ff",
+                        "surface": "#13131b",
+                        "inverse-surface": "#e4e1ed",
+                        "primary": "#c0c1ff",
+                        "tertiary-container": "#e14ef6",
+                        "on-surface": "#e4e1ed",
+                        "secondary-fixed-dim": "#4cd7f4",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "secondary": "#4cd7f4",
+                        "secondary-fixed": "#aaedff",
+                        "on-tertiary-container": "#4d0059",
+                        "error-container": "#93000a",
+                        "background": "#13131b",
+                        "primary-fixed": "#e1e0ff",
+                        "secondary-container": "#00b3cf",
+                        "on-primary": "#1000a9",
+                        "on-tertiary-fixed-variant": "#7c008e",
+                        "on-secondary-container": "#00404b",
+                        "surface-container-lowest": "#0d0d15",
+                        "on-secondary-fixed": "#001f26",
+                        "surface-tint": "#c0c1ff",
+                        "outline": "#908fa0",
+                        "surface-bright": "#393841"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "glass-padding": "24px",
+                        "base": "8px",
+                        "container-padding-desktop": "40px",
+                        "container-padding-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Sora"],
+                        "display-lg-mobile": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Sora"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid #334155;
+            box-shadow: inset 1px 1px 0 0 rgba(71, 85, 105, 0.5);
+        }
+        .btn-primary {
+            background: linear-gradient(to right, #4f46e5, #d946ef);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+        }
+        .input-glass {
+            background-color: #0F172A;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+        .input-glass:focus-within {
+            border-color: #c0c1ff;
+            box-shadow: 0 0 0 2px rgba(192, 193, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex overflow-hidden">
+<!-- Left Side: WebGL Animation Container -->
+<div class="hidden lg:block lg:w-1/2 relative h-screen border-r border-outline-variant/20">
+<!-- STITCH_SHADER_START:ANIMATION_2 class="absolute inset-0 w-full h-full object-cover" -->
+<div class="absolute inset-0 w-full h-full object-cover" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_2" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_2');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+void main() {
+    vec2 uv = gl_FragCoord.xy / u_resolution.xy;
+    
+    // Scale UV for grid
+    vec2 gv = fract(uv * 10.0 + u_time * 0.1);
+    
+    // Subtle grid lines
+    float grid = smoothstep(0.02, 0.0, abs(gv.x - 0.5)) + smoothstep(0.02, 0.0, abs(gv.y - 0.5));
+    
+    // Floating "squares" effect using noise-like pulses
+    float pulse = sin(u_time * 0.5 + uv.x * 5.0 + uv.y * 3.0) * 0.5 + 0.5;
+    float squares = smoothstep(0.4, 0.45, pulse * grid);
+    
+    // Base deep dark color
+    vec3 color = vec3(0.058, 0.09, 0.165); // #0F172A equivalent
+    
+    // Add glowing indigo/fuchsia accents to squares
+    vec3 accent = mix(vec3(0.388, 0.4, 0.945), vec3(0.851, 0.275, 0.937), uv.x);
+    color += squares * accent * 0.5;
+    
+    // Subtle ambient glow
+    color += accent * (0.05 * sin(u_time * 0.3));
+
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_2 -->
+<!-- Overlay content for visual depth -->
+<div class="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent flex flex-col justify-end p-container-padding-desktop">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-4">Empower Your Mind</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Connect, collaborate, and grow with the next generation of peer-to-peer learning.</p>
+</div>
+</div>
+<!-- Right Side: Authentication -->
+<div class="w-full lg:w-1/2 flex items-center justify-center p-container-padding-mobile lg:p-container-padding-desktop relative">
+<!-- Subtle background glow behind the card -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
+<div class="w-full max-w-[440px] glass-card rounded-xl p-glass-padding lg:p-10 z-10 relative">
+<div class="text-center mb-8">
+<div class="font-headline-md text-headline-md text-primary font-bold mb-2">P2P Platform</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Welcome Back</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Enter your details to access your account.</p>
+</div>
+<form class="space-y-6">
+<!-- Email Field -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="email">Email Address</label>
+<div class="input-glass rounded-lg flex items-center px-4 py-3">
+<span class="material-symbols-outlined text-outline mr-3" style="font-variation-settings: 'FILL' 0, 'wght' 300;">mail</span>
+<input class="w-full bg-transparent border-none text-on-surface font-body-md text-body-md placeholder-outline focus:ring-0 p-0" id="email" placeholder="alex@example.com" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="password">Password</label>
+<div class="input-glass rounded-lg flex items-center px-4 py-3">
+<span class="material-symbols-outlined text-outline mr-3" style="font-variation-settings: 'FILL' 0, 'wght' 300;">lock</span>
+<input class="w-full bg-transparent border-none text-on-surface font-body-md text-body-md placeholder-outline focus:ring-0 p-0" id="password" placeholder="••••••••" type="password"/>
+<button class="text-outline hover:text-primary transition-colors ml-2 focus:outline-none" type="button">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 0, 'wght' 300;">visibility</span>
+</button>
+</div>
+</div>
+<!-- Options -->
+<div class="flex items-center justify-between mt-4">
+<label class="flex items-center space-x-2 cursor-pointer">
+<input class="rounded border-outline-variant bg-surface-container text-primary focus:ring-primary focus:ring-offset-background w-4 h-4" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Remember me</span>
+</label>
+<a class="font-label-sm text-label-sm text-primary hover:text-primary-fixed transition-colors" href="#">Forgot password?</a>
+</div>
+<!-- Submit Button -->
+<button class="w-full btn-primary rounded-lg py-3 mt-6 font-label-md text-label-md text-center flex justify-center items-center gap-2" type="submit">
+                    Sign In
+                    <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 0, 'wght' 400;">arrow_forward</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="mt-8 flex items-center justify-center space-x-4">
+<div class="h-px bg-outline-variant/30 flex-1"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">OR CONTINUE WITH</span>
+<div class="h-px bg-outline-variant/30 flex-1"></div>
+</div>
+<!-- Social Logins -->
+<div class="mt-6 grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 py-2.5 rounded-lg border border-[#334155] hover:bg-surface-variant/30 transition-colors bg-surface-container/50">
+<img class="w-5 h-5" data-alt="A small, high-quality, minimalist Google 'G' logo icon optimized for a dark mode interface. The icon features the classic Google colors but stylized to fit a premium, sleek, futuristic web design theme with deep contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHJccRP8LWJ_GmK_KCu5_FrcJK0HaiUa_6PjLkkSr4E89xnBeWvFZupWbWbwUGTvWl1rE6SBSfMUXvBg2qoj0jXEwDF52H_7ZK4PoG7Sv6qKU8klj0ivADqMq--NWGcWyUC1X7LfdRKccoy5gr_5k7jpSFiIKN3Y7XZJJgafVk3WgrS7n1SmgmXYpYIOGK3AymyFhHwIjPkwEARH2_1oGC3zbrAQPpzx8jLltzAEloBVn3Rz0yrTgcvA"/>
+<span class="font-label-sm text-label-sm text-on-surface">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2.5 rounded-lg border border-[#334155] hover:bg-surface-variant/30 transition-colors bg-surface-container/50">
+<img class="w-5 h-5" data-alt="A small, high-quality, minimalist Apple logo icon optimized for a dark mode interface. The logo is solid white or light silver, fitting perfectly into a sleek, premium, modern glassmorphic web design theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr9AjsWvdFm2B6kzVxtanGwIw536KC88Nw9BgcXQs9TjPRqgNbuQiZwTNpFlXiY0ig46yqD_wt6ZoXAzkeE5ZPAVlRBwWpDwJ0B_kxz4k-IKRNbwW69ESqIrGV0hUlQdiOF7jotxJpIrgb1xyiemcRK597UDQIQluwVeSvRqfaIsA6nuCxpwmGREh5GcT5YMDdvSd-4ZrTcJRsXGS3gjrhpDmXcKOc03WTQosnRb_St2T9dDnZwUWBdA"/>
+<span class="font-label-sm text-label-sm text-on-surface">Apple</span>
+</button>
+</div>
+<div class="mt-8 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                    Don't have an account? 
+                    <a class="text-secondary hover:text-secondary-fixed transition-colors" href="#">Sign up</a>
+</p>
+</div>
+</div>
+</div>
+</body></html>

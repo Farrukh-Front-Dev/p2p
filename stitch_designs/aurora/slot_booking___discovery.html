@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slots &amp; Search - P2P Platform</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#07006c",
+                        "tertiary": "#fbabff",
+                        "surface-container-highest": "#34343d",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-tertiary": "#580065",
+                        "inverse-on-surface": "#303038",
+                        "surface-container-high": "#292932",
+                        "on-surface-variant": "#c7c4d7",
+                        "surface-container": "#1f1f27",
+                        "on-primary-container": "#0d0096",
+                        "tertiary-fixed-dim": "#fbabff",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "surface-variant": "#34343d",
+                        "surface-dim": "#13131b",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "outline-variant": "#464554",
+                        "on-background": "#e4e1ed",
+                        "on-tertiary-fixed": "#36003e",
+                        "on-secondary": "#003640",
+                        "inverse-primary": "#494bd6",
+                        "surface-container-low": "#1b1b23",
+                        "tertiary-fixed": "#ffd6fd",
+                        "primary-container": "#8083ff",
+                        "surface": "#13131b",
+                        "inverse-surface": "#e4e1ed",
+                        "primary": "#c0c1ff",
+                        "tertiary-container": "#e14ef6",
+                        "on-surface": "#e4e1ed",
+                        "secondary-fixed-dim": "#4cd7f4",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "secondary": "#4cd7f4",
+                        "secondary-fixed": "#aaedff",
+                        "on-tertiary-container": "#4d0059",
+                        "error-container": "#93000a",
+                        "background": "#13131b",
+                        "primary-fixed": "#e1e0ff",
+                        "secondary-container": "#00b3cf",
+                        "on-primary": "#1000a9",
+                        "on-tertiary-fixed-variant": "#7c008e",
+                        "on-secondary-container": "#00404b",
+                        "surface-container-lowest": "#0d0d15",
+                        "on-secondary-fixed": "#001f26",
+                        "surface-tint": "#c0c1ff",
+                        "outline": "#908fa0",
+                        "surface-bright": "#393841"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "glass-padding": "24px",
+                        "base": "8px",
+                        "container-padding-desktop": "40px",
+                        "container-padding-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Sora"],
+                        "display-lg-mobile": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Sora"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #13131b;
+            color: #e4e1ed;
+        }
+        
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid #334155;
+            box-shadow: inset 1px 1px 0 0 rgba(71, 85, 105, 0.5);
+        }
+        
+        .aurora-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            background: #13131b;
+        }
+        
+        .aurora-blob {
+            position: absolute;
+            filter: blur(100px);
+            opacity: 0.4;
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out alternate;
+        }
+        
+        .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: rgba(99, 102, 241, 0.3); animation-delay: 0s; }
+        .blob-2 { bottom: -20%; right: -10%; width: 60vw; height: 60vw; background: rgba(225, 78, 246, 0.2); animation-delay: -5s; }
+        .blob-3 { top: 40%; left: 60%; width: 40vw; height: 40vw; background: rgba(76, 215, 244, 0.2); animation-delay: -10s; }
+        
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(5%, 10%) scale(1.1); }
+            100% { transform: translate(-5%, -5%) scale(0.9); }
+        }
+
+        .gradient-btn {
+            background: linear-gradient(135deg, #494bd6, #e14ef6);
+            transition: all 0.3s ease;
+        }
+        
+        .gradient-btn:hover {
+            box-shadow: 0 0 20px rgba(225, 78, 246, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .tab-active {
+            background: rgba(192, 193, 255, 0.1);
+            color: #c0c1ff;
+            border-bottom: 2px solid #c0c1ff;
+        }
+
+        .tab-inactive {
+            color: #c7c4d7;
+        }
+        
+        .tab-inactive:hover {
+            color: #c0c1ff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- Ambient Background -->
+<div class="aurora-bg">
+<div class="aurora-blob blob-1"></div>
+<div class="aurora-blob blob-2"></div>
+<div class="aurora-blob blob-3"></div>
+</div>
+<!-- TopNavBar -->
+<nav class="bg-surface-container/60 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-outline-variant/30 shadow-[0_0_20px_rgba(192,193,255,0.1)]">
+<div class="flex justify-between items-center w-full px-container-padding-desktop max-w-7xl mx-auto h-20">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                P2P Platform
+            </div>
+<div class="hidden md:flex gap-8 h-full">
+<a class="flex items-center h-full px-4 text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 transition-all duration-300 active:scale-95 font-label-md text-label-md" href="#">Dashboard</a>
+<a class="flex items-center h-full px-4 text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 transition-all duration-300 active:scale-95 font-label-md text-label-md" href="#">Courses</a>
+<a class="flex items-center h-full px-4 text-primary border-b-2 border-primary pb-1 hover:bg-white/5 transition-all duration-300 active:scale-95 font-label-md text-label-md" href="#">Peers</a>
+<a class="flex items-center h-full px-4 text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 transition-all duration-300 active:scale-95 font-label-md text-label-md" href="#">Mentors</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors hover:bg-white/5 rounded-full active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/30">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="A highly detailed close-up portrait of a young professional in a futuristic cyberpunk office. Cinematic lighting with neon purple and blue reflections. Minimalist glassmorphism background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3wM-6YsPyZnpBJp8jLpjuVbj63nUv35aLIzBDfmgSw1NcaHk-QTUIuQjBmsqHrG_WZT1PUBSzJTr8zNjjmjkLH_ReaiqQ6kgAQixP9Way5rYKmkaOJvHJmxguQI2RTSwkX6SeH8ziY73A1G9oHvIpBQyXHdLcGCv6P7v6skMsX-D38geH9-3z8jVo68SdLn44f_JvKu6oaQjkWr7Ca0QRjJ3rwP7FDZHIEjpcbqTxhBA8xUUOvZAxfg"/>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-28 pb-20 px-container-padding-mobile md:px-container-padding-desktop max-w-7xl mx-auto w-full flex flex-col gap-8">
+<!-- Header & Tabs -->
+<div class="flex flex-col gap-6">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">Slots &amp; Search</h1>
+<!-- Dual-tab toggle -->
+<div class="flex border-b border-outline-variant/30 w-full max-w-md">
+<button class="flex-1 py-4 text-center font-label-md text-label-md tab-inactive transition-all duration-300">
+                    Mening Slotlarim
+                </button>
+<button class="flex-1 py-4 text-center font-label-md text-label-md tab-active transition-all duration-300">
+                    Qidiruv
+                </button>
+</div>
+</div>
+<!-- Search Content -->
+<div class="glass-panel p-glass-padding rounded-xl flex flex-col md:flex-row gap-4 items-center">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-[#0F172A] border border-[#334155] rounded-lg py-3 pl-12 pr-4 text-on-surface focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all placeholder:text-outline-variant font-body-md text-body-md" placeholder="Select Project..." type="text"/>
+</div>
+<button class="w-full md:w-auto px-6 py-3 border border-secondary text-secondary rounded-lg font-label-md text-label-md hover:bg-secondary/10 transition-colors whitespace-nowrap">
+                Filter
+            </button>
+</div>
+<!-- Discovery Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter mt-4">
+<!-- Card 1 -->
+<div class="glass-panel rounded-xl p-glass-padding flex flex-col gap-6 group hover:shadow-[0_0_30px_rgba(192,193,255,0.05)] transition-all duration-300">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-full overflow-hidden border 2 border-outline-variant/50 shrink-0">
+<img class="w-full h-full object-cover" data-alt="A photorealistic avatar of an Asian female student in a high-tech library setting. She is wearing a dark tech-wear jacket. Soft, cool lighting illuminates her face against a blurred background of holographic screens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBga_lo1DtO1v_inISE8nx644E9ZPEPXOm0JlWesDIdYF0Wdj1n5DkXXYT9PHNgWp0Nc9YIS141PXTFFe0WY0dIIQgYzsWvJ4KbemqHcELr8DxITbSeSGyQM-z2BVs8Fi5EdPOAanA4z7jMvvfGCzXXWT18IGOJBwWsp1hDb69cdfJ701Bg-FeY59nz63SJVbXhO--EJ3v21KWYCc6vOUi0ita3HaiiF9mTRPWbI7vA3PJMNf7tQX97Nw"/>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Elena Rostova</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">Advanced React Architecture</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-[rgba(99,102,241,0.1)] text-primary font-label-sm text-label-sm">Frontend</span>
+<span class="px-3 py-1 rounded-full bg-[rgba(56,201,230,0.1)] text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Campus A
+                    </span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline">calendar_today</span>
+<span>Oct 24, 14:00 - 15:30</span>
+</div>
+<button class="mt-auto w-full py-3 rounded-lg gradient-btn text-white font-label-md text-label-md">
+                    Book Now
+                </button>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel rounded-xl p-glass-padding flex flex-col gap-6 group hover:shadow-[0_0_30px_rgba(192,193,255,0.05)] transition-all duration-300">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-full overflow-hidden border 2 border-outline-variant/50 shrink-0">
+<img class="w-full h-full object-cover" data-alt="A portrait of a male peer mentor with curly hair, wearing a dark hoodie. The background is a sleek, modern tech incubator with subtle neon accents and glass partitions. Cinematic depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgxlLIrBswE902I5S2FJEFTTEvXs4J7R0TWjINekUnIYOYnB06p-tD-2DuuEVjfU_5xZU5KlHdo3vz_S-ez9NqB4qLxO3CJYH4zZcQecB00AwvbJJwTIw-b8S58DHFEwbK5vL6cky5HlTpwhcU5lG7KhKKKb1feyKuEuvr_2OGOZ7tGVFJFpL2LxZmkNdHvxI47BOJb72LgiNqVD_1cDjXN00S9fsKy_a05r871KaVMpmsnLihVo6b1A"/>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">David Kim</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">Machine Learning Basics</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-[rgba(99,102,241,0.1)] text-primary font-label-sm text-label-sm">AI/ML</span>
+<span class="px-3 py-1 rounded-full bg-[rgba(56,201,230,0.1)] text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Virtual
+                    </span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline">calendar_today</span>
+<span>Oct 25, 10:00 - 11:00</span>
+</div>
+<button class="mt-auto w-full py-3 rounded-lg gradient-btn text-white font-label-md text-label-md">
+                    Book Now
+                </button>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel rounded-xl p-glass-padding flex flex-col gap-6 group hover:shadow-[0_0_30px_rgba(192,193,255,0.05)] transition-all duration-300">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-full overflow-hidden border 2 border-outline-variant/50 shrink-0">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a female UI/UX designer. She has glasses and short dark hair. The setting is a design studio lit by cool monitors and warm desk lamps, creating a moody, focused atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLwHnOWI7SEOFn7oPLPZ-0AUFNq16hCAKM97JQYUvLvuIbvWhqM_Snedt3yHhkwqM-JxRa6NjE2-A_vvUDEDbjgwVpbspWAskc9eGz4eMnyUqFmeC4Gg8IJspr_mgVonBDSd4BQnn8PmRelBVkaE7TRB1o-syPK2YuTT1eeVxjcwpZZzkndCq9DF6TIk-WATpx8iRqxEdOAmw4xShUswL9xXCs3YI_3mEAvvhWoDYwFQqgPu5LeC2hgg"/>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Sarah Connor</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-1">Design Systems Review</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-[rgba(99,102,241,0.1)] text-primary font-label-sm text-label-sm">Design</span>
+<span class="px-3 py-1 rounded-full bg-[rgba(56,201,230,0.1)] text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Campus B
+                    </span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-outline">calendar_today</span>
+<span>Oct 26, 16:00 - 17:30</span>
+</div>
+<button class="mt-auto w-full py-3 rounded-lg gradient-btn text-white font-label-md text-label-md">
+                    Book Now
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-dim w-full py-12 border-t border-outline-variant/10 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-container-padding-desktop gap-6 max-w-7xl mx-auto">
+<div class="font-headline-sm text-headline-sm text-on-surface">
+                P2P Platform
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Help Center</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Community Guidelines</a>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2024 P2P Platform. The future of learning.
+            </div>
+</div>
+</footer>
+</body></html>

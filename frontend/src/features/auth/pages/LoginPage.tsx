@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -20,22 +21,24 @@ const verifySchema = z.object({
 type LoginFormValues = z.infer<typeof loginSchema>;
 type VerifyFormValues = z.infer<typeof verifySchema>;
 
-const SLIDES = [
-  {
-    title: 'Gamification',
-    description: 'Gain knowledge. Complete projects and achieve higher Levels.',
-  },
-  {
-    title: 'Peer-to-Peer Review',
-    description: 'Evaluate your peers and receive objective feedback to progress daily.',
-  },
-  {
-    title: 'Fast Slots Booking',
-    description: 'Instantly schedule p2p reviews, gain coins, and upgrade your level.',
-  }
-];
-
 export default function LoginPage() {
+  const { t } = useTranslation();
+
+  const SLIDES = [
+    {
+      title: t('login.slides.gamification.title'),
+      description: t('login.slides.gamification.desc'),
+    },
+    {
+      title: t('login.slides.p2p.title'),
+      description: t('login.slides.p2p.desc'),
+    },
+    {
+      title: t('login.slides.slots.title'),
+      description: t('login.slides.slots.desc'),
+    }
+  ];
+
   const { login, isLoggingIn, loginData, verifyCode, isVerifyingCode } = useAuth();
   const { setTokens } = useAuthStore();
   const [showOtp, setShowOtp] = useState(false);
@@ -71,10 +74,10 @@ export default function LoginPage() {
       onSuccess: (data) => {
         if (data.status === 'need_telegram') {
           setShowOtp(true);
-          triggerToast('Telegram botdan olingan tasdiqlash kodini kiriting', 'info');
+          triggerToast(t('login.toast.otp'), 'info');
         } else if (data.status === 'ok' && data.access_token) {
           setTokens(data.access_token, data.refresh_token as string, data.onboarding_done);
-          triggerToast('Muvaffaqiyatli kirdingiz!', 'success');
+          triggerToast(t('login.toast.success'), 'success');
         }
       },
     });
@@ -82,7 +85,7 @@ export default function LoginPage() {
 
   const onVerifySubmit = (values: VerifyFormValues) => {
     if (!loginData?.temp_token) {
-      triggerToast('Vaqtinchalik seans tugagan. Qaytadan login qiling.', 'error');
+      triggerToast(t('login.toast.sessionExpired'), 'error');
       setShowOtp(false);
       return;
     }
@@ -246,10 +249,10 @@ export default function LoginPage() {
 
               {/* Header Title inside card */}
               <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white tracking-tight leading-snug font-montserrat">
-                Welcome to School 21
+                {t('login.welcome')}
               </h1>
               <p className="text-[#B0BEC5] text-xs sm:text-sm mt-2 sm:mt-3 leading-relaxed">
-                Please enter your login and password that you received earlier
+                {t('login.description')}
               </p>
 
               {!showOtp ? (
@@ -263,7 +266,7 @@ export default function LoginPage() {
                         loginErrors.login ? 'border-[#FF9B9B] ring-2 ring-[#FF9B9B]/20' : 'border-black focus-within:border-[#38C9E6]'
                       }`}
                     >
-                      <label className="text-[10px] text-[#B0BEC5] font-bold select-none leading-none pt-0.5 font-montserrat uppercase tracking-wider">login</label>
+                      <label className="text-[10px] text-[#B0BEC5] font-bold select-none leading-none pt-0.5 font-montserrat uppercase tracking-wider">{t('login.loginLabel')}</label>
                       <input
                         type="text"
                         disabled={isLoggingIn}
@@ -285,7 +288,7 @@ export default function LoginPage() {
                       }`}
                     >
                       <div className="flex-grow flex flex-col justify-between">
-                        <label className="text-[10px] text-[#B0BEC5] font-bold select-none leading-none pt-0.5 font-montserrat uppercase tracking-wider">password</label>
+                        <label className="text-[10px] text-[#B0BEC5] font-bold select-none leading-none pt-0.5 font-montserrat uppercase tracking-wider">{t('login.passwordLabel')}</label>
                         <input
                           type={showPassword ? 'text' : 'password'}
                           disabled={isLoggingIn}
@@ -313,7 +316,7 @@ export default function LoginPage() {
                       disabled={isLoggingIn}
                       className="h-11 w-full sm:w-auto px-6 bg-gradient-to-r from-[#38C9E6] to-[#43E8A0] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] text-black font-black text-sm rounded-xl flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
                     >
-                      <span>{isLoggingIn ? 'Logging in...' : 'Log in'}</span>
+                      <span>{isLoggingIn ? t('login.loggingIn') : t('login.loginBtn')}</span>
                       <ChevronRight className="h-4 w-4 stroke-[3px]" />
                     </button>
                   </div>
@@ -323,10 +326,10 @@ export default function LoginPage() {
                 <form onSubmit={handleVerifySubmit(onVerifySubmit)} className="flex flex-col gap-4 sm:gap-5 mt-6 sm:mt-8">
                   <div className="bg-[#34495E] border-2 border-black p-3 sm:p-4 rounded-xl flex flex-col gap-2 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                     <span className="text-[10px] text-[#38C9E6] font-black uppercase tracking-widest font-montserrat">
-                      Secure Telegram Authentication
+                      {t('login.otpTitle')}
                     </span>
                     <p className="text-xs text-[#B0BEC5] leading-relaxed">
-                      Please open the bot using the link below to retrieve your securely generated 6-digit confirmation code.
+                      {t('login.otpDescription')}
                     </p>
                     {loginData?.bot_url && (
                       <a
@@ -335,7 +338,7 @@ export default function LoginPage() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-start gap-1 text-xs font-black text-[#43E8A0] hover:text-[#38C9E6] uppercase tracking-wider mt-2 min-h-11 sm:min-h-0"
                       >
-                        <Send className="h-3.5 w-3.5" /> Open Telegram Bot
+                        <Send className="h-3.5 w-3.5" /> {t('login.openBot')}
                       </a>
                     )}
                   </div>
@@ -346,7 +349,7 @@ export default function LoginPage() {
                         verifyErrors.code ? 'border-[#FF9B9B] ring-2 ring-[#FF9B9B]/20' : 'border-black focus-within:border-[#38C9E6]'
                       }`}
                     >
-                      <label className="text-[10px] text-[#B0BEC5] font-bold select-none leading-none pt-0.5 font-montserrat uppercase tracking-wider">verification code</label>
+                      <label className="text-[10px] text-[#B0BEC5] font-bold select-none leading-none pt-0.5 font-montserrat uppercase tracking-wider">{t('login.verificationCode')}</label>
                       <input
                         type="text"
                         maxLength={6}
@@ -368,7 +371,7 @@ export default function LoginPage() {
                       className="h-11 w-full bg-gradient-to-r from-[#38C9E6] to-[#43E8A0] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-y-[2px] active:shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] text-black font-black text-sm rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
                     >
                       <Key className="h-4 w-4 stroke-[2.5]" />{' '}
-                      {isVerifyingCode ? 'Verifying OTP...' : 'Verify OTP Code'}
+                      {isVerifyingCode ? t('login.verifyingOtp') : t('login.verifyOtp')}
                     </button>
 
                     <button
@@ -376,7 +379,7 @@ export default function LoginPage() {
                       onClick={() => setShowOtp(false)}
                       className="text-xs font-bold text-center text-[#B0BEC5] hover:text-[#38C9E6] mt-1 transition-colors cursor-pointer min-h-11 sm:min-h-0 flex items-center justify-center"
                     >
-                      Go back to log in
+                      {t('login.goBack')}
                     </button>
                   </div>
                 </form>
@@ -388,17 +391,17 @@ export default function LoginPage() {
               {/* Footer inside login card */}
               <div className="flex flex-col gap-2">
                 <span className="text-white text-xs sm:text-sm font-bold font-montserrat">
-                  How to begin the study?
+                  {t('login.howToBegin')}
                 </span>
                 <p className="text-[#B0BEC5] text-[11px] sm:text-xs leading-relaxed">
-                  If you want to study at the next-gen School, press the{' '}
+                  {t('login.schoolLinkDesc1')}{' '}
                   <a
                     href="https://21-school.ru"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#38C9E6] hover:underline font-semibold"
                   >
-                    link to School21
+                    {t('login.schoolLink')}
                   </a>
                 </p>
               </div>

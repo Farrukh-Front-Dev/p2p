@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useLeaderboard } from '@/features/leaderboard/hooks';
 import { Card, Skeleton, PageHeader, EmptyState, Button } from '@/shared/ui';
 import { Trophy, Zap, BookOpen, GraduationCap, Medal, AlertTriangle, RefreshCw } from 'lucide-react';
@@ -6,6 +7,7 @@ import { Trophy, Zap, BookOpen, GraduationCap, Medal, AlertTriangle, RefreshCw }
 type TabType = 'xp' | 'taught' | 'learned';
 
 export default function LeaderboardPage() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<TabType>('xp');
   const {
     mostXP, mostTaught, mostLearned,
@@ -20,9 +22,9 @@ export default function LeaderboardPage() {
       case 'xp':
         return { data: mostXP, loading: isLoadingXP, isError: isErrorXP, refetch: refetchXP, suffix: 'XP' };
       case 'taught':
-        return { data: mostTaught, loading: isLoadingTaught, isError: isErrorTaught, refetch: refetchTaught, suffix: 'marta' };
+        return { data: mostTaught, loading: isLoadingTaught, isError: isErrorTaught, refetch: refetchTaught, suffix: t('leaderboard.suffix.times') };
       case 'learned':
-        return { data: mostLearned, loading: isLoadingLearned, isError: isErrorLearned, refetch: refetchLearned, suffix: 'marta' };
+        return { data: mostLearned, loading: isLoadingLearned, isError: isErrorLearned, refetch: refetchLearned, suffix: t('leaderboard.suffix.times') };
     }
   };
 
@@ -42,7 +44,7 @@ export default function LeaderboardPage() {
   };
 
   const tabs = [
-    { key: 'xp' as TabType, label: 'Jami XP', icon: Zap },
+    { key: 'xp' as TabType, label: t('leaderboard.tabs.xp'), icon: Zap },
     { key: 'taught' as TabType, label: 'Ko\'p o\'rgatganlar', icon: GraduationCap },
     { key: 'learned' as TabType, label: 'Ko\'p o\'rganganlar', icon: BookOpen },
   ];
@@ -50,8 +52,8 @@ export default function LeaderboardPage() {
   return (
     <div className="flex flex-col gap-4 sm:gap-6 animate-fade-in font-ibm-plex-mono text-white">
       <PageHeader
-        title="Koalitsiya Reytingi"
-        subtitle="Joriy oy davomida eng faol qatnashgan School21 student va koalitsiya a'zolari jadvali."
+        title={t('leaderboard.title')}
+        subtitle={t('leaderboard.subtitle')}
         icon={Trophy}
         iconClassName="text-[#ffd740]"
       />
@@ -84,13 +86,13 @@ export default function LeaderboardPage() {
         <Card className="flex flex-col items-center justify-center py-12 gap-4 text-center">
           <AlertTriangle className="h-10 w-10 text-[#FF9B9B]" />
           <h3 className="text-sm font-extrabold text-[#FF9B9B] font-montserrat uppercase">
-            Ma'lumotlarni yuklashda xatolik
+            {t('leaderboard.errors.loadTitle')}
           </h3>
           <p className="text-xs text-[#B0BEC5]">
-            Reyting ma'lumotlarini olishda xato yuz berdi. Qayta urinib ko'ring.
+            {t('leaderboard.errors.loadDesc')}
           </p>
           <Button variant="primary" onClick={() => refetch()}>
-            <RefreshCw className="h-4 w-4" /> Qayta yuklash
+            <RefreshCw className="h-4 w-4" /> {t('leaderboard.reload')}
           </Button>
         </Card>
       ) : loading ? (
@@ -124,8 +126,8 @@ export default function LeaderboardPage() {
         </div>
       ) : rankedList.length === 0 ? (
         <EmptyState
-          title="Reyting bo'sh"
-          description="Ushbu tur yozuvlari hali hisoblab chiqilmagan."
+          title={t('leaderboard.empty.title')}
+          description={t('leaderboard.empty.desc')}
           icon={<Medal className="h-7 w-7" />}
         />
       ) : (
@@ -150,10 +152,10 @@ export default function LeaderboardPage() {
 
                 {/* Information */}
                 <span className="text-sm sm:text-base font-extrabold text-white truncate max-w-full font-montserrat tracking-tight">
-                  @{item.first_name || 'Talaba'}
+                  @{item.first_name || t('leaderboard.student')}
                 </span>
                 <span className="text-[10px] text-[#B0BEC5] font-bold tracking-widest uppercase mt-1">
-                  RANK SPOTLIGHT
+                  {t('leaderboard.rankSpotlight')}
                 </span>
 
                 <div className="mt-3 sm:mt-4 px-3 sm:px-4 py-2 rounded-xl bg-[#34495E] border-2 border-black w-full text-center shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
@@ -185,10 +187,10 @@ export default function LeaderboardPage() {
 
                     <div className="flex flex-col min-w-0">
                       <span className="text-xs sm:text-sm font-bold text-white truncate">
-                        @{item.first_name || 'Talaba'}
+                        @{item.first_name || t('leaderboard.student')}
                       </span>
                       <span className="text-[9px] text-[#B0BEC5] font-bold uppercase tracking-wider hidden sm:block">
-                        S21 KEY MEMBER
+                        {t('leaderboard.keyMember')}
                       </span>
                     </div>
                   </div>

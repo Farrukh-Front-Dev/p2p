@@ -1,6 +1,163 @@
 INFO:     Will watch for changes in these directories: ['/home/farrukh/Frontend/p2p/backend']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [20724] using WatchFiles
-INFO:     Started server process [20749]
+INFO:     Started reloader process [18133] using WatchFiles
+INFO:     Started server process [18161]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
+INFO:     127.0.0.1:58716 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54232 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54234 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     127.0.0.1:54250 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:54266 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54276 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54298 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54282 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54248 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54324 - "GET /api/v1/leaderboard/most-taught HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54336 - "GET /api/v1/leaderboard/most-learned HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54308 - "GET /api/v1/leaderboard/most-xp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49594 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49602 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49616 - "GET /api/v1/settings/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44544 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44532 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50064 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50060 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50076 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50052 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:32816 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32802 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:32836 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:32844 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32856 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32832 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+S21 429 rate-limit (projects) — qisman natija (600 ta)
+INFO:     127.0.0.1:32866 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32860 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32882 - "GET /api/v1/leaderboard/most-xp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32902 - "GET /api/v1/leaderboard/most-learned HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32898 - "GET /api/v1/leaderboard/most-taught HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54152 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54162 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46054 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46048 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52618 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52610 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52604 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52638 - "GET /api/v1/leaderboard/most-taught HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52622 - "GET /api/v1/leaderboard/most-xp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52644 - "GET /api/v1/leaderboard/most-learned HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52646 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52666 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52662 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49654 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49650 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:41884 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:41892 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:41904 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:41918 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41924 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41902 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41926 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:60696 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60722 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:60736 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:60708 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60740 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:60750 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:60770 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:60782 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60766 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60784 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60794 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:53984 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53972 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:54000 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54002 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53990 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54004 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:48632 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:40588 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40608 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40634 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40598 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40612 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40626 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:43362 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:43376 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43382 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:43390 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:41820 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41838 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:41850 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41846 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:41860 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:41826 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41884 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:41894 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41918 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:41922 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41874 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41906 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41942 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41956 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41936 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:46458 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:46468 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:46480 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:46482 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46502 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46498 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46496 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46470 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49848 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49864 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49878 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49882 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49888 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49836 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33580 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33586 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33592 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33570 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+S21 429 rate-limit (projects) — qisman natija (500 ta)
+INFO:     127.0.0.1:33616 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+S21 429 rate-limit (projects) — qisman natija (500 ta)
+INFO:     127.0.0.1:33606 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK

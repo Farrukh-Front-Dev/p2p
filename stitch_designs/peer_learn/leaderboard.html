@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Peer Learn - Leaderboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffe17b",
+                    "outline": "#85948f",
+                    "on-primary-container": "#00473c",
+                    "on-tertiary": "#3b2f00",
+                    "on-error-container": "#ffdad6",
+                    "surface": "#0e1513",
+                    "secondary-fixed": "#e8deff",
+                    "on-background": "#dde4e0",
+                    "tertiary-container": "#caa600",
+                    "surface-variant": "#2f3634",
+                    "surface-container-low": "#161d1b",
+                    "on-tertiary-fixed-variant": "#564500",
+                    "on-secondary-fixed-variant": "#4f00d0",
+                    "on-surface-variant": "#bbcac4",
+                    "on-primary": "#00382f",
+                    "on-secondary-container": "#c0acff",
+                    "inverse-on-surface": "#2b3230",
+                    "on-surface": "#dde4e0",
+                    "secondary-container": "#5203d5",
+                    "on-primary-fixed-variant": "#005145",
+                    "surface-container": "#1a211f",
+                    "error": "#ffb4ab",
+                    "secondary": "#cdbdff",
+                    "inverse-surface": "#dde4e0",
+                    "primary-fixed-dim": "#44ddc1",
+                    "surface-tint": "#44ddc1",
+                    "on-primary-fixed": "#00201a",
+                    "on-secondary-fixed": "#20005f",
+                    "primary": "#44ddc1",
+                    "tertiary": "#eac32b",
+                    "surface-container-lowest": "#09100e",
+                    "on-tertiary-container": "#4b3d00",
+                    "secondary-fixed-dim": "#cdbdff",
+                    "surface-container-highest": "#2f3634",
+                    "on-tertiary-fixed": "#231b00",
+                    "on-secondary": "#370096",
+                    "surface-dim": "#0e1513",
+                    "background": "#0e1513",
+                    "outline-variant": "#3c4a46",
+                    "surface-container-high": "#242b29",
+                    "surface-bright": "#343b38",
+                    "primary-container": "#00bfa5",
+                    "inverse-primary": "#006b5c",
+                    "primary-fixed": "#68fadd",
+                    "on-error": "#690005",
+                    "tertiary-fixed-dim": "#eac32b",
+                    "error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "xs": "4px",
+                    "md": "16px",
+                    "unit": "4px",
+                    "xl": "32px",
+                    "sm": "8px",
+                    "lg": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-sm": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-sm": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0f1923;
+            color: #dde4e0;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(26, 35, 50, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid #2d3748;
+        }
+        .rank-glow:hover {
+            box-shadow: 0 0 12px 0 rgba(0, 191, 165, 0.2);
+            border-color: #00bfa5;
+        }
+        .active-tab-indicator {
+            box-shadow: 0 0 10px rgba(0, 191, 165, 0.4);
+        }
+    </style>
+</head>
+<body class="dark overflow-x-hidden">
+<!-- SideNavBar (Desktop) -->
+<aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container border-r border-outline-variant hidden lg:flex flex-col py-xl z-50">
+<div class="px-lg mb-xl flex items-center gap-md">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<div>
+<h1 class="font-display-sm text-display-sm font-bold text-primary">Peer Learn</h1>
+<p class="text-on-surface-variant font-label-md text-label-md">P2P Academy</p>
+</div>
+</div>
+<nav class="flex-grow space-y-xs">
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body-md text-body-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">event_seat</span>
+<span class="font-body-md text-body-md">Slots</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-body-md text-body-md">Search</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-primary bg-surface-container-high border-l-4 border-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+<span class="font-body-md text-body-md">Leaderboard</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-body-md text-body-md">Profile</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-lg pt-lg border-t border-outline-variant">
+<button class="flex items-center gap-md px-lg py-md w-full text-on-surface-variant hover:bg-surface-container-highest hover:text-error transition-colors">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-body-md text-body-md">Logout</span>
+</button>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-40 bg-surface-container-low border-b border-outline-variant flex justify-between items-center h-16 px-margin-mobile lg:px-margin-desktop ml-0 lg:ml-[260px] lg:w-[calc(100%-260px)]">
+<h2 class="font-headline-lg-mobile lg:font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-bold text-primary">Leaderboard</h2>
+<div class="flex items-center gap-md">
+<button class="hover:bg-surface-variant rounded-full p-2 text-on-surface-variant active:scale-95 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant">
+<img alt="User Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOdsaLksLJpgNz8wXKkrfn4Wje1r_lGSwX6AoOlirJED4I9rLlwTH_O7Em07HS3QlCzRWJf7bX2dsY_d-VrFWg4E7gbXwkaHGwrZx75q5HLqOdsYoDgMq9aTq7FKNmxSrgIXoGnmvQtyWj1PZp6AwtI4OEYXcgMICFR1sX-ko2LB4xEqFbsmnTZgp0A5RXndwfo_dWQUuNqdqK0zaVc_EOsO9VzBXOuWM4asL5l6ioLysjqmp-sXEhiCfwG_7A69_bzcjtobu7eXzM"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-0 lg:ml-[260px] pt-24 pb-32 lg:pb-12 px-margin-mobile lg:px-margin-desktop min-h-screen bg-[#0f1923]">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-lg gap-lg">
+<div class="flex items-center gap-md">
+<div class="w-16 h-16 bg-tertiary-container/20 rounded-2xl flex items-center justify-center border border-tertiary/30">
+<span class="material-symbols-outlined text-[40px] text-tertiary" style="font-variation-settings: 'FILL' 1;">trophy</span>
+</div>
+<div>
+<h3 class="font-display-sm text-display-sm font-bold text-on-surface">Reyting</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">Top performers this season</p>
+</div>
+</div>
+<!-- Tab Switcher (Pill Style) -->
+<div class="bg-surface-container-highest p-1 rounded-full flex self-start lg:self-center">
+<button class="px-md py-sm rounded-full font-label-md text-label-md bg-primary-container text-on-primary active-tab-indicator transition-all">XP</button>
+<button class="px-md py-sm rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all">Most Taught</button>
+<button class="px-md py-sm rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all">Most Learned</button>
+</div>
+</div>
+<!-- Leaderboard List Section -->
+<div class="glass-card rounded-xl overflow-hidden mb-lg">
+<!-- Table Header -->
+<div class="grid grid-cols-12 px-lg py-md border-b border-outline-variant bg-surface-container-high/50">
+<div class="col-span-1 text-on-surface-variant font-label-md text-label-md">RANK</div>
+<div class="col-span-7 lg:col-span-8 text-on-surface-variant font-label-md text-label-md">STUDENT</div>
+<div class="col-span-4 lg:col-span-3 text-right text-on-surface-variant font-label-md text-label-md">SCORE</div>
+</div>
+<!-- Row 1: Gold -->
+<div class="grid grid-cols-12 items-center px-lg py-md border-b border-outline-variant/30 hover:bg-surface-container-highest/40 transition-all rank-glow group cursor-pointer">
+<div class="col-span-1 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center font-bold text-tertiary bg-tertiary/10 rounded-full border border-tertiary/30">1</span>
+</div>
+<div class="col-span-7 lg:col-span-8 flex items-center gap-md">
+<div class="relative">
+<img alt="dev_knight" class="w-12 h-12 rounded-full border-2 border-tertiary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASDUGJXPyWgtwAAzbVcSHpnQA2JlziQiBierm77EVE5h_sbnR6iilpyn8d-oEwTbOqJn5oePXWUJuR2Oj2g50XaulRGbTcOLIHVWpN-MLa0_A4hMHPaBAGbNDMl_SIQCiw-rzHLdHvOnRK_dDbOquCqQMw1XD-FKThS5ZKwjLZBNfk14K624kODhzMkGJepNaOOiq9tS7ku1RAL3bm7n69yvv5jbm-HXNZsEyemkOvQnfSoGguSJ6m6vEiqoeOCWWiQ2xA-kmCH2ch"/>
+<div class="absolute -bottom-1 -right-1 bg-tertiary rounded-full p-0.5">
+<span class="material-symbols-outlined text-[12px] text-on-tertiary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">dev_knight</p>
+<p class="text-on-surface-variant font-body-sm text-body-sm">@knight21</p>
+</div>
+</div>
+<div class="col-span-4 lg:col-span-3 flex justify-end">
+<div class="bg-primary/10 text-primary border border-primary/20 px-md py-xs rounded-full font-label-md text-label-md flex items-center gap-xs">
+<span class="font-bold">9200</span>
+<span>XP</span>
+</div>
+</div>
+</div>
+<!-- Row 2: Silver -->
+<div class="grid grid-cols-12 items-center px-lg py-md border-b border-outline-variant/30 hover:bg-surface-container-highest/40 transition-all rank-glow group cursor-pointer">
+<div class="col-span-1 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center font-bold text-on-surface-variant bg-on-surface-variant/10 rounded-full border border-outline-variant">2</span>
+</div>
+<div class="col-span-7 lg:col-span-8 flex items-center gap-md">
+<img alt="pixel_wizard" class="w-12 h-12 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVk0egxOQ-eZHdD5faeeAaI2vHkAhRgqe8yiQvLXY7R764w_czU7DvNuggm2-Ob2g-vj6KTEQ1yUax5tHTgB5vr_Vf9_aydBtVVnvJ_rkaibzCFCI_UvwHAnXXsSBRj576DMQsDoHXVZrNiWMHJ4gAAHWDlExZuiQu9TKngCVNtWxFQEfT7yPq_nnGNXsjXI9mWnf5BM1vcrBoML06cW0LRMwA2Xd5Om0WscJFBi0qALyIOiNfXDfnrphyQP7PtODve9-KM48oz2wr"/>
+<div>
+<p class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">pixel_wizard</p>
+<p class="text-on-surface-variant font-body-sm text-body-sm">@wizard21</p>
+</div>
+</div>
+<div class="col-span-4 lg:col-span-3 flex justify-end">
+<div class="bg-primary/10 text-primary border border-primary/20 px-md py-xs rounded-full font-label-md text-label-md flex items-center gap-xs">
+<span class="font-bold">8850</span>
+<span>XP</span>
+</div>
+</div>
+</div>
+<!-- Row 3: Bronze -->
+<div class="grid grid-cols-12 items-center px-lg py-md border-b border-outline-variant/30 hover:bg-surface-container-highest/40 transition-all rank-glow group cursor-pointer">
+<div class="col-span-1 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center font-bold text-[#CD7F32] bg-[#CD7F32]/10 rounded-full border border-[#CD7F32]/30">3</span>
+</div>
+<div class="col-span-7 lg:col-span-8 flex items-center gap-md">
+<img alt="student_21" class="w-12 h-12 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv3bYnDi8klJMkPfrxzz6oFvTBpXptKNOPhMc8vhUwUhJo6nLNca5sghviPQiT7625pyqOetCB90PJJOsyvg9tYldA0ewgmVEU6zgLT3l1A0ZnzygnzsvjCmQWPvyRoZe0LWeCzogQ_M7WJ6vKIDPHXcn6AuzMLRsYtp2sVkFqn92UrjxNuVt7B89uf1F9bMCX5Czj4rh4Lky9cEqhmmAslpF0_UcAy-bOXyo-FRfYnDyGAqlY1ESggonpIDcjJsbdsv5suYBpoUhI"/>
+<div>
+<p class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">student_21</p>
+<p class="text-on-surface-variant font-body-sm text-body-sm">@student21</p>
+</div>
+</div>
+<div class="col-span-4 lg:col-span-3 flex justify-end">
+<div class="bg-primary/10 text-primary border border-primary/20 px-md py-xs rounded-full font-label-md text-label-md flex items-center gap-xs">
+<span class="font-bold">4500</span>
+<span>XP</span>
+</div>
+</div>
+</div>
+<!-- Extra Placeholder Rows to show full list -->
+<div class="grid grid-cols-12 items-center px-lg py-md border-b border-outline-variant/30 hover:bg-surface-container-highest/40 transition-all group cursor-pointer">
+<div class="col-span-1 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center font-bold text-on-surface-variant">4</span>
+</div>
+<div class="col-span-7 lg:col-span-8 flex items-center gap-md">
+<img alt="code_master" class="w-12 h-12 rounded-full border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClwWEInl1OdML5XB2Hkdnjg7Crlfcmrlvs27MmGkgxrX7Y_D1Ow6tuJsdiXiU0BGu_dOTeeetAbi-QxGpAZY5YYaFoWLtfOKQZROzXMmgF6AMPhY8OxOd_NMrZCrdaXTTLwII4HbX3gg-EX0LySbqwmQnor5bCMc3iGOQ6lYjcWHSyTPLoiu3I8jfnXjupAZU_yDWWkSBlhcif40BKCY4S5mpnE6PPtkwKLKsXCG7xmjI7QzMODeqmPlB4ueYExKH9paRMYN7qyrDv"/>
+<div>
+<p class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">code_master</p>
+<p class="text-on-surface-variant font-body-sm text-body-sm">@coder_0</p>
+</div>
+</div>
+<div class="col-span-4 lg:col-span-3 flex justify-end">
+<div class="bg-surface-variant text-on-surface-variant px-md py-xs rounded-full font-label-md text-label-md flex items-center gap-xs">
+<span class="font-bold">3200</span>
+<span>XP</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Achievement Card (Asymmetric Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg mt-xl">
+<div class="glass-card rounded-xl p-lg relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-500"></div>
+<h4 class="font-headline-md text-headline-md text-primary mb-md">Top Gainer</h4>
+<div class="flex items-center gap-lg">
+<div class="w-14 h-14 bg-surface-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-display-sm" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+</div>
+<div>
+<p class="text-on-surface font-body-lg text-body-lg">@wizard21 gained +450 XP</p>
+<p class="text-on-surface-variant font-body-sm text-body-sm">In the last 24 hours</p>
+</div>
+</div>
+</div>
+<div class="bg-primary-container rounded-xl p-lg flex flex-col justify-between">
+<h4 class="font-headline-md text-headline-md text-on-primary-container">Next Level Reward</h4>
+<div class="flex justify-between items-end">
+<p class="text-on-primary-container/80 font-body-md text-body-md max-w-[200px]">Reach 10k XP to unlock the Exclusive 'Neon Mentor' badge.</p>
+<button class="bg-surface text-primary font-label-md text-label-md px-lg py-sm rounded-lg hover:bg-surface-bright transition-colors">View Badge</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface/80 backdrop-blur-md border-t border-outline-variant lg:hidden flex justify-around items-center h-16 pb-safe px-4 shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">event_seat</span>
+<span class="font-label-md text-label-md">Slots</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-md text-label-md">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+<span class="font-label-md text-label-md">Leaderboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+<!-- Interactive Ambient Particles -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-20" id="ambient-particles"></div>
+<script>
+        // Simple micro-interaction for the tab switcher
+        const tabs = document.querySelectorAll('.bg-surface-container-highest button');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => {
+                    t.classList.remove('bg-primary-container', 'text-on-primary', 'active-tab-indicator');
+                    t.classList.add('text-on-surface-variant');
+                });
+                tab.classList.remove('text-on-surface-variant');
+                tab.classList.add('bg-primary-container', 'text-on-primary', 'active-tab-indicator');
+            });
+        });
+
+        // Atmospheric particle effect
+        const particleContainer = document.getElementById('ambient-particles');
+        const particleCount = 12;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'absolute bg-primary rounded-full blur-3xl';
+            const size = Math.random() * 200 + 100;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top = `${Math.random() * 100}%`;
+            particle.style.opacity = '0.1';
+            
+            // Random animation
+            particle.animate([
+                { transform: 'translate(0, 0) scale(1)' },
+                { transform: `translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px) scale(1.2)` },
+                { transform: 'translate(0, 0) scale(1)' }
+            ], {
+                duration: 10000 + Math.random() * 10000,
+                iterations: Infinity,
+                easing: 'ease-in-out'
+            });
+
+            particleContainer.appendChild(particle);
+        }
+    </script>
+</body></html>

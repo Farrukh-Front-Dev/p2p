@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Review your Peer - Peer Learn</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffe17b",
+                        "outline": "#85948f",
+                        "on-primary-container": "#00473c",
+                        "on-tertiary": "#3b2f00",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#0e1513",
+                        "secondary-fixed": "#e8deff",
+                        "on-background": "#dde4e0",
+                        "tertiary-container": "#caa600",
+                        "surface-variant": "#2f3634",
+                        "surface-container-low": "#161d1b",
+                        "on-tertiary-fixed-variant": "#564500",
+                        "on-secondary-fixed-variant": "#4f00d0",
+                        "on-surface-variant": "#bbcac4",
+                        "on-primary": "#00382f",
+                        "on-secondary-container": "#c0acff",
+                        "inverse-on-surface": "#2b3230",
+                        "on-surface": "#dde4e0",
+                        "secondary-container": "#5203d5",
+                        "on-primary-fixed-variant": "#005145",
+                        "surface-container": "#1a211f",
+                        "error": "#ffb4ab",
+                        "secondary": "#cdbdff",
+                        "inverse-surface": "#dde4e0",
+                        "primary-fixed-dim": "#44ddc1",
+                        "surface-tint": "#44ddc1",
+                        "on-primary-fixed": "#00201a",
+                        "on-secondary-fixed": "#20005f",
+                        "primary": "#44ddc1",
+                        "tertiary": "#eac32b",
+                        "surface-container-lowest": "#09100e",
+                        "on-tertiary-container": "#4b3d00",
+                        "secondary-fixed-dim": "#cdbdff",
+                        "surface-container-highest": "#2f3634",
+                        "on-tertiary-fixed": "#231b00",
+                        "on-secondary": "#370096",
+                        "surface-dim": "#0e1513",
+                        "background": "#0e1513",
+                        "outline-variant": "#3c4a46",
+                        "surface-container-high": "#242b29",
+                        "surface-bright": "#343b38",
+                        "primary-container": "#00bfa5",
+                        "inverse-primary": "#006b5c",
+                        "primary-fixed": "#68fadd",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#eac32b",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-sm": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .feedback-card.selected-positive {
+            border-color: #44ddc1;
+            box-shadow: 0px 0px 12px 0px rgba(68, 221, 193, 0.2);
+            background-color: #243447;
+        }
+        .feedback-card.selected-negative {
+            border-color: #ffb4ab;
+            box-shadow: 0px 0px 12px 0px rgba(255, 180, 171, 0.2);
+            background-color: #243447;
+        }
+        .textarea-focus:focus {
+            border-color: #44ddc1;
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-40 bg-surface-container-low border-b border-outline-variant flex justify-between items-center h-16 px-margin-mobile lg:px-margin-desktop ml-0 lg:ml-[260px]">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary lg:hidden">Peer Learn</h1>
+<div class="hidden lg:block"></div> <!-- Spacer for desktop -->
+<div class="flex items-center gap-md">
+<button class="hover:bg-surface-variant rounded-full p-2 transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant">
+<img alt="User Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq4g7glj0MtSPPf4xWh8dSEAx9Ln3Ku5WVXA1jgBBs31c5m_dKuaoC382LGkS-CFt_09dh1QLFyYuRuvQFtMy2fx7ZVeGRip_o0sY5T1YeeQ7AQbtETbwdoSuhQrOfnMjrCIM0VaEuT7ZXORY_Giwg-0ImM0KwQz5rLpuP6_cPfkdt_IXa4AXlZWT_jAIuY9J8wGpPyEWiyEK7l_ttkIbQ7paVyGaNw5QZ6npnFDow9Iu1vfmorwIUOxg0FOOMJ1ECrumj38vXqdxJ"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Desktop) -->
+<aside class="fixed left-0 top-0 h-full w-[260px] hidden lg:flex flex-col py-xl bg-surface-container border-r border-outline-variant z-50">
+<div class="px-lg mb-xl">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary text-display-sm" data-icon="school">school</span>
+<div>
+<h2 class="font-display-sm text-display-sm font-bold text-primary leading-tight">Peer Learn</h2>
+<p class="text-body-sm text-on-surface-variant opacity-70">P2P Academy</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 flex flex-col">
+<!-- Active Tab: Dashboard -->
+<a class="flex items-center gap-md px-lg py-md text-primary bg-surface-container-high border-l-4 border-primary hover:bg-surface-container-highest transition-colors group" href="#">
+<span class="material-symbols-outlined group-active:scale-95 duration-150" data-icon="dashboard">dashboard</span>
+<span class="font-body-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined group-active:scale-95 duration-150" data-icon="event_seat">event_seat</span>
+<span class="font-body-md">Slots</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined group-active:scale-95 duration-150" data-icon="search">search</span>
+<span class="font-body-md">Search</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined group-active:scale-95 duration-150" data-icon="leaderboard">leaderboard</span>
+<span class="font-body-md">Leaderboard</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined group-active:scale-95 duration-150" data-icon="person">person</span>
+<span class="font-body-md">Profile</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined group-active:scale-95 duration-150" data-icon="settings">settings</span>
+<span class="font-body-md">Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-lg">
+<a class="flex items-center gap-md py-md text-on-surface-variant hover:text-error transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-body-md">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-24 lg:pb-12 lg:ml-[260px] px-margin-mobile lg:px-margin-desktop max-w-[1440px] mx-auto min-h-screen">
+<header class="mb-xl">
+<h2 class="font-display-sm text-display-sm text-on-surface mb-xs">Review your Peer</h2>
+<p class="text-on-surface-variant font-body-md">Your feedback helps the community grow. Please be honest and constructive.</p>
+</header>
+<section class="max-w-4xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg mb-xl">
+<!-- Card 1: Exceeded Expectations -->
+<button class="feedback-card group flex flex-col items-center justify-center p-xl bg-surface-container border border-outline-variant rounded-xl transition-all duration-300 hover:border-primary active:scale-98" id="btn-positive" onclick="selectFeedback('positive')">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-[40px]" data-icon="thumb_up">thumb_up</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">Exceeded expectations</span>
+<p class="text-body-sm text-on-surface-variant mt-sm text-center">Demonstrated deep knowledge and collaborated effectively.</p>
+</button>
+<!-- Card 2: Needs Improvement -->
+<button class="feedback-card group flex flex-col items-center justify-center p-xl bg-surface-container border border-outline-variant rounded-xl transition-all duration-300 hover:border-error active:scale-98" id="btn-negative" onclick="selectFeedback('negative')">
+<div class="w-16 h-16 rounded-full bg-error/10 flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-error text-[40px]" data-icon="thumb_down">thumb_down</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">Needs improvement</span>
+<p class="text-body-sm text-on-surface-variant mt-sm text-center">Some concepts were unclear or communication was inconsistent.</p>
+</button>
+</div>
+<!-- Review Details -->
+<div class="bg-surface-container border border-outline-variant rounded-xl p-lg space-y-md">
+<label class="font-headline-md text-headline-md text-on-surface block" for="review-comments">Detailed Comments</label>
+<div class="relative">
+<textarea class="w-full bg-surface border border-outline-variant rounded-lg p-md text-on-surface font-body-md textarea-focus transition-all resize-none" id="review-comments" placeholder="Describe the learning experience..." rows="6"></textarea>
+<div class="absolute bottom-3 right-3 flex gap-xs">
+<div class="w-1 h-1 rounded-full bg-primary opacity-50"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-md border-t border-outline-variant">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full border border-outline-variant p-0.5 overflow-hidden">
+<img alt="Peer Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqouT2OobYthQE-QjzInlvRZDvgWs9vNgCjRqVRL8Pur1IVxEP2-U6rUFQrq21FZFIB3z5MXt1sXm5ESQSYE2sqwcZM9YL8iENfzRJRVN7Mi-wxGsDsYwrZUHA8LIEzPmbc9hmxgVrYmCh_uB99vECwvMm5KS99zjv3X7wPZkUiZcR4HRNL-RM0WhFTZM0sZP4L9uTir7-NbztQofonKH932b4bW-Os8OnctfZGAMtg5DsHDxtb5srU_FWNjRBEkjmc31PqrR960h8"/>
+</div>
+<div>
+<p class="text-body-sm font-bold text-on-surface">Reviewing Sam Rivera</p>
+<p class="text-[10px] uppercase tracking-wider text-on-surface-variant">Advanced Javascript Slot</p>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary px-xl py-md rounded-lg font-headline-md transition-all active:scale-95 shadow-lg shadow-primary/10">
+                        Submit Review
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="lg:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container border-t border-outline-variant shadow-lg flex justify-around items-center h-16 pb-safe">
+<a class="flex flex-col items-center justify-center text-primary group active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant group hover:text-primary active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="event_seat">event_seat</span>
+<span class="font-label-md text-label-md">Slots</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant group hover:text-primary active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-md text-label-md">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant group hover:text-primary active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-label-md text-label-md">Leaderboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant group hover:text-primary active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+<script>
+        function selectFeedback(type) {
+            const posBtn = document.getElementById('btn-positive');
+            const negBtn = document.getElementById('btn-negative');
+            
+            // Clear existing selections
+            posBtn.classList.remove('selected-positive');
+            negBtn.classList.remove('selected-negative');
+            
+            // Set selection
+            if (type === 'positive') {
+                posBtn.classList.add('selected-positive');
+            } else {
+                negBtn.classList.add('selected-negative');
+            }
+        }
+    </script>
+</body></html>

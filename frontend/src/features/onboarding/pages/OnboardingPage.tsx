@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { onboardingService } from '@/features/onboarding/api';
 import { useAuthStore } from '@/features/auth/store';
@@ -21,6 +22,7 @@ const LANGUAGES = [
 ];
 
 export default function OnboardingPage() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const setOnboardingDone = useAuthStore((state) => state.setOnboardingDone);
 
@@ -53,17 +55,17 @@ export default function OnboardingPage() {
 
   const handleConfirmTrack = async () => {
     if (!selectedTrack) {
-      triggerToast("Iltimos, asosiy yo'nalishingizni belgilang", 'error');
+      triggerToast(t('onboarding.errors.noTrack'), 'error');
       return;
     }
 
     setSubmitLoading(true);
     try {
       await onboardingService.confirmTrack(selectedTrack);
-      triggerToast("Yo'nalish tasdiqlandi!", 'success');
+      triggerToast(t('onboarding.success.trackConfirmed'), 'success');
       setStep(2);
     } catch (err: any) {
-      const detail = err?.response?.data?.detail || 'Amal bajarilmadi';
+      const detail = err?.response?.data?.detail || t('onboarding.errors.actionFailed');
       triggerToast(detail, 'error');
     } finally {
       setSubmitLoading(false);
@@ -78,7 +80,7 @@ export default function OnboardingPage() {
 
   const handleConfirmLanguages = async () => {
     if (selectedLanguages.length === 0) {
-      triggerToast('Kamida 1 ta til tanlashingiz shart', 'error');
+      triggerToast(t('onboarding.errors.noLanguage'), 'error');
       return;
     }
 
@@ -87,11 +89,11 @@ export default function OnboardingPage() {
       const response = await onboardingService.confirmLanguages(selectedLanguages);
       if (response.onboarding_done) {
         setOnboardingDone(true);
-        triggerToast('Onbording muvaffaqiyatli yakunlandi!', 'success');
+        triggerToast(t('onboarding.success.completed'), 'success');
         navigate('/dashboard');
       }
     } catch (err: any) {
-      const detail = err?.response?.data?.detail || 'Amal bajarilmadi';
+      const detail = err?.response?.data?.detail || t('onboarding.errors.actionFailed');
       triggerToast(detail, 'error');
     } finally {
       setSubmitLoading(false);
@@ -131,10 +133,10 @@ export default function OnboardingPage() {
         <div className="flex items-center justify-between mb-6 sm:mb-8 border-b-2 border-black pb-3 sm:pb-4">
           <div className="flex items-center gap-2">
             <Sparkles className="h-5 w-5 text-[#38C9E6] flex-shrink-0" />
-            <h1 className="text-base sm:text-lg font-black text-white font-montserrat uppercase tracking-tight">Onbording</h1>
+            <h1 className="text-base sm:text-lg font-black text-white font-montserrat uppercase tracking-tight">{t('onboarding.title')}</h1>
           </div>
           <span className="text-[10px] sm:text-xs uppercase tracking-wider font-extrabold text-[#B0BEC5] font-montserrat flex-shrink-0">
-            Qadam {step} / 2
+            {t('onboarding.step')} {step} / 2
           </span>
         </div>
 
@@ -144,10 +146,10 @@ export default function OnboardingPage() {
             <div className="flex flex-col gap-1.5">
               <div className="flex items-center gap-2 text-[#43E8A0]">
                 <Compass className="h-5 w-5 flex-shrink-0" />
-                <h2 className="text-sm sm:text-base font-black uppercase tracking-tight font-montserrat">Asosiy Yo'nalishingizni tasdiqlang</h2>
+                <h2 className="text-sm sm:text-base font-black uppercase tracking-tight font-montserrat">{t('onboarding.track.title')}</h2>
               </div>
               <p className="text-xs text-[#B0BEC5] leading-relaxed">
-                Tizim sizga mos darslar va baholovchilar taqdim qilishi uchun yo'nalishingizni tanlang. Program:{' '}
+                {t('onboarding.track.description')}{' '}
                 <strong className="text-white bg-[#34495E] px-2 py-0.5 border border-black rounded-md break-words">{coreProgram || 'CORE'}</strong>
               </p>
             </div>
@@ -181,7 +183,7 @@ export default function OnboardingPage() {
               onClick={handleConfirmTrack}
               disabled={submitLoading || !selectedTrack}
             >
-              Keyingi qadam <ArrowRight className="h-4 w-4" />
+              {t('onboarding.track.nextBtn')} <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
         ) : (
@@ -190,17 +192,17 @@ export default function OnboardingPage() {
             <div className="flex flex-col gap-1.5">
               <div className="flex items-center gap-2 text-[#cdbdff]">
                 <Languages className="h-5 w-5 flex-shrink-0" />
-                <h2 className="text-sm sm:text-base font-black uppercase tracking-tight font-montserrat">Muloqot tillaringizni belgilang</h2>
+                <h2 className="text-sm sm:text-base font-black uppercase tracking-tight font-montserrat">{t('onboarding.languages.title')}</h2>
               </div>
               <p className="text-xs text-[#B0BEC5] leading-relaxed">
-                Siz dars o'tkazadigan yoki loyihalaringizni tekshiruvchilar bilan bemalol gaplasha oladigan tillaringiz (Kamida bitta til tanlanishi shart!).
+                {t('onboarding.languages.description')}
               </p>
             </div>
 
             {/* Selected pill counters */}
             <div className="flex flex-wrap gap-1.5 p-3 rounded-xl bg-[#34495E] border-2 border-black min-h-[48px] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
               {selectedLanguages.length === 0 ? (
-                <span className="text-xs text-[#B0BEC5] select-none font-bold">Tillar tanlanmagan...</span>
+                <span className="text-xs text-[#B0BEC5] select-none font-bold">{t('onboarding.languages.noneSelected')}</span>
               ) : (
                 selectedLanguages.map((l) => (
                   <Badge key={l} type="primary">{l}</Badge>

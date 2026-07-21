@@ -1,5 +1,446 @@
 
-  [32m[1mVITE[22m v8.0.16[39m  [2mready in [0m[1m406[22m[2m[0m ms[22m
+  VITE v6.4.3  ready in 299 ms
 
-  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
-  [32m➜[39m  [1mNetwork[22m: [36mhttp://10.130.166.39:[1m5173[22m/[39m
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://10.5.49.77:5173/
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3460|    }
+3461|  }
+3462|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3463|  :root {
+3464|    --bg-primary: #1D2633;
+4:21:17 PM [vite] (client) hmr update /src/app/layout/Navbar.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3635|    }
+3636|  }
+3637|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3638|  :root {
+3639|    --bg-primary: #1D2633;
+4:21:26 PM [vite] (client) hmr update /src/app/layout/AppLayout.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3643|    }
+3644|  }
+3645|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3646|  :root {
+3647|    --bg-primary: #1D2633;
+4:21:46 PM [vite] (client) hmr update /src/app/layout/navbar/ProfileMenu.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3643|    }
+3644|  }
+3645|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3646|  :root {
+3647|    --bg-primary: #1D2633;
+4:21:49 PM [vite] (client) hmr update /src/app/layout/navbar/ProfileMenu.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3643|    }
+3644|  }
+3645|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3646|  :root {
+3647|    --bg-primary: #1D2633;
+4:21:51 PM [vite] (client) hmr update /src/app/layout/navbar/MobileMenu.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3643|    }
+3644|  }
+3645|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3646|  :root {
+3647|    --bg-primary: #1D2633;
+4:21:54 PM [vite] (client) hmr update /src/app/layout/navbar/MobileMenu.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3643|    }
+3644|  }
+3645|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3646|  :root {
+3647|    --bg-primary: #1D2633;
+4:27:13 PM [vite] (client) hmr update /src/app/layout/navbar/Logo.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3643|    }
+3644|  }
+3645|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3646|  :root {
+3647|    --bg-primary: #1D2633;
+4:27:19 PM [vite] (client) hmr update /src/app/layout/navbar/DesktopNav.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3653|    }
+3654|  }
+3655|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3656|  :root {
+3657|    --bg-primary: #1D2633;
+4:27:24 PM [vite] (client) hmr update /src/app/layout/navbar/ProfileMenu.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3805|    }
+3806|  }
+3807|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3808|  :root {
+3809|    --bg-primary: #1D2633;
+4:27:27 PM [vite] (client) hmr update /src/app/layout/Navbar.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3871|    }
+3872|  }
+3873|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3874|  :root {
+3875|    --bg-primary: #1D2633;
+4:27:31 PM [vite] (client) hmr update /src/app/layout/navbar/MobileMenu.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3878|    }
+3879|  }
+3880|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3881|  :root {
+3882|    --bg-primary: #1D2633;
+4:28:45 PM [vite] (client) hmr update /src/app/layout/navbar/Logo.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3878|    }
+3879|  }
+3880|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3881|  :root {
+3882|    --bg-primary: #1D2633;
+4:29:32 PM [vite] (client) hmr update /src/app/layout/navbar/Logo.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3878|    }
+3879|  }
+3880|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3881|  :root {
+3882|    --bg-primary: #1D2633;
+4:32:10 PM [vite] (client) page reload package.json
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3878|    }
+3879|  }
+3880|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3881|  :root {
+3882|    --bg-primary: #1D2633;
+4:33:10 PM [vite] (client) page reload src/main.tsx
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:33:11 PM [vite] (client) ✨ new dependencies optimized: i18next, react-i18next, i18next-browser-languagedetector
+4:33:11 PM [vite] (client) ✨ optimized dependencies changed. reloading
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:33:49 PM [vite] (client) hmr update /src/app/App.tsx, /src/index.css, /src/app/ErrorBoundary.tsx, /src/app/router.tsx, /src/app/layout/Sidebar.tsx, /src/app/layout/Header.tsx, /src/app/layout/AppLayout.tsx, /src/features/dashboard/components/Dashboard.tsx, /src/features/slots/pages/SlotsPage.tsx, /src/features/slots/components/SlotSearch.tsx, /src/features/slots/components/SlotCard.tsx, /src/features/slots/components/CreateSlotForm.tsx, /src/features/leaderboard/pages/LeaderboardPage.tsx, /src/features/profile/pages/ProfilePage.tsx, /src/features/settings/pages/SettingsPage.tsx, /src/app/layout/navbar/ProfileMenu.tsx
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:33:49 PM [vite] (client) hmr invalidate /src/app/router.tsx Could not Fast Refresh ("default" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:33:49 PM [vite] (client) hmr update /src/app/App.tsx, /src/index.css
+4:33:54 PM [vite] (client) hmr update /src/app/layout/Navbar.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:34:00 PM [vite] (client) hmr update /src/app/layout/Navbar.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:34:05 PM [vite] (client) hmr update /src/app/layout/navbar/DesktopNav.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:34:20 PM [vite] (client) hmr update /src/app/layout/navbar/ProfileMenu.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:34:26 PM [vite] (client) hmr update /src/app/layout/BottomNav.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:34:29 PM [vite] (client) hmr update /src/app/layout/navbar/MobileMenu.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:41:09 PM [vite] (client) hmr update /src/features/slots/components/SlotSearch.tsx, /src/index.css
+4:41:09 PM [vite] (client) hmr update /src/features/slots/components/CreateSlotForm.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:41:50 PM [vite] (client) hmr update /src/features/slots/components/SlotCard.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:41:50 PM [vite] (client) hmr update /src/features/slots/pages/SlotsPage.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:42:40 PM [vite] (client) hmr update /src/features/auth/pages/LoginPage.tsx, /src/index.css
+4:42:40 PM [vite] (client) hmr update /src/index.css, /src/app/router.tsx
+4:42:40 PM [vite] (client) hmr update /src/features/dashboard/components/Dashboard.tsx, /src/index.css
+4:42:40 PM [vite] (client) hmr update /src/features/leaderboard/pages/LeaderboardPage.tsx, /src/index.css
+4:42:40 PM [vite] (client) hmr update /src/features/settings/pages/SettingsPage.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:42:40 PM [vite] (client) hmr invalidate /src/app/router.tsx Could not Fast Refresh ("default" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:42:40 PM [vite] (client) hmr update /src/app/App.tsx, /src/index.css
+4:42:40 PM [vite] Internal server error: /home/farrukh/Frontend/p2p/frontend/src/features/dashboard/components/Dashboard.tsx: JSX value should be either an expression or a quoted JSX text. (59:16)
+
+  57 |       <div className="flex flex-col gap-4 sm:gap-6 animate-fade-in font-ibm-plex-mono text-white">
+  58 |         <PageHeader
+> 59 |           title=t('dashboard.title')
+     |                 ^
+  60 |           subtitle=t('dashboard.subtitle')
+  61 |           icon={LayoutDashboard}
+  62 |         />
+  Plugin: vite:react-babel
+  File: /home/farrukh/Frontend/p2p/frontend/src/features/dashboard/components/Dashboard.tsx:59:16
+  57 |        <div className="flex flex-col gap-4 sm:gap-6 animate-fade-in font-ibm-plex-mono text-white">
+  58 |          <PageHeader
+  59 |            title=t('dashboard.title')
+     |                  ^
+  60 |            subtitle=t('dashboard.subtitle')
+  61 |            icon={LayoutDashboard}
+      at constructor (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:365:19)
+      at TypeScriptParserMixin.raise (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:6616:19)
+      at TypeScriptParserMixin.jsxParseAttributeValue (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4625:20)
+      at TypeScriptParserMixin.jsxParseAttribute (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4665:38)
+      at TypeScriptParserMixin.jsxParseOpeningElementAfterName (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4679:28)
+      at TypeScriptParserMixin.jsxParseOpeningElementAfterName (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10060:18)
+      at TypeScriptParserMixin.jsxParseOpeningElementAt (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4674:17)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4698:33)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElement (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:9792:39
+      at TypeScriptParserMixin.tryParse (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:6924:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:9792:18)
+      at /home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:12443:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10817:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:12510:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11692:28)
+      at TypeScriptParserMixin.parseExprAtom (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11348:23)
+      at TypeScriptParserMixin.parseExprAtom (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:12438:16)
+      at TypeScriptParserMixin.parseExpression (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10797:17)
+      at TypeScriptParserMixin.parseReturnStatement (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:13159:28)
+      at TypeScriptParserMixin.parseStatementContent (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:12815:21)
+      at TypeScriptParserMixin.parseStatementContent (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:9525:18)
+      at TypeScriptParserMixin.parseStatementLike (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:12784:17)
+      at TypeScriptParserMixin.parseStatementListItem (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:12764:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:13333:61)
+      at TypeScriptParserMixin.parseBlockBody (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:13326:10)
+      at TypeScriptParserMixin.parseBlock (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:13314:10)
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:42:40 PM [vite] Internal server error: /home/farrukh/Frontend/p2p/frontend/src/features/dashboard/components/Dashboard.tsx: JSX value should be either an expression or a quoted JSX text. (59:16)
+
+  57 |       <div className="flex flex-col gap-4 sm:gap-6 animate-fade-in font-ibm-plex-mono text-white">
+  58 |         <PageHeader
+> 59 |           title=t('dashboard.title')
+     |                 ^
+  60 |           subtitle=t('dashboard.subtitle')
+  61 |           icon={LayoutDashboard}
+  62 |         />
+  Plugin: vite:react-babel
+  File: /home/farrukh/Frontend/p2p/frontend/src/features/dashboard/components/Dashboard.tsx:59:16
+  57 |        <div className="flex flex-col gap-4 sm:gap-6 animate-fade-in font-ibm-plex-mono text-white">
+  58 |          <PageHeader
+  59 |            title=t('dashboard.title')
+     |                  ^
+  60 |            subtitle=t('dashboard.subtitle')
+  61 |            icon={LayoutDashboard}
+      at constructor (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:365:19)
+      at TypeScriptParserMixin.raise (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:6616:19)
+      at TypeScriptParserMixin.jsxParseAttributeValue (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4625:20)
+      at TypeScriptParserMixin.jsxParseAttribute (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4665:38)
+      at TypeScriptParserMixin.jsxParseOpeningElementAfterName (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4679:28)
+      at TypeScriptParserMixin.jsxParseOpeningElementAfterName (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10060:18)
+      at TypeScriptParserMixin.jsxParseOpeningElementAt (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4674:17)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4698:33)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4710:32)
+      at TypeScriptParserMixin.jsxParseElement (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4761:17)
+      at TypeScriptParserMixin.parseExprAtom (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4771:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10848:21)
+      at /home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:9792:39
+      at TypeScriptParserMixin.tryParse (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:6924:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:9792:18)
+      at /home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10817:39
+      at TypeScriptParserMixin.allowInAnd (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:12443:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10817:17)
+      at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:12510:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11692:28)
+      at TypeScriptParserMixin.parseExprAtom (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11348:23)
+      at TypeScriptParserMixin.parseExprAtom (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:4776:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11098:23)
+      at TypeScriptParserMixin.parseUpdate (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11083:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:11063:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:9854:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10916:61)
+      at TypeScriptParserMixin.parseExprOps (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10921:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10898:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10848:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:9803:20)
+      at TypeScriptParserMixin.parseExpressionBase (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10801:23)
+      at /home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10797:39
+      at TypeScriptParserMixin.allowInAnd (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:12438:16)
+      at TypeScriptParserMixin.parseExpression (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:10797:17)
+      at TypeScriptParserMixin.parseReturnStatement (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:13159:28)
+      at TypeScriptParserMixin.parseStatementContent (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:12815:21)
+      at TypeScriptParserMixin.parseStatementContent (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:9525:18)
+      at TypeScriptParserMixin.parseStatementLike (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:12784:17)
+      at TypeScriptParserMixin.parseStatementListItem (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:12764:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:13333:61)
+      at TypeScriptParserMixin.parseBlockBody (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:13326:10)
+      at TypeScriptParserMixin.parseBlock (/home/farrukh/Frontend/p2p/frontend/node_modules/@babel/parser/lib/index.js:13314:10)
+4:42:43 PM [vite] (client) hmr update /src/index.css, /src/app/router.tsx
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3959|    }
+3960|  }
+3961|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3962|  :root {
+3963|    --bg-primary: #1D2633;
+4:42:43 PM [vite] (client) hmr invalidate /src/app/router.tsx Could not Fast Refresh ("default" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:42:43 PM [vite] (client) hmr update /src/app/App.tsx, /src/index.css
+4:43:25 PM [vite] (client) hmr update /src/app/layout/AppLayout.tsx, /src/index.css
+4:43:25 PM [vite] (client) hmr update /src/app/layout/BottomNav.tsx, /src/index.css
+4:43:25 PM [vite] (client) hmr update /src/app/layout/Navbar.tsx, /src/index.css
+4:43:25 PM [vite] (client) hmr update /src/features/auth/pages/LoginPage.tsx, /src/index.css
+4:43:25 PM [vite] (client) hmr update /src/features/dashboard/components/Dashboard.tsx, /src/index.css
+4:43:25 PM [vite] (client) hmr update /src/features/leaderboard/pages/LeaderboardPage.tsx, /src/index.css
+4:43:25 PM [vite] (client) hmr update /src/index.css, /src/app/router.tsx
+4:43:25 PM [vite] (client) hmr update /src/features/settings/pages/SettingsPage.tsx, /src/index.css
+4:43:25 PM [vite] (client) hmr update /src/features/slots/components/CreateSlotForm.tsx, /src/index.css
+4:43:25 PM [vite] (client) hmr update /src/features/slots/components/SlotCard.tsx, /src/index.css
+4:43:25 PM [vite] (client) hmr update /src/features/slots/components/SlotSearch.tsx, /src/index.css
+4:43:25 PM [vite] (client) hmr update /src/index.css, /src/app/router.tsx
+4:43:25 PM [vite] (client) hmr update /src/features/slots/pages/SlotsPage.tsx, /src/index.css
+4:43:25 PM [vite] (client) hmr update /src/index.css
+4:43:25 PM [vite] (client) page reload src/main.tsx
+4:43:25 PM [vite] (client) hmr update /src/shared/ui/Button.tsx, /src/index.css
+4:43:25 PM [vite] (client) hmr update /src/app/App.tsx, /src/index.css, /src/app/ErrorBoundary.tsx, /src/app/router.tsx, /src/app/layout/Sidebar.tsx, /src/app/layout/Header.tsx, /src/app/layout/AppLayout.tsx, /src/features/dashboard/components/Dashboard.tsx, /src/features/slots/pages/SlotsPage.tsx, /src/features/slots/components/SlotSearch.tsx, /src/features/slots/components/SlotCard.tsx, /src/features/slots/components/CreateSlotForm.tsx, /src/features/leaderboard/pages/LeaderboardPage.tsx, /src/features/profile/pages/ProfilePage.tsx, /src/features/settings/pages/SettingsPage.tsx, /src/app/layout/navbar/ProfileMenu.tsx, /src/app/layout/Navbar.tsx
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3980|    --border-color: #324151;
+3981|  }
+3982|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3983|  body {
+3984|    font-family: var(--font-sans);
+4:43:25 PM [vite] (client) hmr invalidate /src/app/router.tsx Could not Fast Refresh ("default" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+4:43:25 PM [vite] (client) hmr update /src/app/App.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3980|    --border-color: #324151;
+3981|  }
+3982|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3983|  body {
+3984|    font-family: var(--font-sans);
+4:43:38 PM [vite] (client) hmr update /src/features/profile/pages/ProfilePage.tsx, /src/index.css
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3980|    --border-color: #324151;
+3981|  }
+3982|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3983|  body {
+3984|    font-family: var(--font-sans);
+4:43:38 PM [vite] (client) page reload src/features/profile/pages/UserProfilePage.tsx
+[vite:css][postcss] @import must precede all other statements (besides @charset or empty @layer)
+3980|    --border-color: #324151;
+3981|  }
+3982|  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+   |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3983|  body {
+3984|    font-family: var(--font-sans);
+4:43:38 PM [vite] (client) hmr update /src/features/auth/pages/LoginPage.tsx, /src/index.css

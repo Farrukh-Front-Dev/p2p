@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Slot Booking &amp; Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        background: "#1E2A38",
+                        surface: "#2A3442",
+                        primary: "#38C9E6",
+                        secondary: "#43E8A0"
+                    },
+                    fontFamily: {
+                        headline: ["Montserrat", "sans-serif"],
+                        display: ["Montserrat", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                        label: ["Montserrat", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'brutal': '4px 4px 0px 0px rgba(0,0,0,1)',
+                        'brutal-hover': '2px 2px 0px 0px rgba(0,0,0,1)'
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-white font-body antialiased min-h-screen flex">
+<!-- Top Navigation (Mobile Only) -->
+<nav class="md:hidden flex justify-between items-center px-6 py-4 w-full bg-[#1E2A38] border-b-2 border-black fixed top-0 z-50">
+<div class="text-[#38C9E6] font-display text-2xl font-black uppercase tracking-tighter">StudyPeer</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#38C9E6] hover:-translate-y-0.5 transition-transform active:translate-y-0.5 cursor-pointer">notifications</span>
+<span class="material-symbols-outlined text-[#38C9E6] hover:-translate-y-0.5 transition-transform active:translate-y-0.5 cursor-pointer">account_circle</span>
+</div>
+</nav>
+<!-- Side Navigation (Desktop) -->
+<aside class="hidden md:flex flex-col fixed left-0 top-0 h-full z-40 w-64 border-r-2 border-black bg-[#2A3442]">
+<!-- Brand/Header -->
+<div class="p-6 border-b-2 border-black">
+<div class="text-[#38C9E6] font-display font-black text-2xl mb-6">StudyPeer</div>
+<div class="flex items-center gap-4">
+<img alt="User Avatar" class="w-12 h-12 rounded-full border-2 border-black object-cover bg-white" data-alt="A stylized, flat-vector illustration of a neo-brutalist avatar. The character is young, wearing thick rimmed glasses and a colorful beanie, rendered with thick black outlines and vibrant flat colors against a bright #38C9E6 background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSGejm-DUJQoJ7VL4Aw1fiATAMVP0tPIQlj--AlOh6o34GRbn-g2g_kRK8zcZk66T3ZMRF77RLo0H67FVefGmIx_i5JbpgejE5_HrgN_4Sl4NYpFSdhH5IiIqlVZgnr8T_EG12l-3VayCNc2HOyFRk6FIfUqzmSfaBUprV4Mdn295rlLZvPT6e6rYzV_xhw7IcXjsc122NLQwUN5uAeiOq0v4rN1EsrfrWF3FnKrQDDVkabFtseosRbYzFjEobFy1Pz5os-8Ei99_w"/>
+<div>
+<h2 class="font-headline font-bold text-white leading-tight">Welcome, Scholar</h2>
+<p class="font-body text-sm font-medium text-[#43E8A0]">Level 12 Mentor</p>
+</div>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex-1 p-4 overflow-y-auto font-body text-sm font-medium">
+<a class="text-white hover:bg-[#1E2A38] m-2 p-3 flex items-center gap-3 transition-colors rounded-none hover:translate-x-1 active:scale-95" href="#">
+<span class="material-symbols-outlined">dashboard</span> Dashboard
+            </a>
+<a class="bg-[#38C9E6] text-black border-2 border-black shadow-brutal m-2 p-3 flex items-center gap-3 hover:translate-x-1 transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined font-bold">event_upcoming</span> Slots
+            </a>
+<a class="text-white hover:bg-[#1E2A38] m-2 p-3 flex items-center gap-3 transition-colors rounded-none hover:translate-x-1 active:scale-95" href="#">
+<span class="material-symbols-outlined">search</span> Search
+            </a>
+<a class="text-white hover:bg-[#1E2A38] m-2 p-3 flex items-center gap-3 transition-colors rounded-none hover:translate-x-1 active:scale-95" href="#">
+<span class="material-symbols-outlined">leaderboard</span> Leaderboard
+            </a>
+<!-- CTA -->
+<div class="mt-8 mx-2">
+<button class="w-full bg-[#43E8A0] text-black font-headline font-bold py-3 border-2 border-black shadow-brutal hover:-translate-y-1 hover:shadow-[4px_6px_0px_0px_rgba(0,0,0,1)] active:translate-y-0 active:shadow-brutal-hover transition-all">
+                    Book New Slot
+                </button>
+</div>
+</nav>
+<!-- Footer Links -->
+<div class="p-4 border-t-2 border-black font-body text-sm font-medium">
+<a class="text-white hover:bg-[#1E2A38] m-2 p-3 flex items-center gap-3 transition-colors rounded-none hover:translate-x-1 active:scale-95" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+            </a>
+<a class="text-white hover:bg-[#1E2A38] m-2 p-3 flex items-center gap-3 transition-colors rounded-none hover:translate-x-1 active:scale-95 text-red-400" href="#">
+<span class="material-symbols-outlined">logout</span> Logout
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 pt-20 md:pt-0 min-h-screen p-6 md:p-12 relative overflow-hidden">
+<!-- Background decorative elements -->
+<div class="absolute top-[-10%] right-[-5%] w-[40vw] h-[40vw] bg-primary/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[30vw] h-[30vw] bg-secondary/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+<!-- Header Section -->
+<header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="font-display text-5xl md:text-6xl font-black uppercase tracking-tighter text-white mb-2 drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]">Slot Discovery</h1>
+<p class="font-body text-gray-300 text-lg border-l-4 border-secondary pl-4">Find available peers to review your projects or open a slot yourself.</p>
+</div>
+<div class="hidden md:flex gap-4">
+<!-- Desktop search in header area for quick access if needed, but per requirements we'll put prominent search in tab 1 -->
+</div>
+</header>
+<!-- Tabs -->
+<div class="flex gap-4 mb-8 border-b-2 border-black pb-0 relative z-10">
+<button class="px-6 py-3 font-headline font-bold text-lg bg-surface border-2 border-black border-b-0 shadow-[4px_-4px_0px_0px_rgba(0,0,0,1)] text-primary translate-y-[2px] transition-all" id="tab-book">
+                Book reviews
+            </button>
+<button class="px-6 py-3 font-headline font-bold text-lg bg-transparent hover:bg-surface/50 border-2 border-transparent hover:border-black hover:border-b-0 text-gray-400 hover:text-white transition-all opacity-70 hover:opacity-100" id="tab-open">
+                My open slots
+            </button>
+</div>
+<!-- Tab Content: Book Reviews (Active) -->
+<div class="block space-y-8 animate-[fadeIn_0.3s_ease-out]" id="content-book">
+<!-- Prominent Search -->
+<div class="relative max-w-3xl">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-black font-bold">search</span>
+</div>
+<input class="w-full bg-white text-black font-body font-bold text-lg py-4 pl-12 pr-4 border-4 border-black shadow-brutal focus:outline-none focus:ring-0 focus:translate-y-1 focus:shadow-brutal-hover transition-all placeholder:text-gray-500 rounded-none" placeholder="Search by project name (e.g., ft_printf, cub3d)..." type="text"/>
+</div>
+<!-- Filter Chips -->
+<div class="flex flex-wrap gap-3">
+<span class="font-label text-sm uppercase font-bold text-gray-400 py-2 mr-2">Filters:</span>
+<button class="bg-primary text-black font-bold px-4 py-1 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm hover:translate-y-0.5 hover:shadow-none transition-all">Common Core</button>
+<button class="bg-surface text-white font-bold px-4 py-1 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm hover:translate-y-0.5 hover:shadow-none transition-all">Piscine</button>
+<button class="bg-surface text-white font-bold px-4 py-1 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm hover:translate-y-0.5 hover:shadow-none transition-all">Today</button>
+</div>
+<!-- Bento Grid of Slots -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Slot Card 1 -->
+<div class="bg-surface border-2 border-black shadow-brutal p-6 flex flex-col justify-between group hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="inline-block bg-[#1E2A38] text-primary border-2 border-black px-2 py-1 text-xs font-bold uppercase tracking-wider">C++ Pool</span>
+<div class="flex gap-1 text-yellow-400">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-white">4.9</span>
+</div>
+</div>
+<h3 class="font-headline font-black text-2xl text-white mb-2 group-hover:text-primary transition-colors">ft_printf</h3>
+<div class="flex items-center gap-3 mb-4">
+<img alt="Sarah Jenkins" class="w-10 h-10 rounded-full border-2 border-black grayscale group-hover:grayscale-0 transition-all object-cover" data-alt="A portrait photograph of a young professional programmer with an intense expression. The lighting is cinematic, utilizing deep shadows and stark white highlights to fit a neo-brutalist dark mode theme. The background is a solid, dark slate color #1E2A38." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7py6Sq2VQRQflQn91dHdZ0fNfcj77uLUxkXufc42TicE_caYlfNmVVPEytIFzWI4zNQTSfEAjAbCFheXR3HOBwJA5mDqw8hfPsfdNzCaJyINzMDqEeobxYBpMGhmw3Gn9zFDBIVXRBWta8xdCJVVj1L1g9xnjqA4CBkm2TwDHph9Yl2TKahaOyIorwknz9ZGXAvqYdzqLEdAJFiKQoGpT25zbNIYll5vYW-yYMkulmcDdsIMBV0xbtb77-qg7aUvJXDgzpT-rwO5y"/>
+<div>
+<p class="font-body font-bold text-white">Sarah Jenkins</p>
+<p class="font-body text-xs text-gray-400">Level 7</p>
+</div>
+</div>
+<div class="bg-[#1E2A38] border-2 border-black p-3 mb-6">
+<div class="flex items-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span class="font-bold text-sm">Oct 28</span>
+</div>
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-bold text-sm">14:30 - 15:30</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-black font-headline font-black uppercase tracking-wider py-3 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-y-0.5 hover:shadow-none active:bg-white transition-all flex items-center justify-center gap-2">
+                        Book Review <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+</button>
+</div>
+<!-- Slot Card 2 -->
+<div class="bg-surface border-2 border-black shadow-brutal p-6 flex flex-col justify-between group hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="inline-block bg-[#1E2A38] text-secondary border-2 border-black px-2 py-1 text-xs font-bold uppercase tracking-wider">Graphics</span>
+<div class="flex gap-1 text-yellow-400">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-white">4.2</span>
+</div>
+</div>
+<h3 class="font-headline font-black text-2xl text-white mb-2 group-hover:text-primary transition-colors">cub3D</h3>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full border-2 border-black bg-primary flex items-center justify-center font-bold text-black">
+                                MX
+                            </div>
+<div>
+<p class="font-body font-bold text-white">Maximus X.</p>
+<p class="font-body text-xs text-gray-400">Level 5</p>
+</div>
+</div>
+<div class="bg-[#1E2A38] border-2 border-black p-3 mb-6">
+<div class="flex items-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span class="font-bold text-sm">Oct 28</span>
+</div>
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-bold text-sm">16:00 - 17:30</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-black font-headline font-black uppercase tracking-wider py-3 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-y-0.5 hover:shadow-none active:bg-white transition-all flex items-center justify-center gap-2">
+                        Book Review <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+</button>
+</div>
+<!-- Slot Card 3 -->
+<div class="bg-surface border-2 border-black shadow-brutal p-6 flex flex-col justify-between group hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all">
+<div>
+<div class="flex justify-between items-start mb-4">
+<span class="inline-block bg-[#1E2A38] text-white border-2 border-black px-2 py-1 text-xs font-bold uppercase tracking-wider">Web</span>
+<div class="flex gap-1 text-yellow-400">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-white">5.0</span>
+</div>
+</div>
+<h3 class="font-headline font-black text-2xl text-white mb-2 group-hover:text-primary transition-colors">Inception</h3>
+<div class="flex items-center gap-3 mb-4">
+<img alt="Elena R." class="w-10 h-10 rounded-full border-2 border-black grayscale group-hover:grayscale-0 transition-all object-cover" data-alt="A neo-brutalist stylized portrait of a female developer. The image uses stark contrast, heavy black outlines, and flat shading. Her expression is calm but focused, set against a vibrant cyan #38C9E6 abstract background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7CKC0l1w3gEbJnRuNy0jSonkLYR2CXnLemrlZu5IG_bslHYBsLDK3r6ahmgHyinH-sCS0glAwSTsoICUZm__vSRoggwK9RLZuon1aQiROzeOOgYSFXwYWJiJRy0b9T5RVyejkffVs5t8HmD9kZqMQ6SfgLxBJhYSQ4-bvNMl7aRTF8iDvtXOGZcfuW1cFVMfiUA-T0NP3lfZ3Dy49a7nuu2Bx0M9y9vDc6uf_hb2S_CMccCfJL6vkmeozEjI1C4z9o6v6Y7AOQDYQ"/>
+<div>
+<p class="font-body font-bold text-white">Elena R.</p>
+<p class="font-body text-xs text-gray-400">Level 9</p>
+</div>
+</div>
+<div class="bg-[#1E2A38] border-2 border-black p-3 mb-6">
+<div class="flex items-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span class="font-bold text-sm">Oct 29</span>
+</div>
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-bold text-sm">09:00 - 10:00</span>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-black font-headline font-black uppercase tracking-wider py-3 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-y-0.5 hover:shadow-none active:bg-white transition-all flex items-center justify-center gap-2">
+                        Book Review <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Tab Content: My Open Slots (Hidden initially) -->
+<div class="hidden space-y-8 animate-[fadeIn_0.3s_ease-out]" id="content-open">
+<!-- Large Action Area -->
+<div class="bg-surface border-4 border-black p-12 text-center flex flex-col items-center justify-center min-h-[400px] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden group">
+<!-- Decorative background pattern in card -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 2px, transparent 2px); background-size: 20px 20px;"></div>
+<span class="material-symbols-outlined text-7xl text-secondary mb-6 group-hover:scale-110 transition-transform duration-500 z-10" style="font-variation-settings: 'wght' 200;">add_circle</span>
+<h2 class="font-display font-black text-3xl md:text-4xl text-white mb-4 z-10">Offer Your Expertise</h2>
+<p class="font-body text-gray-300 max-w-md mx-auto mb-10 z-10">Open a slot for others to book. You'll earn evaluation points and help your peers progress.</p>
+<button class="bg-secondary text-black font-headline font-black text-xl px-8 py-5 border-4 border-black shadow-brutal hover:translate-y-1 hover:shadow-brutal-hover active:translate-y-2 active:shadow-none transition-all flex items-center gap-3 z-10">
+                    Open New Review Slot <span class="material-symbols-outlined font-bold">edit_calendar</span>
+</button>
+</div>
+<!-- List of current open slots (if any) could go here -->
+<div class="mt-12">
+<h3 class="font-headline font-bold text-xl text-white mb-6 border-l-4 border-primary pl-3">Currently Scheduled Openings</h3>
+<div class="bg-[#1E2A38] border-2 border-dashed border-gray-600 p-8 text-center">
+<p class="text-gray-400 font-body">You don't have any open slots right now. Create one above to get started.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden flex justify-around items-center w-full bg-[#2A3442] border-t-2 border-black fixed bottom-0 z-50 pb-safe">
+<a class="flex flex-col items-center p-3 text-white" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-xs font-bold mt-1">Dash</span>
+</a>
+<a class="flex flex-col items-center p-3 text-[#38C9E6]" href="#">
+<span class="material-symbols-outlined font-bold">event_upcoming</span>
+<span class="text-xs font-bold mt-1">Slots</span>
+</a>
+<a class="flex flex-col items-center p-3 text-white" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-xs font-bold mt-1">Search</span>
+</a>
+<a class="flex flex-col items-center p-3 text-white" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-xs font-bold mt-1">Rank</span>
+</a>
+</nav>
+<!-- Simple Tab Switching Logic -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabBook = document.getElementById('tab-book');
+            const tabOpen = document.getElementById('tab-open');
+            const contentBook = document.getElementById('content-book');
+            const contentOpen = document.getElementById('content-open');
+
+            const activeClass = ['bg-surface', 'border-black', 'shadow-[4px_-4px_0px_0px_rgba(0,0,0,1)]', 'text-primary', 'translate-y-[2px]', 'opacity-100'];
+            const inactiveClass = ['bg-transparent', 'border-transparent', 'text-gray-400', 'opacity-70', 'hover:opacity-100'];
+
+            function switchTab(showBook) {
+                if(showBook) {
+                    contentBook.classList.remove('hidden');
+                    contentBook.classList.add('block');
+                    contentOpen.classList.remove('block');
+                    contentOpen.classList.add('hidden');
+                    
+                    // Style Active Tab
+                    tabBook.classList.add(...activeClass);
+                    tabBook.classList.remove(...inactiveClass);
+                    
+                    // Style Inactive Tab
+                    tabOpen.classList.add(...inactiveClass);
+                    tabOpen.classList.remove(...activeClass);
+                } else {
+                    contentOpen.classList.remove('hidden');
+                    contentOpen.classList.add('block');
+                    contentBook.classList.remove('block');
+                    contentBook.classList.add('hidden');
+
+                    // Style Active Tab
+                    tabOpen.classList.add(...activeClass);
+                    tabOpen.classList.remove(...inactiveClass);
+                    
+                    // Style Inactive Tab
+                    tabBook.classList.add(...inactiveClass);
+                    tabBook.classList.remove(...activeClass);
+                }
+            }
+
+            tabBook.addEventListener('click', () => switchTab(true));
+            tabOpen.addEventListener('click', () => switchTab(false));
+        });
+    </script>
+</body></html>

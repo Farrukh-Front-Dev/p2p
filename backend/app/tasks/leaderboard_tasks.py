@@ -1,12 +1,12 @@
 """Monthly leaderboard snapshot task."""
 from __future__ import annotations
 
-import asyncio
 from datetime import date, datetime, timezone
 
 from app.db.base import AsyncSessionLocal
 from app.db.models.leaderboard_snapshot import LeaderboardSnapshot
 from app.services import leaderboard_service
+from app.tasks.async_utils import run_async
 from app.tasks.celery_app import celery_app
 
 
@@ -20,7 +20,7 @@ def _previous_month_start() -> date:
 
 @celery_app.task(name="app.tasks.leaderboard_tasks.monthly_snapshot")
 def monthly_snapshot() -> int:
-    return asyncio.run(_monthly_snapshot())
+    return run_async(_monthly_snapshot())
 
 
 async def _monthly_snapshot() -> int:

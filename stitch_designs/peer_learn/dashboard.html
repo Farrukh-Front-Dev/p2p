@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Peer Learn - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .teal-glow-hover:hover {
+            box-shadow: 0px 0px 12px 0px rgba(0, 191, 165, 0.2);
+            border-color: #00bfa5;
+        }
+        .progress-gradient {
+            background: linear-gradient(90deg, #44ddc1 0%, #5203d5 100%);
+        }
+        body {
+            background-color: #0f1923;
+            color: #dde4e0;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#ffe17b",
+                      "outline": "#85948f",
+                      "on-primary-container": "#00473c",
+                      "on-tertiary": "#3b2f00",
+                      "on-error-container": "#ffdad6",
+                      "surface": "#0e1513",
+                      "secondary-fixed": "#e8deff",
+                      "on-background": "#dde4e0",
+                      "tertiary-container": "#caa600",
+                      "surface-variant": "#2f3634",
+                      "surface-container-low": "#161d1b",
+                      "on-tertiary-fixed-variant": "#564500",
+                      "on-secondary-fixed-variant": "#4f00d0",
+                      "on-surface-variant": "#bbcac4",
+                      "on-primary": "#00382f",
+                      "on-secondary-container": "#c0acff",
+                      "inverse-on-surface": "#2b3230",
+                      "on-surface": "#dde4e0",
+                      "secondary-container": "#5203d5",
+                      "on-primary-fixed-variant": "#005145",
+                      "surface-container": "#1a211f",
+                      "error": "#ffb4ab",
+                      "secondary": "#cdbdff",
+                      "inverse-surface": "#dde4e0",
+                      "primary-fixed-dim": "#44ddc1",
+                      "surface-tint": "#44ddc1",
+                      "on-primary-fixed": "#00201a",
+                      "on-secondary-fixed": "#20005f",
+                      "primary": "#44ddc1",
+                      "tertiary": "#eac32b",
+                      "surface-container-lowest": "#09100e",
+                      "on-tertiary-container": "#4b3d00",
+                      "secondary-fixed-dim": "#cdbdff",
+                      "surface-container-highest": "#2f3634",
+                      "on-tertiary-fixed": "#231b00",
+                      "on-secondary": "#370096",
+                      "surface-dim": "#0e1513",
+                      "background": "#0e1513",
+                      "outline-variant": "#3c4a46",
+                      "surface-container-high": "#242b29",
+                      "surface-bright": "#343b38",
+                      "primary-container": "#00bfa5",
+                      "inverse-primary": "#006b5c",
+                      "primary-fixed": "#68fadd",
+                      "on-error": "#690005",
+                      "tertiary-fixed-dim": "#eac32b",
+                      "error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "xs": "4px",
+                      "md": "16px",
+                      "unit": "4px",
+                      "xl": "32px",
+                      "sm": "8px",
+                      "lg": "24px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "40px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "display-sm": ["Inter"],
+                      "headline-lg-mobile": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-sm": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- SideNavBar (Desktop Only) -->
+<nav class="hidden lg:flex flex-col h-full py-xl fixed left-0 top-0 h-full w-[260px] bg-surface-container border-r border-outline-variant z-50">
+<div class="px-lg mb-xl">
+<div class="flex items-center gap-sm mb-xs">
+<span class="font-display-sm text-display-sm font-bold text-primary">Peer Learn</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">P2P Academy</p>
+</div>
+<div class="flex-1 space-y-xs">
+<!-- Dashboard Active -->
+<a class="flex items-center gap-md px-lg py-md text-primary bg-surface-container-high border-l-4 border-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-md text-body-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="event_seat">event_seat</span>
+<span class="font-body-md text-body-md">Slots</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-body-md text-body-md">Search</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-body-md text-body-md">Leaderboard</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-body-md text-body-md">Profile</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</a>
+</div>
+<div class="mt-auto px-lg">
+<button class="flex items-center gap-md py-md text-on-surface-variant hover:text-error transition-colors w-full">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-body-md text-body-md">Logout</span>
+</button>
+</div>
+</nav>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-40 bg-surface-container-low border-b border-outline-variant flex justify-between items-center h-16 px-margin-mobile lg:px-margin-desktop ml-0 lg:ml-[260px] lg:w-[calc(100%-260px)]">
+<h1 class="font-headline-lg-mobile lg:font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-bold text-primary">Dashboard</h1>
+<div class="flex items-center gap-md">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-variant rounded-full p-2 transition-all" data-icon="notifications">notifications</button>
+<div class="w-10 h-10 rounded-full border-2 border-primary-container p-[2px] overflow-hidden">
+<img alt="User Avatar" class="w-full h-full object-cover rounded-full" data-alt="A close-up portrait of a young tech-savvy student with a modern haircut, looking confidently at the camera. The background is a blurred futuristic laboratory with subtle teal and purple neon lighting. The lighting is soft yet cinematic, reinforcing a premium, high-performance academic identity with deep blacks and vibrant cyber-minimalist accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLDQs_YdPSOrOIZXEH0PX3VsJhK8NpsR8n2n04FZ8Z6njTV0b6Z_Jx-j17mZDibYSsllrBVfWPQBf4G1eL-lHVjvIUpoEv99sfaWzA1vszMyNawq2Fa6sigD5YFW2a4Wfi_47QrvOJplyesd47B3gSr5ZgKmLj36RhLGVDmG0Mm5xLPZbvwNTNnu_GXWh-m5OOA1rAv0h4M85zwxxnPewPaPYgSx2vW27PWFZt519U54FsyKzjOKQ_cgEW9X16kZ06OOb8ch8B-ZLQ"/>
+</div>
+</div>
+</header>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="lg:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface/80 backdrop-blur-md border-t border-outline-variant flex justify-around items-center h-16 pb-safe">
+<a class="flex flex-col items-center justify-center text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="event_seat">event_seat</span>
+<span class="font-label-md text-label-md">Slots</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-md text-label-md">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-label-md text-label-md">Leader</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+<!-- Main Canvas -->
+<main class="pt-24 pb-24 lg:pb-12 px-margin-mobile lg:px-margin-desktop lg:ml-[260px] max-w-[1440px]">
+<!-- Welcome Section -->
+<section class="mb-xl flex flex-col md:flex-row items-center gap-lg">
+<div class="relative">
+<div class="w-24 h-24 rounded-full border-4 border-primary p-1 overflow-hidden">
+<img alt="student_21 Avatar" class="w-full h-full object-cover rounded-full" data-alt="A centered profile portrait of a focused young developer with a modern digital interface aesthetic. The lighting is dominated by cool teal tones reflecting off the subject's face, creating a high-contrast cyber-minimalist vibe. The background is a dark, sleek texture resembling a high-performance gaming environment, emphasizing technical expertise and modern digital-native culture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWqQcIpzE1KJWZCOWd7-d6FDYjM5egaNV3pAtkQFrSGEDMyI1HGV7oUhbhJmTNCiO4WWwJWJ_qxJyHXiWhpQG_AT1IGT25lQ-K8KLAYiPhilzcTwDBB0-jeGikAvtncWniL8zlLvVP-fsd2paYUJ41-0EJa00U1TSxN_CFe1P4NWj7OAbskHEdUdmU2fxJd5thJlrW1SmZ__rqv0FN6fkcx5zf2b_qbDbe2axvfA0Sy9qDebV1trRw4k_AlpNlRWy0bBx3d3h_tDZX"/>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary w-6 h-6 rounded-full border-2 border-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-on-primary font-bold" data-icon="verified">verified</span>
+</div>
+</div>
+<div class="text-center md:text-left">
+<h2 class="font-display-sm text-display-sm font-bold text-on-surface">Welcome back, student_21</h2>
+<div class="flex items-center justify-center md:justify-start gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="font-body-md text-body-md">Tashkent Campus</span>
+</div>
+</div>
+</section>
+<!-- Level Progress -->
+<section class="mb-xl bg-surface-container border border-outline-variant rounded-xl p-lg">
+<div class="flex justify-between items-end mb-sm">
+<div>
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest">Global Ranking</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Level 12</h3>
+</div>
+<span class="font-headline-md text-headline-md text-primary">75%</span>
+</div>
+<div class="h-4 w-full bg-[#1a2332] rounded-full overflow-hidden">
+<div class="h-full progress-gradient rounded-full" style="width: 75%"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-sm">2,500 XP until Level 13</p>
+</section>
+<!-- Stats Row -->
+<section class="grid grid-cols-2 lg:grid-cols-4 gap-md mb-xl">
+<div class="bg-surface-container border border-outline-variant p-md rounded-lg teal-glow-hover transition-all cursor-pointer">
+<div class="flex items-center gap-sm text-primary mb-xs">
+<span class="material-symbols-outlined" data-icon="military_tech">military_tech</span>
+<span class="font-label-md text-label-md uppercase">Current Level</span>
+</div>
+<p class="font-headline-lg text-headline-lg">12</p>
+</div>
+<div class="bg-surface-container border border-outline-variant p-md rounded-lg teal-glow-hover transition-all cursor-pointer">
+<div class="flex items-center gap-sm text-secondary mb-xs">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+<span class="font-label-md text-label-md uppercase">Total XP</span>
+</div>
+<p class="font-headline-lg text-headline-lg">4,500</p>
+</div>
+<div class="bg-surface-container border border-outline-variant p-md rounded-lg teal-glow-hover transition-all cursor-pointer">
+<div class="flex items-center gap-sm text-primary mb-xs">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+<span class="font-label-md text-label-md uppercase">Peer Points</span>
+</div>
+<p class="font-headline-lg text-headline-lg">120</p>
+</div>
+<div class="bg-surface-container border border-outline-variant p-md rounded-lg teal-glow-hover transition-all cursor-pointer">
+<div class="flex items-center gap-sm text-tertiary mb-xs">
+<span class="material-symbols-outlined" data-icon="monetization_on">monetization_on</span>
+<span class="font-label-md text-label-md uppercase">Peer Coins</span>
+</div>
+<p class="font-headline-lg text-headline-lg">85</p>
+</div>
+</section>
+<!-- Active Slots Section -->
+<section class="mb-xl">
+<div class="flex justify-between items-center mb-lg">
+<h3 class="font-headline-lg text-headline-lg">Active Peer Slots</h3>
+<button class="text-primary font-label-md text-label-md uppercase flex items-center gap-xs hover:underline">
+                    View Schedule <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-lg">
+<!-- Slot Card 1 -->
+<div class="bg-surface-container border-l-4 border-l-primary border-y border-r border-outline-variant p-lg rounded-r-xl teal-glow-hover transition-all group">
+<div class="flex justify-between items-start mb-md">
+<div>
+<span class="bg-primary/10 text-primary px-sm py-[2px] rounded-full text-label-md font-label-md uppercase mb-xs inline-block">Teacher</span>
+<h4 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Advanced Algorithm Design</h4>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="code">code</span>
+</div>
+<div class="space-y-sm mb-lg">
+<div class="flex items-center gap-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span>
+                            Today, 14:30 - 16:00
+                        </div>
+<div class="flex items-center gap-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="group">group</span>
+                            4/5 Students Registered
+                        </div>
+</div>
+<button class="w-full py-md bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md uppercase tracking-wider hover:opacity-90 transition-all active:scale-95">
+                        Launch Virtual Space
+                    </button>
+</div>
+<!-- Slot Card 2 -->
+<div class="bg-surface-container border-l-4 border-l-secondary border-y border-r border-outline-variant p-lg rounded-r-xl teal-glow-hover transition-all group">
+<div class="flex justify-between items-start mb-md">
+<div>
+<span class="bg-secondary/10 text-secondary px-sm py-[2px] rounded-full text-label-md font-label-md uppercase mb-xs inline-block">Student</span>
+<h4 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Intro to Neural Networks</h4>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="psychology">psychology</span>
+</div>
+<div class="space-y-sm mb-lg">
+<div class="flex items-center gap-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span>
+                            Tomorrow, 10:00 - 11:30
+                        </div>
+<div class="flex items-center gap-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="person">person</span>
+                            Instructor: Prof. K. Demir
+                        </div>
+</div>
+<button class="w-full py-md border border-outline-variant text-primary rounded-lg font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container-highest transition-all active:scale-95">
+                        View Resources
+                    </button>
+</div>
+<!-- Slot Card 3 -->
+<div class="bg-surface-container border-l-4 border-l-primary border-y border-r border-outline-variant p-lg rounded-r-xl teal-glow-hover transition-all group">
+<div class="flex justify-between items-start mb-md">
+<div>
+<span class="bg-primary/10 text-primary px-sm py-[2px] rounded-full text-label-md font-label-md uppercase mb-xs inline-block">Teacher</span>
+<h4 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">UI/UX Component Systems</h4>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="palette">palette</span>
+</div>
+<div class="space-y-sm mb-lg">
+<div class="flex items-center gap-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span>
+                            Oct 28, 16:00 - 17:30
+                        </div>
+<div class="flex items-center gap-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="record_voice_over">record_voice_over</span>
+                            Ready to stream
+                        </div>
+</div>
+<button class="w-full py-md bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md uppercase tracking-wider hover:opacity-90 transition-all active:scale-95">
+                        Start Session
+                    </button>
+</div>
+</div>
+</section>
+<!-- Bento Grid Insights -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-lg mb-xl">
+<div class="lg:col-span-2 bg-surface-container border border-outline-variant rounded-xl p-lg relative overflow-hidden group">
+<div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity">
+<div class="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-lg text-headline-lg mb-md">Weekly Mastery</h3>
+<div class="flex items-center gap-xl">
+<div class="flex-1">
+<div class="flex justify-between text-on-surface-variant font-label-md text-label-md mb-xs">
+<span>JavaScript Basics</span>
+<span>100%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full mb-md overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 100%"></div>
+</div>
+<div class="flex justify-between text-on-surface-variant font-label-md text-label-md mb-xs">
+<span>React Advanced</span>
+<span>65%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full mb-md overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 65%"></div>
+</div>
+<div class="flex justify-between text-on-surface-variant font-label-md text-label-md mb-xs">
+<span>System Design</span>
+<span>42%</span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 42%"></div>
+</div>
+</div>
+<div class="hidden md:block w-48 h-48">
+<!-- Circular Visualization Placeholder -->
+<div class="w-full h-full rounded-full border-[12px] border-primary/20 flex items-center justify-center relative">
+<div class="absolute inset-0 rounded-full border-[12px] border-primary border-t-transparent border-r-transparent transform -rotate-45"></div>
+<div class="text-center">
+<p class="font-display-sm text-display-sm font-bold text-primary">8.4</p>
+<p class="font-label-md text-label-md text-on-surface-variant">GPA Equivalent</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container border border-outline-variant rounded-xl p-lg flex flex-col justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg mb-sm">Leaderboard</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">Top performers this week</p>
+<div class="space-y-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<span class="text-primary font-bold">1</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest"></div>
+<span class="font-body-md text-body-md">dev_knight</span>
+</div>
+<span class="text-secondary font-bold">9,200 XP</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<span class="text-on-surface-variant">2</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest"></div>
+<span class="font-body-md text-body-md">pixel_wizard</span>
+</div>
+<span class="text-on-surface-variant">8,850 XP</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<span class="text-on-surface-variant">3</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest"></div>
+<span class="font-body-md text-body-md">student_21</span>
+</div>
+<span class="text-primary font-bold">4,500 XP</span>
+</div>
+</div>
+</div>
+<button class="mt-lg w-full py-md border border-outline-variant text-on-surface rounded-lg font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container-highest transition-all">
+                    View All Rankings
+                </button>
+</div>
+</section>
+</main>
+<script>
+        // Micro-interactions and hover effects
+        document.querySelectorAll('.teal-glow-hover').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

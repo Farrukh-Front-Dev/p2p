@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Peer Learn - Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffe17b",
+                        "outline": "#85948f",
+                        "on-primary-container": "#00473c",
+                        "on-tertiary": "#3b2f00",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#0e1513",
+                        "secondary-fixed": "#e8deff",
+                        "on-background": "#dde4e0",
+                        "tertiary-container": "#caa600",
+                        "surface-variant": "#2f3634",
+                        "surface-container-low": "#161d1b",
+                        "on-tertiary-fixed-variant": "#564500",
+                        "on-secondary-fixed-variant": "#4f00d0",
+                        "on-surface-variant": "#bbcac4",
+                        "on-primary": "#00382f",
+                        "on-secondary-container": "#c0acff",
+                        "inverse-on-surface": "#2b3230",
+                        "on-surface": "#dde4e0",
+                        "secondary-container": "#5203d5",
+                        "on-primary-fixed-variant": "#005145",
+                        "surface-container": "#1a211f",
+                        "error": "#ffb4ab",
+                        "secondary": "#cdbdff",
+                        "inverse-surface": "#dde4e0",
+                        "primary-fixed-dim": "#44ddc1",
+                        "surface-tint": "#44ddc1",
+                        "on-primary-fixed": "#00201a",
+                        "on-secondary-fixed": "#20005f",
+                        "primary": "#44ddc1",
+                        "tertiary": "#eac32b",
+                        "surface-container-lowest": "#09100e",
+                        "on-tertiary-container": "#4b3d00",
+                        "secondary-fixed-dim": "#cdbdff",
+                        "surface-container-highest": "#2f3634",
+                        "on-tertiary-fixed": "#231b00",
+                        "on-secondary": "#370096",
+                        "surface-dim": "#0e1513",
+                        "background": "#0e1513",
+                        "outline-variant": "#3c4a46",
+                        "surface-container-high": "#242b29",
+                        "surface-bright": "#343b38",
+                        "primary-container": "#00bfa5",
+                        "inverse-primary": "#006b5c",
+                        "primary-fixed": "#68fadd",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#eac32b",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-sm": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-track {
+            border-color: #44ddc1 !important;
+            box-shadow: 0px 0px 12px 0px rgba(68, 221, 193, 0.2);
+        }
+        .track-card:hover {
+            box-shadow: 0px 0px 12px 0px rgba(68, 221, 193, 0.2);
+            border-color: #44ddc1;
+        }
+        .tonal-stack-1 { background-color: #1a2332; border: 1px solid #2d3748; }
+        .tonal-stack-0 { background-color: #0f1923; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-40 bg-surface-container-low border-b border-outline-variant flex justify-between items-center h-16 px-margin-mobile lg:px-margin-desktop ml-0 lg:ml-[260px]">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile lg:text-headline-lg font-bold text-primary">Peer Learn</h1>
+<div class="flex items-center gap-md">
+<button class="hover:bg-surface-variant rounded-full p-2 transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="A professional close-up headshot of a young digital artist with a creative aesthetic, set against a dark, moody background with subtle teal rim lighting. The style is modern and high-performance, reflecting a technical and empowering personality consistent with a high-end peer-to-peer learning platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADxNie6o8T1BQOxg93Jacup8qDjQf9o4w-XbUHURQxkd8WaAV-tmKJkXnfVJmXRSyZo7Ke9DkhEVVul4nAxW-dTLgU_fWqD9YZg1EKkTNYocdiGWG4hDZ4wz2StWz8WjFQUfOWKP0Rc-OLn6cjwjybmq9NuyPfuk6Bi-mZ1P2aX26OMcqetUgfsP6K0jjqoWBtt-AR0jmZ5pfZ3BJDteLKzQMS2v8ZD3Ymt4sxP4IFX85sz5dDQSonc5iAcJKn3NWnfYEtVQ-jPRrA"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-[260px] hidden lg:flex flex-col py-xl bg-surface-container border-r border-outline-variant z-50">
+<div class="px-lg mb-xl">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<div>
+<div class="font-display-sm text-display-sm font-bold text-primary leading-none">Peer Learn</div>
+<div class="text-label-md text-on-surface-variant opacity-70">P2P Academy</div>
+</div>
+</div>
+</div>
+<nav class="flex-grow flex flex-col">
+<!-- Dashboard Active -->
+<a class="flex items-center gap-md px-lg py-md text-primary bg-surface-container-high border-l-4 border-primary transition-all scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-body-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">event_seat</span>
+<span class="font-body-md">Slots</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-body-md">Search</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-body-md">Leaderboard</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-body-md">Profile</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-md">Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-lg">
+<a class="flex items-center gap-md py-md text-on-surface-variant hover:text-error transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-body-md">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-0 lg:ml-[260px] pt-24 pb-32 px-margin-mobile lg:px-margin-desktop min-h-screen tonal-stack-0">
+<!-- Onboarding Shell -->
+<div class="max-w-4xl mx-auto">
+<!-- Step Progress Indicator -->
+<div class="flex flex-col items-center mb-xl">
+<div class="flex items-center gap-sm mb-xs">
+<div class="w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_rgba(68,221,193,0.6)]"></div>
+<div class="w-16 h-[2px] bg-outline-variant"></div>
+<div class="w-3 h-3 rounded-full bg-outline-variant"></div>
+</div>
+<p class="text-label-md text-on-surface-variant uppercase tracking-widest">Step 1 of 2</p>
+<h2 class="font-display-sm text-display-sm mt-md text-center">Choose your main track</h2>
+<p class="text-on-surface-variant text-center max-w-md mt-sm">Select the discipline you want to master. You can add secondary tracks later in your journey.</p>
+</div>
+<!-- Track Cards Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg mt-xl">
+<!-- Card: Web (Active/Selected) -->
+<div class="track-card active-track tonal-stack-1 p-lg rounded-xl cursor-pointer transition-all duration-300 relative group" onclick="selectTrack(this)">
+<div class="absolute top-4 right-4 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="w-12 h-12 mb-md bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">language</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">Web</h3>
+<p class="text-body-sm text-on-surface-variant">Full-stack development, modern frameworks, and scalable cloud architectures.</p>
+</div>
+<!-- Card: Mobile -->
+<div class="track-card tonal-stack-1 p-lg rounded-xl cursor-pointer transition-all duration-300 relative group" onclick="selectTrack(this)">
+<div class="absolute top-4 right-4 text-on-surface-variant opacity-0 group-[.active-track]:opacity-100">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="w-12 h-12 mb-md bg-surface-container-highest rounded-lg flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">smartphone</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">Mobile</h3>
+<p class="text-body-sm text-on-surface-variant">Build native and cross-platform apps for iOS and Android with high performance.</p>
+</div>
+<!-- Card: GameDev -->
+<div class="track-card tonal-stack-1 p-lg rounded-xl cursor-pointer transition-all duration-300 relative group" onclick="selectTrack(this)">
+<div class="absolute top-4 right-4 text-on-surface-variant opacity-0 group-[.active-track]:opacity-100">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="w-12 h-12 mb-md bg-surface-container-highest rounded-lg flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">sports_esports</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">GameDev</h3>
+<p class="text-body-sm text-on-surface-variant">Master Unreal Engine and Unity to create immersive 3D worlds and mechanics.</p>
+</div>
+<!-- Card: DataScience -->
+<div class="track-card tonal-stack-1 p-lg rounded-xl cursor-pointer transition-all duration-300 relative group" onclick="selectTrack(this)">
+<div class="absolute top-4 right-4 text-on-surface-variant opacity-0 group-[.active-track]:opacity-100">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="w-12 h-12 mb-md bg-surface-container-highest rounded-lg flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">database</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">DataScience</h3>
+<p class="text-body-sm text-on-surface-variant">Analyze complex datasets and build predictive models using advanced ML.</p>
+</div>
+<!-- Card: DevOps -->
+<div class="track-card tonal-stack-1 p-lg rounded-xl cursor-pointer transition-all duration-300 relative group" onclick="selectTrack(this)">
+<div class="absolute top-4 right-4 text-on-surface-variant opacity-0 group-[.active-track]:opacity-100">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="w-12 h-12 mb-md bg-surface-container-highest rounded-lg flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">DevOps</h3>
+<p class="text-body-sm text-on-surface-variant">Optimize deployment pipelines, container orchestration, and system reliability.</p>
+</div>
+<!-- Card: Blockchain -->
+<div class="track-card tonal-stack-1 p-lg rounded-xl cursor-pointer transition-all duration-300 relative group" onclick="selectTrack(this)">
+<div class="absolute top-4 right-4 text-on-surface-variant opacity-0 group-[.active-track]:opacity-100">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="w-12 h-12 mb-md bg-surface-container-highest rounded-lg flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">currency_bitcoin</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs">Blockchain</h3>
+<p class="text-body-sm text-on-surface-variant">Develop decentralized applications and secure smart contracts on Web3.</p>
+</div>
+</div>
+<!-- Action Bar -->
+<div class="mt-32 flex justify-between items-center border-t border-outline-variant pt-lg">
+<button class="px-lg py-md text-on-surface-variant font-headline-md hover:text-primary transition-colors flex items-center gap-sm">
+<span class="material-symbols-outlined">arrow_back</span>
+                    Back
+                </button>
+<button class="px-xl py-md bg-primary-container text-on-primary-container font-headline-md rounded-lg flex items-center gap-sm shadow-[0_4px_10px_rgba(0,191,165,0.3)] hover:shadow-[0_6px_20px_rgba(0,191,165,0.4)] active:scale-95 transition-all">
+                    Next
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="lg:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface/80 backdrop-blur-md border-t border-outline-variant shadow-lg flex justify-around items-center h-16 pb-safe">
+<a class="flex flex-col items-center justify-center text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary" href="#">
+<span class="material-symbols-outlined">event_seat</span>
+<span class="font-label-md text-label-md">Slots</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-md text-label-md">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-label-md text-label-md">Leaderboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+<script>
+        function selectTrack(element) {
+            // Remove active state from all cards
+            document.querySelectorAll('.track-card').forEach(card => {
+                card.classList.remove('active-track');
+                const checkIcon = card.querySelector('.material-symbols-outlined[style*="FILL"]');
+                if (checkIcon && !card.classList.contains('active-track')) {
+                    checkIcon.parentElement.style.opacity = '0';
+                }
+            });
+            
+            // Add active state to clicked card
+            element.classList.add('active-track');
+            const activeCheck = element.querySelector('.absolute.top-4.right-4');
+            if (activeCheck) {
+                activeCheck.style.opacity = '1';
+                const span = activeCheck.querySelector('span');
+                span.style.fontVariationSettings = "'FILL' 1";
+                activeCheck.classList.add('text-primary');
+            }
+
+            // Haptic-like interaction feedback
+            element.classList.add('scale-95');
+            setTimeout(() => element.classList.remove('scale-95'), 150);
+        }
+
+        // Initialize Web as active on load
+        window.onload = () => {
+            const webCard = document.querySelector('.track-card:first-child');
+            if (webCard) {
+                const check = webCard.querySelector('.absolute.top-4.right-4');
+                check.style.opacity = '1';
+            }
+        };
+    </script>
+</body></html>

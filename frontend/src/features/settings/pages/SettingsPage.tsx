@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { settingsService } from '@/features/settings/api';
 import { Skeleton, Modal, PageHeader, Card, Button, EmptyState } from '@/shared/ui';
@@ -21,6 +22,7 @@ const LANGUAGE_OPTIONS = [
 ];
 
 export default function SettingsPage() {
+  const { t } = useTranslation();
   const queryClient = useQueryClient();
   const logout = useAuthStore((state) => state.logout);
 
@@ -46,18 +48,18 @@ export default function SettingsPage() {
   const updateLanguageMutation = useMutation({
     mutationFn: (lang: string) => settingsService.updateLanguage(lang),
     onSuccess: () => {
-      triggerToast('Muloqot tili sozlamasi muvaffaqiyatli saqlandi', 'success');
+      triggerToast(t('settings.toast.langSaved'), 'success');
       queryClient.invalidateQueries({ queryKey: ['settings-page-logs'] });
     },
     onError: (err: any) => {
-      const detail = err?.response?.data?.detail || 'Xatolik yuz berdi';
+      const detail = err?.response?.data?.detail || t('settings.toast.error');
       triggerToast(detail, 'error');
     },
   });
 
   const handleLanguageSave = () => {
     if (!selectedLanguage) {
-      triggerToast('Iltimos, til tanlang', 'error');
+      triggerToast(t('settings.toast.selectLang'), 'error');
       return;
     }
     updateLanguageMutation.mutate(selectedLanguage);
@@ -66,14 +68,14 @@ export default function SettingsPage() {
   const handleUnlinkSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!unlinkPassword) {
-      triggerToast('Iltimos, parolingizni kiriting', 'error');
+      triggerToast(t('settings.toast.enterPassword'), 'error');
       return;
     }
 
     setIsUnlinking(true);
     try {
       await authService.unlinkTelegram(unlinkPassword);
-      triggerToast('Telegram muvaffaqiyatli uzildi. Tizimdan chiqmoqdasiz...', 'success');
+      triggerToast(t('settings.toast.unlinkSuccess'), 'success');
       setShowUnlinkModal(false);
 
       setTimeout(() => {
@@ -92,8 +94,8 @@ export default function SettingsPage() {
     return (
       <div className="flex flex-col gap-4 sm:gap-6 animate-fade-in font-ibm-plex-mono text-white">
         <PageHeader
-          title="Tizim Sozlamalari"
-          subtitle="Platformadagi muloqot tillari, xavfsizlik sozlamalari va vizual tizim parametrlari boshqaruvi."
+          title={t('settings.title')}
+          subtitle={t('settings.subtitle')}
           icon={Settings}
         />
         {/* Content skeletons */}
@@ -129,20 +131,20 @@ export default function SettingsPage() {
     return (
       <div className="flex flex-col gap-4 sm:gap-6 animate-fade-in font-ibm-plex-mono text-white">
         <PageHeader
-          title="Tizim Sozlamalari"
-          subtitle="Platformadagi muloqot tillari, xavfsizlik sozlamalari va vizual tizim parametrlari boshqaruvi."
+          title={t('settings.title')}
+          subtitle={t('settings.subtitle')}
           icon={Settings}
         />
         <Card className="flex flex-col items-center justify-center py-12 gap-4 text-center">
           <AlertTriangle className="h-10 w-10 text-[#FF9B9B]" />
           <h3 className="text-sm font-extrabold text-[#FF9B9B] font-montserrat uppercase">
-            Sozlamalarni yuklashda xatolik
+            {t('settings.errors.loadTitle')}
           </h3>
           <p className="text-xs text-[#B0BEC5]">
-            Server bilan aloqa o'rnatilmadi. Iltimos qayta urinib ko'ring.
+            {t('settings.errors.loadDesc')}
           </p>
           <Button variant="primary" onClick={() => refetch()}>
-            <RefreshCw className="h-4 w-4" /> Qayta yuklash
+            <RefreshCw className="h-4 w-4" /> {t('settings.reload')}
           </Button>
         </Card>
       </div>
@@ -152,8 +154,8 @@ export default function SettingsPage() {
   return (
     <div className="flex flex-col gap-4 sm:gap-6 animate-fade-in font-ibm-plex-mono text-white">
       <PageHeader
-        title="Tizim Sozlamalari"
-        subtitle="Platformadagi muloqot tillari, xavfsizlik sozlamalari va vizual tizim parametrlari boshqaruvi."
+        title={t('settings.title')}
+        subtitle={t('settings.subtitle')}
         icon={Settings}
       />
 
@@ -166,14 +168,14 @@ export default function SettingsPage() {
               <Languages className="h-4 w-4" />
             </div>
             <h2 className="text-sm font-bold uppercase tracking-wider font-montserrat text-white leading-none">
-              Muloqot tillari
+              {t('settings.language.title')}
             </h2>
           </div>
 
           {/* Existing active keys with 3D badges */}
           <div className="flex flex-col gap-2 bg-[#34495E] p-3 sm:p-4 rounded-xl border-2 border-black">
             <span className="text-xs uppercase tracking-wider font-bold font-montserrat text-[#38C9E6]">
-              Sizning faol tillaringiz:
+              {t('settings.language.active')}
             </span>
             <div className="flex flex-wrap gap-2 mt-1">
               {config?.languages && config.languages.length > 0 ? (
@@ -183,7 +185,7 @@ export default function SettingsPage() {
                   </span>
                 ))
               ) : (
-                <span className="text-xs text-[#B0BEC5] italic">Muloqot tillari tanlanmagan</span>
+                <span className="text-xs text-[#B0BEC5] italic">{t('settings.language.title')} tanlanmagan</span>
               )}
             </div>
           </div>
@@ -191,7 +193,7 @@ export default function SettingsPage() {
           {/* Interactive select list and primary action block */}
           <div className="flex flex-col gap-1">
             <label className="text-xs uppercase tracking-wider font-bold font-montserrat text-[#B0BEC5] mb-1">
-              Yangi til qo'shish yoki almashtirish
+              {t('settings.language.add')}
             </label>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <div className="relative flex-1 w-full">
@@ -200,7 +202,7 @@ export default function SettingsPage() {
                   onChange={(e) => setSelectedLanguage(e.target.value)}
                   className="w-full h-11 px-4 py-2 border-2 border-black rounded-xl bg-[#34495E] text-white font-ibm-plex-mono focus:outline-none focus:ring-2 focus:ring-[#38C9E6] transition-all cursor-pointer"
                 >
-                  <option value="" disabled className="bg-[#34495E] text-[#B0BEC5]">-- Tilni Tanlang --</option>
+                  <option value="" disabled className="bg-[#34495E] text-[#B0BEC5]">-- {t('settings.language.select')} --</option>
                   {LANGUAGE_OPTIONS.map((l) => (
                     <option key={l} value={l} className="bg-[#2A3442] text-white">
                       {l}
@@ -215,7 +217,7 @@ export default function SettingsPage() {
                 disabled={updateLanguageMutation.isPending}
                 className="w-full sm:w-auto min-h-11"
               >
-                {updateLanguageMutation.isPending ? 'Saqlanmoqda...' : 'Saqlash'}
+                {updateLanguageMutation.isPending ? t('settings.language.saving') : t('settings.language.saveBtn')}
               </Button>
             </div>
           </div>
@@ -229,19 +231,19 @@ export default function SettingsPage() {
               <Eye className="h-4 w-4" />
             </div>
             <h2 className="text-sm font-bold uppercase tracking-wider font-montserrat text-white leading-none">
-              Vizual Mavzu (Theme Mode)
+              {t('settings.theme.title')}
             </h2>
           </div>
 
           <div className="flex flex-col gap-3">
             <p className="text-xs text-[#B0BEC5] leading-relaxed">
-              P2P Corpus platformasi <strong className="text-[#38C9E6]">Modern 3D Neo-Brutalist</strong> dizayn tizimiga asoslanganligi bois faqatgina <strong className="text-[#cdbdff]">To'q Mavzu (Dark system only)</strong> da ishlaydi.
+              {t('settings.theme.desc1')} <strong className="text-[#38C9E6]">{t('settings.theme.desc2')}</strong> {t('settings.theme.desc3')} <strong className="text-[#cdbdff]">{t('settings.theme.desc4')}</strong> {t('settings.theme.desc5')}
             </p>
 
             <div className="flex items-center gap-3 p-3 sm:p-4 bg-[#34495E] rounded-xl border-2 border-black">
               <div className="h-3 w-3 rounded-full bg-[#00e676] animate-pulse flex-shrink-0" />
               <span className="text-[11px] sm:text-xs text-[#B0BEC5] uppercase tracking-wider font-bold">
-                Tungi baholashlar uchun ko'zni ideal vizual himoya qilish faol!
+                {t('settings.theme.active')}
               </span>
             </div>
           </div>
@@ -255,13 +257,13 @@ export default function SettingsPage() {
               <Unlink className="h-4 w-4" />
             </div>
             <h2 className="text-sm font-bold uppercase tracking-wider font-montserrat text-[#FF9B9B] leading-none">
-              Xavfsizlik & Hisob ulanishi
+              {t('settings.security.title')}
             </h2>
           </div>
 
           <div className="flex flex-col gap-4">
             <p className="text-xs text-[#B0BEC5] leading-relaxed">
-              Agar ulangan Telegram akkauntingizni o'zgartirmoqchi bo'lsangiz, uni profil bilan ulanishini buzishingiz (unlink) mumkin.
+              {t('settings.security.desc')}
             </p>
 
             <div className="flex justify-end mt-1">
@@ -287,13 +289,13 @@ export default function SettingsPage() {
               <LogOut className="h-4 w-4" />
             </div>
             <h2 className="text-sm font-bold uppercase tracking-wider font-montserrat text-white leading-none">
-              Tizimdan chiqish (Logout)
+              {t('settings.logout.title')}
             </h2>
           </div>
 
           <div className="flex flex-col gap-4">
             <p className="text-xs text-[#B0BEC5] leading-relaxed">
-              Platformadagi ish seansini yakunlamoqchimisiz? Chiqqaningizdan so'ng, qayta kirish uchun hisobingiz orqali login qilishingiz kerak bo'ladi.
+              {t('settings.logout.desc')}
             </p>
 
             <div className="flex justify-end mt-1">
@@ -314,11 +316,11 @@ export default function SettingsPage() {
         <Modal
           isOpen={showLogoutModal}
           onClose={() => setShowLogoutModal(false)}
-          title="Tizimdan Chiqish"
+          title={t('settings.logoutModal.title')}
         >
           <div className="flex flex-col gap-4">
             <p className="text-xs text-[#B0BEC5] leading-relaxed">
-              Haqiqatdan ham tizimdan chiqmoqchimisiz? Kelgusi kirishlar uchun qayta avtorizatsiyadan o'tishingiz talab etiladi.
+              {t('settings.logoutModal.desc')}
             </p>
             <div className="flex flex-col-reverse sm:flex-row gap-3 justify-end pt-2">
               <Button
@@ -350,7 +352,7 @@ export default function SettingsPage() {
 
             <div className="flex justify-between items-center border-b-2 border-black pb-3">
               <span className="text-base sm:text-lg font-extrabold font-montserrat text-white tracking-tight uppercase">
-                Xavfsizlik tasdiqi
+                {t('settings.unlinkModal.title')}
               </span>
               <button
                 onClick={() => setShowUnlinkModal(false)}
@@ -363,9 +365,9 @@ export default function SettingsPage() {
             <div className="flex items-start gap-3 p-3 sm:p-4 rounded-xl bg-[#FF9B9B]/10 border-2 border-black">
               <ShieldAlert className="h-6 w-6 text-[#FF9B9B] shrink-0" />
               <div className="flex flex-col gap-1">
-                <span className="text-xs font-extrabold text-[#FF9B9B] uppercase tracking-wider font-montserrat">Diqqat!</span>
+                <span className="text-xs font-extrabold text-[#FF9B9B] uppercase tracking-wider font-montserrat">{t('settings.unlinkModal.warning')}</span>
                 <p className="text-xs text-[#B0BEC5] leading-relaxed">
-                  Telegram ulanishini uzish tizimdan avtomatik logout bo'lishingizga sabab bo'ladi. Davom etish uchun School21 parolingizni kiritib tasdiqlang.
+                  {t('settings.unlinkModal.desc')}
                 </p>
               </div>
             </div>
@@ -373,14 +375,14 @@ export default function SettingsPage() {
             <form onSubmit={handleUnlinkSubmit} className="flex flex-col gap-4">
               <div className="flex flex-col gap-1.5">
                 <label className="text-xs uppercase tracking-wider font-bold font-montserrat text-[#B0BEC5]">
-                  XAVFSIZLIK PAROLI
+                  {t('settings.unlinkModal.passwordLabel')}
                 </label>
                 <div className="relative">
                   <input
                     type="password"
                     value={unlinkPassword}
                     onChange={(e) => setUnlinkPassword(e.target.value)}
-                    placeholder="School21 parolingiz..."
+                    placeholder={t('settings.unlinkModal.passwordPlaceholder')}
                     className="h-11 w-full rounded-xl bg-[#34495E] border-2 border-black pl-10 pr-3 text-sm text-white placeholder:text-[#B0BEC5] focus:outline-none focus:ring-2 focus:ring-[#38C9E6] transition-all"
                     autoFocus
                   />
@@ -403,7 +405,7 @@ export default function SettingsPage() {
                   disabled={isUnlinking || !unlinkPassword}
                   className="w-full sm:flex-1 min-h-11"
                 >
-                  {isUnlinking ? 'Uzilmoqda...' : 'Tasdiqlash'}
+                  {isUnlinking ? t('settings.unlinkModal.unlinking') : t('settings.unlinkModal.confirmBtn')}
                 </Button>
               </div>
             </form>

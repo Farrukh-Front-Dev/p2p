@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduPeer - Discover Slots</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#1E2A38',
+                        surface: '#2A3442',
+                        accent: {
+                            primary: '#38C9E6',
+                            secondary: '#43E8A0'
+                        }
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Montserrat", "sans-serif"],
+                        "display": ["Montserrat", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Montserrat", "sans-serif"]
+                    },
+                    boxShadow: {
+                        'neo': '4px 4px 0px 0px rgba(0,0,0,1)',
+                        'neo-sm': '2px 2px 0px 0px rgba(0,0,0,1)',
+                        'neo-hover': '0px 0px 0px 0px rgba(0,0,0,1)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .neo-brutalist {
+            border: 2px solid black;
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+            transition: all 0.2s ease;
+        }
+        .neo-brutalist:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+        }
+        .neo-brutalist:active {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+        }
+        .neo-brutalist-sm {
+            border: 2px solid black;
+            box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+            transition: all 0.2s ease;
+        }
+        .neo-brutalist-sm:hover {
+            transform: translate(1px, 1px);
+            box-shadow: 1px 1px 0px 0px rgba(0,0,0,1);
+        }
+    </style>
+</head>
+<body class="bg-background text-white font-body min-h-screen flex">
+<!-- SideNavBar (Shared Component) -->
+<nav class="hidden md:flex fixed left-0 top-0 h-full flex-col p-4 space-y-4 bg-[#2A3442] border-r-2 border-black w-64 z-50">
+<!-- Brand Header -->
+<div class="flex items-center space-x-3 mb-8 pb-4 border-b-2 border-black">
+<div class="w-10 h-10 rounded-full border-2 border-black bg-accent-primary overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A bold, stylized avatar for a student using a neo-brutalist design aesthetic. The image features high contrast with deep blacks, bright white, and a vibrant neon cyan (#38C9E6) background. The lighting is flat and graphic, emphasizing strong shapes and energetic vibes suitable for a modern peer learning platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLo5bGUqR_CTC1gIZ59MUc3bspLjY4zMUjmriONp7dVEnfFdXn7LPxGHqmsuvPcLhwcTbr2MWB3sVbqcs691boV93VGU6ntAYg73OA3jXS4L1LXqT2rFLKahCdIHVUKo-mEb0N9qx7zFQEknIN_fkVXkAcayHnukH2HaVE8WQc7TYkTdfagLy_y916wdpxV1Cl2wjfII5TkVVYOBIEVIRIaweVLcshqj67iNiiOR7nb8WMbAIRFSMKkwInHp5tMOPh8LGzvapu1JA"/>
+</div>
+<div>
+<h1 class="text-xl font-black text-[#43E8A0] font-headline tracking-tighter uppercase">EduPeer</h1>
+<p class="text-xs font-bold text-gray-300 font-label uppercase">Peer Learning</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<div class="flex-1 space-y-2">
+<!-- Dashboard (Inactive) -->
+<a class="flex items-center space-x-3 px-4 py-3 rounded-DEFAULT text-white hover:bg-[#43E8A0] hover:text-black transition-colors hover:translate-x-[2px] hover:translate-y-[2px] font-label text-sm uppercase font-bold group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-black">dashboard</span>
+<span>Dashboard</span>
+</a>
+<!-- Slots (Active) -->
+<a class="flex items-center space-x-3 px-4 py-3 rounded-DEFAULT bg-[#38C9E6] text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-transform active:scale-95 font-label text-sm uppercase font-bold" href="#">
+<span class="material-symbols-outlined text-xl">event_repeat</span>
+<span>Slots</span>
+</a>
+<!-- Search (Inactive) -->
+<a class="flex items-center space-x-3 px-4 py-3 rounded-DEFAULT text-white hover:bg-[#43E8A0] hover:text-black transition-colors hover:translate-x-[2px] hover:translate-y-[2px] font-label text-sm uppercase font-bold group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-black">search</span>
+<span>Search</span>
+</a>
+<!-- Leaderboard (Inactive) -->
+<a class="flex items-center space-x-3 px-4 py-3 rounded-DEFAULT text-white hover:bg-[#43E8A0] hover:text-black transition-colors hover:translate-x-[2px] hover:translate-y-[2px] font-label text-sm uppercase font-bold group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-black">leaderboard</span>
+<span>Leaderboard</span>
+</a>
+<!-- Profile (Inactive) -->
+<a class="flex items-center space-x-3 px-4 py-3 rounded-DEFAULT text-white hover:bg-[#43E8A0] hover:text-black transition-colors hover:translate-x-[2px] hover:translate-y-[2px] font-label text-sm uppercase font-bold group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-black">person</span>
+<span>Profile</span>
+</a>
+<!-- Settings (Inactive) -->
+<a class="flex items-center space-x-3 px-4 py-3 rounded-DEFAULT text-white hover:bg-[#43E8A0] hover:text-black transition-colors hover:translate-x-[2px] hover:translate-y-[2px] font-label text-sm uppercase font-bold group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-black">settings</span>
+<span>Settings</span>
+</a>
+</div>
+</nav>
+<!-- Mobile Top Bar (Fallback for mobile screens) -->
+<nav class="md:hidden flex items-center justify-between px-6 py-4 w-full bg-[#1E2A38] border-b-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] fixed top-0 z-50">
+<div class="text-2xl font-black text-[#38C9E6] tracking-tighter font-headline uppercase">EduPeer</div>
+<div class="flex space-x-4">
+<button class="text-white hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-white hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 p-6 md:p-12 mt-16 md:mt-0 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-10">
+<h1 class="font-headline text-4xl md:text-5xl font-black text-white mb-2 uppercase tracking-tight">Discover Slots</h1>
+<p class="text-gray-300 font-body text-lg">Find and book peer review sessions for your projects.</p>
+</header>
+<!-- Tab Bar -->
+<div class="flex space-x-4 mb-8 border-b-2 border-surface pb-2">
+<button class="px-6 py-2 bg-accent-primary text-black font-label font-bold uppercase border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] rounded-DEFAULT">
+                Book reviews
+            </button>
+<button class="px-6 py-2 text-gray-400 font-label font-bold uppercase hover:text-white transition-colors">
+                My open slots
+            </button>
+</div>
+<!-- Content Area: Book Reviews Tab (Active) -->
+<div class="space-y-8">
+<!-- Search Bar -->
+<div class="relative w-full max-w-2xl">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-black font-bold">search</span>
+</div>
+<input class="w-full pl-12 pr-4 py-4 bg-white text-black font-body font-bold rounded-DEFAULT neo-brutalist placeholder-gray-500 focus:outline-none focus:ring-0" placeholder="Search by project name..." type="text"/>
+</div>
+<!-- Slots Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Slot Card 1 -->
+<article class="bg-surface rounded-lg p-6 flex flex-col justify-between neo-brutalist relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-accent-secondary opacity-20 rounded-bl-full transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
+<div class="mb-4">
+<div class="flex items-center space-x-3 mb-4">
+<div class="w-12 h-12 rounded-full border-2 border-black bg-yellow-400 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A stylish portrait of a student programmer for an avatar. High contrast neo-brutalist aesthetic, stark lighting, set against a bright yellow background. The character looks focused and determined, fitting a modern tech education platform. Deep shadows and sharp lines emphasize the brutalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOzjkVjgIChWhpDqm5bZoqeE49O-T4KzXwpyJorWwQWsyKaVu8DpbaSBq2cC-0dEcuMdv3DX-I5p51oCW2Khkckf0zZuMlO6t9jjCCIqwbR6MuJ1QS0NlIKfg0oNMv_KU7216ROKU6XM-nqsj8l3r08y8AmaJOaWIhZpB5FaOffM8oeKl0fbkN9MBfwRxAQ3RBehv5klcGtlWcfyaxNoeM3JPnrS-ilNfGRdG0E3yXK4veDCAOUOEbk7PBga0D4zwaIQMaev_yLXU"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-white">Sarah_k</h3>
+<span class="inline-block px-2 py-1 bg-black text-accent-primary text-xs font-bold font-label uppercase border border-accent-primary rounded">Level 4</span>
+</div>
+</div>
+<h2 class="font-headline font-black text-2xl text-accent-primary uppercase tracking-tight mb-2">TRANSCENDENCE</h2>
+<div class="flex items-center text-gray-300 font-body text-sm font-medium">
+<span class="material-symbols-outlined text-base mr-2">calendar_month</span>
+<span>Today, 15:00</span>
+</div>
+</div>
+<button class="w-full py-3 bg-accent-primary text-black font-label font-bold uppercase rounded-DEFAULT neo-brutalist-sm mt-4 flex justify-center items-center">
+<span class="mr-2">Book review</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</button>
+</article>
+<!-- Slot Card 2 -->
+<article class="bg-surface rounded-lg p-6 flex flex-col justify-between neo-brutalist relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-accent-primary opacity-20 rounded-bl-full transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
+<div class="mb-4">
+<div class="flex items-center space-x-3 mb-4">
+<div class="w-12 h-12 rounded-full border-2 border-black bg-pink-400 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A stylized, high-contrast avatar portrait of a young male coder. Neo-brutalist design aesthetic with bold black outlines, stark shadows, and a vibrant pink background. The mood is modern, edgy, and academic, representing a peer reviewer on a learning platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2u00JChjqWs3vrPfcBVlIkUEFveEg73lSm4A7CJW84AdtAK18QMrs24VXQm_MYtbCeaMrS3dQw5ft4QpXrGYnxOnc7D4HP2Cl8Z-_diYq7lt6QDtXWUy7NwdM20DeXM4feyOYyUCiyGhB1EH8tmzg2OMbVs1-xLryoGBqNn78wull_ucvWyMz6FAe7fZgwkHYUgm85PlmEmTtolFuJ1PTDW4SqXAw3ABqp1ETpUrw9VLj7HSEgoStQ5absEhcaw3XS0z-apuBkWQ"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-lg text-white">Alex_dev</h3>
+<span class="inline-block px-2 py-1 bg-black text-accent-secondary text-xs font-bold font-label uppercase border border-accent-secondary rounded">Level 3</span>
+</div>
+</div>
+<h2 class="font-headline font-black text-2xl text-white uppercase tracking-tight mb-2">INCEPTION API</h2>
+<div class="flex items-center text-gray-300 font-body text-sm font-medium">
+<span class="material-symbols-outlined text-base mr-2">calendar_month</span>
+<span>Tomorrow, 10:00</span>
+</div>
+</div>
+<button class="w-full py-3 bg-accent-primary text-black font-label font-bold uppercase rounded-DEFAULT neo-brutalist-sm mt-4 flex justify-center items-center">
+<span class="mr-2">Book review</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</button>
+</article>
+<!-- Slot Card 3 -->
+<article class="bg-surface rounded-lg p-6 flex flex-col justify-between neo-brutalist relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-16 h-16 bg-purple-400 opacity-20 rounded-bl-full transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
+<div class="mb-4">
+<div class="flex items-center space-x-3 mb-4">
+<div class="w-12 h-12 rounded-full border-2 border-black bg-purple-400 overflow-hidden flex items-center justify-center text-black font-black text-xl">
+                                M
+                            </div>
+<div>
+<h3 class="font-headline font-bold text-lg text-white">Mike_t</h3>
+<span class="inline-block px-2 py-1 bg-black text-purple-400 text-xs font-bold font-label uppercase border border-purple-400 rounded">Level 5</span>
+</div>
+</div>
+<h2 class="font-headline font-black text-2xl text-white uppercase tracking-tight mb-2">CPP MODULE 04</h2>
+<div class="flex items-center text-gray-300 font-body text-sm font-medium">
+<span class="material-symbols-outlined text-base mr-2">calendar_month</span>
+<span>Tomorrow, 14:30</span>
+</div>
+</div>
+<button class="w-full py-3 bg-accent-primary text-black font-label font-bold uppercase rounded-DEFAULT neo-brutalist-sm mt-4 flex justify-center items-center">
+<span class="mr-2">Book review</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</button>
+</article>
+</div>
+</div>
+<!-- Content Area: My Open Slots Tab (Hidden state placeholder for completeness) -->
+<div class="hidden mt-12 p-8 border-2 border-dashed border-gray-600 rounded-xl flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-6xl text-gray-500 mb-4">event_available</span>
+<h3 class="font-headline font-bold text-2xl text-white mb-2">No Open Slots</h3>
+<p class="text-gray-400 mb-6 max-w-md">You haven't created any slots for others to book yet. Share your knowledge and earn evaluation points.</p>
+<button class="px-8 py-4 bg-accent-secondary text-black font-label font-bold uppercase rounded-DEFAULT neo-brutalist flex items-center text-lg">
+<span class="material-symbols-outlined mr-2 font-black">add</span>
+                Create Slot
+            </button>
+</div>
+</main>
+</body></html>

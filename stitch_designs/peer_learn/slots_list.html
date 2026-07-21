@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Peer Learn - Active Slots</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-glow {
+            box-shadow: 0px 0px 12px 0px rgba(0, 191, 165, 0.2);
+        }
+        .card-hover:hover {
+            border-color: #44ddc1;
+            box-shadow: 0px 0px 12px 0px rgba(68, 221, 193, 0.2);
+        }
+        body {
+            background-color: #0e1513;
+            color: #dde4e0;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffe17b",
+                        "outline": "#85948f",
+                        "on-primary-container": "#00473c",
+                        "on-tertiary": "#3b2f00",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#0e1513",
+                        "secondary-fixed": "#e8deff",
+                        "on-background": "#dde4e0",
+                        "tertiary-container": "#caa600",
+                        "surface-variant": "#2f3634",
+                        "surface-container-low": "#161d1b",
+                        "on-tertiary-fixed-variant": "#564500",
+                        "on-secondary-fixed-variant": "#4f00d0",
+                        "on-surface-variant": "#bbcac4",
+                        "on-primary": "#00382f",
+                        "on-secondary-container": "#c0acff",
+                        "inverse-on-surface": "#2b3230",
+                        "on-surface": "#dde4e0",
+                        "secondary-container": "#5203d5",
+                        "on-primary-fixed-variant": "#005145",
+                        "surface-container": "#1a211f",
+                        "error": "#ffb4ab",
+                        "secondary": "#cdbdff",
+                        "inverse-surface": "#dde4e0",
+                        "primary-fixed-dim": "#44ddc1",
+                        "surface-tint": "#44ddc1",
+                        "on-primary-fixed": "#00201a",
+                        "on-secondary-fixed": "#20005f",
+                        "primary": "#44ddc1",
+                        "tertiary": "#eac32b",
+                        "surface-container-lowest": "#09100e",
+                        "on-tertiary-container": "#4b3d00",
+                        "secondary-fixed-dim": "#cdbdff",
+                        "surface-container-highest": "#2f3634",
+                        "on-tertiary-fixed": "#231b00",
+                        "on-secondary": "#370096",
+                        "surface-dim": "#0e1513",
+                        "background": "#0e1513",
+                        "outline-variant": "#3c4a46",
+                        "surface-container-high": "#242b29",
+                        "surface-bright": "#343b38",
+                        "primary-container": "#00bfa5",
+                        "inverse-primary": "#006b5c",
+                        "primary-fixed": "#68fadd",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#eac32b",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "md": "16px",
+                        "unit": "4px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-sm": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-40 bg-surface-container-low border-b border-outline-variant flex justify-between items-center h-16 px-margin-mobile lg:px-margin-desktop ml-0 lg:ml-[260px]">
+<div class="flex items-center gap-md">
+<h1 class="font-headline-lg-mobile lg:font-headline-lg text-primary font-bold">Peer Learn</h1>
+</div>
+<div class="flex items-center gap-lg">
+<button class="hover:bg-surface-variant rounded-full p-2 transition-all active:scale-95 duration-200 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant">
+<img alt="User Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP1x0jsDQ-eoRdrdbpmz3X6Wjog213GLDFMRwsMqTtsp2-av3uQBWdF7vtyerqY8tlY0wVe9QpYm4r9engmqYZ415cc4pvxzh3nsV9CLoXWYye4sx7H3NoP9vnzsYLsA8lC1kR7ZZnMMepDX1vk2zc5N2MbJwUT2qEtcZOrRDa9EPjNVSN6LsQ5Oi1DCZ3JBg8nVU-ULTFhGKdb1mafnSIj54iDFU0nQw80zLpWSjdZUB2xVN8TWhX1FP45CYUjj0XIPQkSIZQlsl3"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="hidden lg:flex flex-col h-full py-xl fixed left-0 top-0 w-[260px] bg-surface-container border-r border-outline-variant z-50">
+<div class="px-lg mb-xl">
+<h2 class="font-display-sm text-display-sm font-bold text-primary">Peer Learn</h2>
+<p class="text-on-surface-variant text-body-sm">P2P Academy</p>
+</div>
+<div class="flex-1 flex flex-col gap-xs">
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-primary bg-surface-container-high border-l-4 border-primary transition-all scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="event_seat">event_seat</span>
+<span class="font-body-md">Slots</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-body-md">Search</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-body-md">Leaderboard</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-body-md">Profile</span>
+</a>
+<a class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-md">Settings</span>
+</a>
+</div>
+<div class="mt-auto px-lg pt-xl">
+<button class="flex items-center gap-md px-lg py-md text-on-surface-variant hover:bg-surface-container-highest hover:text-primary transition-colors w-full rounded-lg">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-body-md">Logout</span>
+</button>
+</div>
+</nav>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="lg:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface/80 backdrop-blur-md border-t border-outline-variant flex justify-around items-center h-16 pb-safe shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-label-md font-label-md">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="event_seat">event_seat</span>
+<span class="text-label-md font-label-md">Slots</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="text-label-md font-label-md">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="text-label-md font-label-md">Leaderboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-label-md font-label-md">Profile</span>
+</a>
+</nav>
+<!-- Main Canvas -->
+<main class="ml-0 lg:ml-[260px] pt-24 pb-24 px-margin-mobile lg:px-margin-desktop min-h-screen">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-md mb-xl">
+<div>
+<h2 class="font-display-sm text-display-sm font-bold text-on-surface">Active Slots</h2>
+<p class="text-on-surface-variant font-body-md">Manage your peer learning sessions and upcoming workshops.</p>
+</div>
+<button class="bg-primary text-on-primary px-xl py-md rounded-lg font-bold flex items-center justify-center gap-sm transition-all hover:brightness-110 active:scale-95 shadow-[0_0_15px_-3px_rgba(68,221,193,0.4)]">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                + Yangi slot
+            </button>
+</div>
+<!-- Filter Chips Row -->
+<div class="flex items-center gap-sm overflow-x-auto pb-md mb-lg no-scrollbar">
+<button class="px-xl py-sm rounded-full bg-primary-container text-on-primary-container font-bold border border-primary/20">All</button>
+<button class="px-xl py-sm rounded-full bg-surface-container border border-outline-variant text-on-surface-variant hover:border-primary/50 hover:text-primary transition-all">My Slots</button>
+<button class="px-xl py-sm rounded-full bg-surface-container border border-outline-variant text-on-surface-variant hover:border-primary/50 hover:text-primary transition-all">Web</button>
+<button class="px-xl py-sm rounded-full bg-surface-container border border-outline-variant text-on-surface-variant hover:border-primary/50 hover:text-primary transition-all">Mobile</button>
+<button class="px-xl py-sm rounded-full bg-surface-container border border-outline-variant text-on-surface-variant hover:border-primary/50 hover:text-primary transition-all">UI/UX</button>
+<button class="px-xl py-sm rounded-full bg-surface-container border border-outline-variant text-on-surface-variant hover:border-primary/50 hover:text-primary transition-all">Backend</button>
+</div>
+<!-- Bento-inspired Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-lg">
+<!-- Slot Card 1 -->
+<div class="card-hover bg-surface-container border border-outline-variant rounded-xl p-lg flex flex-col gap-lg transition-all relative overflow-hidden group">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-xs">
+<span class="bg-primary/10 text-primary text-label-md font-label-md px-md py-xs rounded-full inline-block w-fit">Teacher</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface group-hover:text-primary transition-colors">Advanced Algorithms</h3>
+</div>
+<div class="bg-surface-container-high p-sm rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="code">code</span>
+</div>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="flex items-center gap-md text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span class="font-body-sm">Today, 14:30</span>
+</div>
+<div class="flex items-center gap-md text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="font-body-sm">Online</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-auto pt-md border-t border-outline-variant/30">
+<div class="flex items-center gap-sm">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="text-label-md text-primary uppercase tracking-wider font-bold">Active</span>
+</div>
+<button class="text-primary hover:underline font-bold text-body-sm flex items-center gap-xs">
+                        View Details
+                        <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Slot Card 2 -->
+<div class="card-hover bg-surface-container border border-outline-variant rounded-xl p-lg flex flex-col gap-lg transition-all relative overflow-hidden group">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-xs">
+<span class="bg-secondary/10 text-secondary text-label-md font-label-md px-md py-xs rounded-full inline-block w-fit">Student</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface group-hover:text-secondary transition-colors">React Hooks Deep Dive</h3>
+</div>
+<div class="bg-surface-container-high p-sm rounded-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="javascript">javascript</span>
+</div>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="flex items-center gap-md text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span class="font-body-sm">Tomorrow, 16:00</span>
+</div>
+<div class="flex items-center gap-md text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="pin_drop">pin_drop</span>
+<span class="font-body-sm">Campus, Room 302</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-auto pt-md border-t border-outline-variant/30">
+<div class="flex items-center gap-sm">
+<div class="w-2 h-2 rounded-full bg-outline"></div>
+<span class="text-label-md text-on-surface-variant uppercase tracking-wider font-bold">Pending</span>
+</div>
+<button class="text-secondary hover:underline font-bold text-body-sm flex items-center gap-xs">
+                        View Details
+                        <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Slot Card 3 - Placeholder / Asymmetric Content -->
+<div class="card-hover bg-surface-container-high border border-outline-variant rounded-xl p-lg flex flex-col gap-md transition-all relative overflow-hidden group border-dashed border-2">
+<div class="flex-1 flex flex-col items-center justify-center text-center gap-md py-lg">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center border border-outline-variant group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-display-sm text-outline group-hover:text-primary transition-colors" data-icon="calendar_add_on">calendar_add_on</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-surface">No slots in Mobile?</h3>
+<p class="text-body-sm text-on-surface-variant">Create a session to share your mobile dev skills with the community.</p>
+</div>
+<button class="text-primary font-bold border border-primary/30 px-lg py-sm rounded-lg hover:bg-primary/10 transition-all">Create Mobile Slot</button>
+</div>
+</div>
+<!-- Slot Card 4 -->
+<div class="card-hover bg-surface-container border border-outline-variant rounded-xl p-lg flex flex-col gap-lg transition-all relative overflow-hidden group">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-xs">
+<span class="bg-primary/10 text-primary text-label-md font-label-md px-md py-xs rounded-full inline-block w-fit">Teacher</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface group-hover:text-primary transition-colors">Rust Systems Basics</h3>
+</div>
+<div class="bg-surface-container-high p-sm rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="memory">memory</span>
+</div>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="flex items-center gap-md text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span class="font-body-sm">Oct 12, 10:00</span>
+</div>
+<div class="flex items-center gap-md text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span class="font-body-sm">Online</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-auto pt-md border-t border-outline-variant/30">
+<div class="flex items-center gap-sm">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<span class="text-label-md text-primary uppercase tracking-wider font-bold">Active</span>
+</div>
+<button class="text-primary hover:underline font-bold text-body-sm flex items-center gap-xs">
+                        View Details
+                        <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Promotion Card -->
+<div class="xl:col-span-2 bg-gradient-to-br from-primary-container to-secondary-container rounded-xl p-lg flex flex-col md:flex-row items-center gap-xl relative overflow-hidden group min-h-[220px]">
+<div class="flex-1 z-10">
+<h2 class="font-display-sm text-display-sm text-white font-extrabold mb-sm leading-tight">Master New Tech with the Best Peers</h2>
+<p class="text-white/80 font-body-md mb-lg max-w-md">Join the leaderboard challenge this month by hosting at least 5 teaching slots and earn the "Architect" badge.</p>
+<button class="bg-white text-on-primary-container px-xl py-md rounded-lg font-bold transition-transform hover:scale-105 active:scale-95 shadow-xl">Join Challenge</button>
+</div>
+<div class="relative w-full md:w-1/3 aspect-video md:aspect-square rounded-xl overflow-hidden shadow-2xl border-4 border-white/20 z-10">
+<img class="w-full h-full object-cover" data-alt="A modern collaborative workspace where focused professionals are using high-tech equipment and minimalist digital displays. The environment is illuminated with vibrant teal and purple atmospheric lighting, creating a futuristic peer-to-peer learning environment. The mood is high-performance, technical, and immersive, reflecting a top-tier digital academy aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRRRbJIF74noiiO0adwPkr1NBhOYAwoUV_HY54gKT4F-slSO-iuYVz7Jg55IEL-IOE7-1d4vhoiZMU4e9EyD7eqWx6rVMVGS7_XCGFdiUUmBMvoIXr3VxGxbcFj7uUSP78F5Db_HjJGYM2MazafKO4uC9TDsVVtHcSpMmFLhwNpkNCZqP6FWbIU9yCJp3lqiiqHFAdoX5IouUkWmYWN6-MK8ZAud4njpT-QezWGAvekyyQhVPKzGJEJv249eDFWKpdfe_WTtaZvew-"/>
+</div>
+<!-- Abstract Background shapes -->
+<div class="absolute -right-16 -bottom-16 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute -left-16 -top-16 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
+</div>
+</div>
+</main>
+<script>
+        // Micro-interactions and hover effects
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Filter chip selection logic
+        const chips = document.querySelectorAll('.filter-chip');
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => {
+                    c.classList.remove('bg-primary-container', 'text-on-primary-container');
+                    c.classList.add('bg-surface-container', 'text-on-surface-variant');
+                });
+                chip.classList.add('bg-primary-container', 'text-on-primary-container');
+                chip.classList.remove('bg-surface-container', 'text-on-surface-variant');
+            });
+        });
+    </script>
+</body></html>

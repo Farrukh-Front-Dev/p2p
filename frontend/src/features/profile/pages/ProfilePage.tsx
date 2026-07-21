@@ -19,14 +19,15 @@ import {
   ChevronLeft,
   MessageSquare,
 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const profileUpdateSchema = z.object({
-  first_name: z.string().min(2, 'Ism kamida 2 ta belgidan iborat bo\'lishi kerak'),
-  last_name: z.string().min(2, 'Familiya kamida 2 ta belgidan iborat bo\'lishi kerak'),
-  avatar_url: z.string().url('To\'g\'ri rasm URL manzilini kiriting').or(z.literal('')),
+const getProfileUpdateSchema = (t: any) => z.object({
+  first_name: z.string().min(2, t('profile.validation.first_name', "Ism kamida 2 ta belgidan iborat bo'lishi kerak")),
+  last_name: z.string().min(2, t('profile.validation.last_name', "Familiya kamida 2 ta belgidan iborat bo'lishi kerak")),
+  avatar_url: z.string().url(t('profile.validation.avatar_url', "To'g'ri rasm URL manzilini kiriting")).or(z.literal('')),
 });
 
-type FormValues = z.infer<typeof profileUpdateSchema>;
+type FormValues = z.infer<ReturnType<typeof getProfileUpdateSchema>>;
 
 export default function ProfilePage() {
   const { username } = useParams<{ username?: string }>();
@@ -42,6 +43,8 @@ export default function ProfilePage() {
 // ─── OWN PROFILE ────────────────────────────────────────────────────────────────
 
 function OwnProfileView() {
+  const { t } = useTranslation();
+  const profileUpdateSchema = getProfileUpdateSchema(t);
   const { profile, isLoadingProfile, updateProfile, isUpdatingProfile, skills, isLoadingSkills } = useProfile();
   const [isEditing, setIsEditing] = useState(false);
 
@@ -115,8 +118,8 @@ function OwnProfileView() {
   return (
     <div className="flex flex-col gap-4 sm:gap-6 animate-fade-in font-ibm-plex-mono text-white">
       <PageHeader
-        title="Mening Profilim"
-        subtitle="Platformadagi darajangiz, dars va fikr-mulohazalar statistikasi boshqaruvi."
+        title={t('profile.title', 'Mening Profilim')}
+        subtitle={t('profile.subtitle', "Platformadagi darajangiz, dars va fikr-mulohazalar statistikasi boshqaruvi.")}
         icon={User}
       />
 
@@ -148,7 +151,7 @@ function OwnProfileView() {
         </div>
 
         <Button variant="secondary" onClick={handleEditOpen} className="text-xs uppercase font-extrabold tracking-wider font-montserrat w-full sm:w-auto min-h-11">
-          <Edit className="h-4 w-4" /> Edit Profile
+          <Edit className="h-4 w-4" /> {t('profile.actions.edit', 'Edit Profile')}
         </Button>
       </Card>
 
@@ -157,24 +160,24 @@ function OwnProfileView() {
         <Card className="p-4 sm:p-6 border-2 border-black bg-[#2A3442] animate-slide-in rounded-3xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
           <form onSubmit={handleSubmit(onUpdateSubmit)} className="flex flex-col gap-4">
             <h3 className="text-sm font-extrabold text-white border-b-2 border-black pb-3 font-montserrat uppercase tracking-wider">
-              Profil Ma'lumotlarini Tahrirlash
+              {t('profile.edit.title', "Profil Ma'lumotlarini Tahrirlash")}
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Input label="Ism" error={errors.first_name?.message} {...register('first_name')} />
-              <Input label="Familiya" error={errors.last_name?.message} {...register('last_name')} />
+              <Input label={t('profile.edit.first_name', 'Ism')} error={errors.first_name?.message} {...register('first_name')} />
+              <Input label={t('profile.edit.last_name', 'Familiya')} error={errors.last_name?.message} {...register('last_name')} />
             </div>
             <Input
-              label="Avatar loyiha yoki rasm URL manzili"
+              label={t('profile.edit.avatar_url', 'Avatar loyiha yoki rasm URL manzili')}
               error={errors.avatar_url?.message}
               placeholder="https://..."
               {...register('avatar_url')}
             />
             <div className="flex flex-col-reverse sm:flex-row gap-3 justify-end pt-2">
               <Button type="button" variant="ghost" onClick={() => setIsEditing(false)} disabled={isUpdatingProfile} className="w-full sm:w-auto min-h-11">
-                Bekor qilish
+                {t('common.cancel', 'Bekor qilish')}
               </Button>
               <Button type="submit" variant="primary" disabled={isUpdatingProfile} className="w-full sm:w-auto min-h-11">
-                {isUpdatingProfile ? 'Saqlanmoqda...' : 'Saqlash'}
+                {isUpdatingProfile ? t('common.saving', 'Saqlanmoqda...') : t('common.save', 'Saqlash')}
               </Button>
             </div>
           </form>
@@ -187,54 +190,54 @@ function OwnProfileView() {
         <Card className="p-3 sm:p-5 flex flex-col gap-1.5 sm:gap-2 rounded-2xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] bg-[#2A3442]">
           <div className="flex items-center gap-2 text-[#cdbdff]">
             <GraduationCap className="h-4 w-4 flex-shrink-0" />
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-widest font-extrabold text-[#B0BEC5] font-montserrat truncate">O'rgatilgan</span>
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-widest font-extrabold text-[#B0BEC5] font-montserrat truncate">{t('profile.stats.taught', "O'rgatilgan")}</span>
           </div>
-          <span className="text-xl sm:text-2xl font-black text-white mt-1 font-montserrat leading-none">{stats.taught_count} <span className="text-xs">marta</span></span>
-          <span className="text-[9px] sm:text-[10px] text-[#B0BEC5] leading-relaxed">Reviewer sifatida</span>
+          <span className="text-xl sm:text-2xl font-black text-white mt-1 font-montserrat leading-none">{stats.taught_count} <span className="text-xs">{t('profile.stats.times', 'marta')}</span></span>
+          <span className="text-[9px] sm:text-[10px] text-[#B0BEC5] leading-relaxed">{t('profile.stats.as_reviewer', 'Reviewer sifatida')}</span>
         </Card>
 
         {/* Learn count */}
         <Card className="p-3 sm:p-5 flex flex-col gap-1.5 sm:gap-2 rounded-2xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] bg-[#2A3442]">
           <div className="flex items-center gap-2 text-[#38C9E6]">
             <BookOpen className="h-4 w-4 flex-shrink-0" />
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-widest font-extrabold text-[#B0BEC5] font-montserrat truncate">O'rganilgan</span>
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-widest font-extrabold text-[#B0BEC5] font-montserrat truncate">{t('profile.stats.learned', "O'rganilgan")}</span>
           </div>
-          <span className="text-xl sm:text-2xl font-black text-white mt-1 font-montserrat leading-none">{stats.learned_count} <span className="text-xs">marta</span></span>
-          <span className="text-[9px] sm:text-[10px] text-[#B0BEC5] leading-relaxed">Reviewee sifatida</span>
+          <span className="text-xl sm:text-2xl font-black text-white mt-1 font-montserrat leading-none">{stats.learned_count} <span className="text-xs">{t('profile.stats.times', 'marta')}</span></span>
+          <span className="text-[9px] sm:text-[10px] text-[#B0BEC5] leading-relaxed">{t('profile.stats.as_reviewee', 'Reviewee sifatida')}</span>
         </Card>
 
         {/* Positive Review */}
         <Card className="p-3 sm:p-5 flex flex-col gap-1.5 sm:gap-2 rounded-2xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] bg-[#263E33]">
           <div className="flex items-center gap-2 text-[#43E8A0]">
             <ThumbsUp className="h-4 w-4 flex-shrink-0" />
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-widest font-extrabold text-white/80 font-montserrat truncate">Ijobiy</span>
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-widest font-extrabold text-white/80 font-montserrat truncate">{t('profile.stats.positive', 'Ijobiy')}</span>
           </div>
-          <span className="text-xl sm:text-2xl font-black text-[#43E8A0] mt-1 font-montserrat leading-none">{stats.positive_reviews} <span className="text-xs">ta</span></span>
-          <span className="text-[9px] sm:text-[10px] text-white/75 leading-relaxed">Sheriklar olqishladi</span>
+          <span className="text-xl sm:text-2xl font-black text-[#43E8A0] mt-1 font-montserrat leading-none">{stats.positive_reviews} <span className="text-xs">{t('profile.stats.count', 'ta')}</span></span>
+          <span className="text-[9px] sm:text-[10px] text-white/75 leading-relaxed">{t('profile.stats.peers_applauded', 'Sheriklar olqishladi')}</span>
         </Card>
 
         {/* Negative Review */}
         <Card className="p-3 sm:p-5 flex flex-col gap-1.5 sm:gap-2 rounded-2xl border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] bg-[#4A2D2D]">
           <div className="flex items-center gap-2 text-[#FF9B9B]">
             <ThumbsDown className="h-4 w-4 flex-shrink-0" />
-            <span className="text-[9px] sm:text-[10px] uppercase tracking-widest font-extrabold text-white/80 font-montserrat truncate">Salbiy</span>
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-widest font-extrabold text-white/80 font-montserrat truncate">{t('profile.stats.negative', 'Salbiy')}</span>
           </div>
-          <span className="text-xl sm:text-2xl font-black text-[#FF9B9B] mt-1 font-montserrat leading-none">{stats.negative_reviews} <span className="text-xs">ta</span></span>
-          <span className="text-[9px] sm:text-[10px] text-white/75 leading-relaxed">Jiddiy kamchiliklar</span>
+          <span className="text-xl sm:text-2xl font-black text-[#FF9B9B] mt-1 font-montserrat leading-none">{stats.negative_reviews} <span className="text-xs">{t('profile.stats.count', 'ta')}</span></span>
+          <span className="text-[9px] sm:text-[10px] text-white/75 leading-relaxed">{t('profile.stats.serious_flaws', 'Jiddiy kamchiliklar')}</span>
         </Card>
       </div>
 
       {/* Skills list */}
       <div className="flex flex-col gap-4 mt-2">
         <span className="text-sm font-extrabold text-white flex items-center gap-2 border-b-2 border-black pb-3 font-montserrat uppercase tracking-wider">
-          <Code className="h-5 w-5 text-[#38C9E6]" /> Texnik Ko'nikmalar
+          <Code className="h-5 w-5 text-[#38C9E6]" /> {t('profile.skills.title', "Texnik Ko'nikmalar")}
         </span>
 
         {isLoadingSkills ? (
           <Spinner size="sm" />
         ) : skills.length === 0 ? (
           <Card className="p-6 text-center text-[#B0BEC5] text-xs">
-            Hech qanday ko'nikmalar qayd etilmagan.
+            {t('profile.skills.empty', "Hech qanday ko'nikmalar qayd etilmagan.")}
           </Card>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
@@ -263,6 +266,7 @@ function OwnProfileView() {
 // ─── PUBLIC PROFILE ─────────────────────────────────────────────────────────────
 
 function PublicProfileView({ username }: { username: string }) {
+  const { t } = useTranslation();
   const { data: userPublic, isLoading: isLoadingPublic, isError: isErrorPublic } = useQuery({
     queryKey: ['profile', 'public', username],
     queryFn: () => profileService.getPublicProfile(username),
@@ -320,16 +324,16 @@ function PublicProfileView({ username }: { username: string }) {
     return (
       <div className="flex flex-col gap-4 sm:gap-6 animate-fade-in font-ibm-plex-mono text-white">
         <PageHeader
-          title="Talaba Profili"
-          subtitle="Foydalanuvchi ma'lumotlari."
+          title={t('profile.public.title', 'Talaba Profili')}
+          subtitle={t('profile.public.subtitle', "Foydalanuvchi ma'lumotlari.")}
           icon={User}
         />
         <Card className="p-6 sm:p-8 text-center border-2 border-black rounded-3xl bg-[#2A3442] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
           <p className="text-[#FF9B9B] font-bold text-sm mb-3">
-            Ushbu talaba topilmadi yoki ma'lumotlarni yuklab bo'lmadi.
+            {t('profile.public.not_found', "Ushbu talaba topilmadi yoki ma'lumotlarni yuklab bo'lmadi.")}
           </p>
           <Link to="/leaderboard" className="text-xs uppercase tracking-wider text-[#38C9E6] underline font-montserrat font-extrabold">
-            Reyting ro'yxatiga qaytish
+            {t('profile.public.back_to_leaderboard', "Reyting ro'yxatiga qaytish")}
           </Link>
         </Card>
       </div>
@@ -344,7 +348,7 @@ function PublicProfileView({ username }: { username: string }) {
           to="/leaderboard"
           className="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-[#B0BEC5] hover:text-white transition-colors font-montserrat min-h-11 py-2"
         >
-          <ChevronLeft className="h-4 w-4" /> Reytingga qaytish
+          <ChevronLeft className="h-4 w-4" /> {t('profile.public.back_to_leaderboard', "Reytingga qaytish")}
         </Link>
       </div>
 
@@ -381,14 +385,14 @@ function PublicProfileView({ username }: { username: string }) {
       {/* Reviews about this user */}
       <div className="flex flex-col gap-4">
         <span className="text-sm font-extrabold text-white flex items-center gap-2 border-b-2 border-black pb-3 font-montserrat uppercase tracking-wider">
-          <MessageSquare className="h-5 w-5 text-[#38C9E6]" /> Fikrlar (Reviews)
+          <MessageSquare className="h-5 w-5 text-[#38C9E6]" /> {t('profile.reviews.title', 'Fikrlar (Reviews)')}
         </span>
 
         {isLoadingReviews ? (
           <Spinner size="sm" />
         ) : reviews.length === 0 ? (
           <Card className="p-6 sm:p-8 text-center bg-[#2A3442]/50 text-[#B0BEC5] text-xs border-2 border-black rounded-2xl">
-            Hali bu talaba haqida hech qanday fikr-mulohazalar yozib qoldirilmagan.
+            {t('profile.reviews.empty', 'Hali bu talaba haqida hech qanday fikr-mulohazalar yozib qoldirilmagan.')}
           </Card>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
@@ -402,18 +406,18 @@ function PublicProfileView({ username }: { username: string }) {
                       <ThumbsDown className="h-5 w-5 text-[#FF9B9B] bg-[#FF9B9B]/10 p-1 rounded" />
                     )}
                     <span className={`text-xs font-black uppercase tracking-wider font-montserrat ${rev.is_positive ? 'text-[#43E8A0]' : 'text-[#FF9B9B]'}`}>
-                      {rev.is_positive ? 'Ijobiy' : 'Salbiy'}
+                      {rev.is_positive ? t('profile.reviews.positive', 'Ijobiy') : t('profile.reviews.negative', 'Salbiy')}
                     </span>
                   </div>
                 </div>
 
                 <p className="text-xs text-[#B0BEC5] leading-relaxed italic break-words">
-                  &ldquo;{rev.comment || 'Tavsif qoldirilmagan'}&rdquo;
+                  &ldquo;{rev.comment || t('profile.reviews.no_comment', 'Tavsif qoldirilmagan')}&rdquo;
                 </p>
 
                 <div className="text-[9px] text-[#B0BEC5] uppercase tracking-wider font-bold border-t-2 border-black/30 pt-3 flex justify-between font-montserrat">
-                  <span>Baholovchi a'zo</span>
-                  <span className="text-[#43E8A0] font-black">SAQLANGAN</span>
+                  <span>{t('profile.reviews.reviewer', "Baholovchi a'zo")}</span>
+                  <span className="text-[#43E8A0] font-black">{t('profile.reviews.saved', 'SAQLANGAN')}</span>
                 </div>
               </Card>
             ))}

@@ -27,7 +27,7 @@ api:
 	cd backend && .venv/bin/uvicorn app.main:app --reload --port 8000
 
 bot:
-	cd bot && python -m bot.main
+	cd backend && .venv/bin/python -m bot.main
 
 worker:
 	cd backend && .venv/bin/celery -A app.tasks.celery_app.celery_app worker --loglevel=info
@@ -51,4 +51,4 @@ test:
 
 lint:
 	cd backend && .venv/bin/ruff check .
-	cd bot && python -m py_compile bot/main.py
+	cd backend && .venv/bin/python -m py_compile bot/main.py

@@ -18,7 +18,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.constants import ChatMemberStatus
 from telegram.ext import (
     CallbackQueryHandler, CommandHandler, ContextTypes,
-    ConversationHandler, filters,
+    ConversationHandler,
 )
 
 from bot.constants import REG_CHECK_SUBSCRIPTION
@@ -203,7 +203,6 @@ async def check_sub_cb(update: Update, context: ContextTypes.DEFAULT_TYPE) -> in
 async def _generate_and_show_code(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """OTP kod generatsiya qilish va ko'rsatish."""
     user_id = context.user_data.get("link_user_id")
-    temp_token = context.user_data.get("temp_token")
     tg_user = update.effective_user
 
     if not user_id:

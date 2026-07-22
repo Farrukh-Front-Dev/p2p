@@ -5,7 +5,7 @@ from telegram import Update
 from telegram.ext import ContextTypes, ConversationHandler
 
 from app.core.config import settings
-from bot.constants import ADM_MENU, ADM_CHANNELS_LIST, ADM_USERS_MENU, ADM_BROADCAST_MENU
+from bot.constants import ADM_MENU
 from bot.keyboards import admin_main_kb
 
 

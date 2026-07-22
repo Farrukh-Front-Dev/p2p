@@ -3,10 +3,18 @@ from telegram.ext import (
     CallbackQueryHandler, CommandHandler, ConversationHandler, MessageHandler, filters,
 )
 
-from bot.constants import *
+from bot.constants import (
+    ADM_BROADCAST_BTN_TEXT, ADM_BROADCAST_BTN_URL, ADM_BROADCAST_CONFIRM,
+    ADM_BROADCAST_MENU, ADM_BROADCAST_PHOTO, ADM_BROADCAST_TARGET,
+    ADM_BROADCAST_TEXT, ADM_CHANNEL_ADD_ID, ADM_CHANNEL_ADD_LINK,
+    ADM_CHANNEL_ADD_TITLE, ADM_CHANNEL_DETAIL, ADM_CHANNEL_EDIT,
+    ADM_CHANNEL_EDIT_INPUT, ADM_CHANNELS_LIST, ADM_MENU, ADM_SETTINGS_WEBAPP,
+    ADM_USER_DETAIL, ADM_USER_POINTS_INPUT, ADM_USER_XP_INPUT,
+    ADM_USERS_MENU, ADM_USERS_SEARCH,
+)
 from bot.handlers.admin.menu import admin_cmd, main_menu_cb, admin_cancel
 from bot.handlers.admin.channels import (
-    channels_list_cb, channels_cb, channel_detail_cb, channel_edit_cb,
+    channels_cb, channel_detail_cb, channel_edit_cb,
     channel_edit_input, channel_add_id, channel_add_title, channel_add_link,
 )
 from bot.handlers.admin.users import (

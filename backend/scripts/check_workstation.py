@@ -1,5 +1,6 @@
 """Check /participants/{login}/workstation endpoint response structure."""
-import asyncio, json
+import asyncio
+import json
 import httpx
 from app.db.base import AsyncSessionLocal
 from app.db.models.user import User

@@ -8,7 +8,7 @@ from fastapi import APIRouter, HTTPException, Query, status
 from sqlalchemy import and_, select
 
 from app.core.dependencies import CurrentUser, DbSession
-from app.db.models.slot import Slot, SlotStatus
+from app.db.models.slot import Slot
 from app.schemas.slot import (
     SlotBook,
     SlotCancel,

@@ -32,7 +32,9 @@ services:
 
   bot:
     build:
-      context: ./bot
+      context: ./backend
+      dockerfile: docker/Dockerfile
+    command: python -m bot.main
     env_file: ./backend/.env
     depends_on:
       - api

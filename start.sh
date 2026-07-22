@@ -80,7 +80,11 @@ command -v npm >/dev/null     || err "npm topilmadi"
 info "PostgreSQL tekshiruvi..."
 if ! check_port 5432; then
     sudo systemctl start postgresql 2>/dev/null || true
-    wait_for_port 5432 "PostgreSQL" 10
+    if ! check_port 5432; then
+        warn "PostgreSQL (port 5432) ishlamayapti. (Local DB ni ishga tushirish talab etiladi)"
+    else
+        log "PostgreSQL ishga tushdi (port 5432)"
+    fi
 else
     log "PostgreSQL allaqachon ishlamoqda"
 fi
@@ -89,7 +93,11 @@ fi
 info "Redis tekshiruvi..."
 if ! check_port 6379; then
     sudo systemctl start redis valkey 2>/dev/null || true
-    wait_for_port 6379 "Redis" 10
+    if ! check_port 6379; then
+        warn "Redis (port 6379) ishlamayapti. (Local Redis ni ishga tushirish talab etiladi)"
+    else
+        log "Redis ishga tushdi (port 6379)"
+    fi
 else
     log "Redis allaqachon ishlamoqda"
 fi

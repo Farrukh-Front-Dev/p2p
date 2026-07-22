@@ -10,7 +10,6 @@ Oqim:
 """
 from __future__ import annotations
 
-import json
 import logging
 import secrets
 import uuid
@@ -295,7 +294,6 @@ async def unlink_telegram(request: Request, payload: RelinkTelegramRequest, user
         raise HTTPException(status.HTTP_502_BAD_GATEWAY, "School21 ga ulanib bo'lmadi")
 
     # Telegram uzish
-    old_tg = user.telegram_id
     user.telegram_id = None
     user.telegram_username = None
     user.is_logged_in = False

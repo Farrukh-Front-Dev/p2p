@@ -1,10 +1,10 @@
  
  -------------- celery@arch v5.6.3 (recovery)
 --- ***** ----- 
--- ******* ---- Linux-7.0.14-arch1-1-x86_64-with-glibc2.43 2026-07-20 16:17:39
+-- ******* ---- Linux-6.18.39-1-lts-x86_64-with-glibc2.43 2026-07-22 15:07:05
 - *** --- * --- 
 - ** ---------- [config]
-- ** ---------- .> app:         peer_learn:0x7f77aadf0ad0
+- ** ---------- .> app:         peer_learn:0x7faeb0ce0ad0
 - ** ---------- .> transport:   redis://localhost:6379/1
 - ** ---------- .> results:     redis://localhost:6379/2
 - *** --- * --- .> concurrency: 16 (prefork)
@@ -19,155 +19,347 @@
   . app.tasks.slot_tasks.check_absences
   . app.tasks.slot_tasks.send_slot_reminders
 
-[2026-07-20 16:17:41,049: INFO/MainProcess] Connected to redis://localhost:6379/1
-[2026-07-20 16:17:41,053: INFO/MainProcess] mingle: searching for neighbors
-[2026-07-20 16:17:42,067: INFO/MainProcess] mingle: all alone
-[2026-07-20 16:17:42,086: INFO/MainProcess] celery@arch ready.
-[2026-07-20 16:17:56,040: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[7c198fa7-a9fd-4122-ad7e-5a308bc3e8bb] received
-[2026-07-20 16:17:56,041: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[46ed345a-6bca-4279-b46f-9bc7b01dc083] received
-[2026-07-20 16:17:56,080: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[7c198fa7-a9fd-4122-ad7e-5a308bc3e8bb] succeeded in 0.03835899199975756s: 0
-[2026-07-20 16:17:56,080: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[46ed345a-6bca-4279-b46f-9bc7b01dc083] succeeded in 0.03849520100038717s: 0
-[2026-07-20 16:18:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[fe2204f3-33f2-40a5-a5ab-23186c8729d1] received
-[2026-07-20 16:18:56,037: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[fe2204f3-33f2-40a5-a5ab-23186c8729d1] succeeded in 0.007846635999612772s: 0
-[2026-07-20 16:18:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[92e30d30-5dd1-4239-9cee-7aced2c67a66] received
-[2026-07-20 16:18:56,048: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[92e30d30-5dd1-4239-9cee-7aced2c67a66] succeeded in 0.005072540999663033s: 0
-[2026-07-20 16:19:56,027: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[ebca7018-c551-4b2b-86d2-2ca97379b8c2] received
-[2026-07-20 16:19:56,032: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[ebca7018-c551-4b2b-86d2-2ca97379b8c2] succeeded in 0.003615449000335502s: 0
-[2026-07-20 16:19:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[8bfebe07-205f-49eb-a7bf-5b8d8c5fcd56] received
-[2026-07-20 16:19:56,046: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[8bfebe07-205f-49eb-a7bf-5b8d8c5fcd56] succeeded in 0.0034356159999333613s: 0
-[2026-07-20 16:20:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[dbf3eb11-65a9-4734-bf0c-64e4a4e7d703] received
-[2026-07-20 16:20:56,040: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[dbf3eb11-65a9-4734-bf0c-64e4a4e7d703] succeeded in 0.008791438000116614s: 0
-[2026-07-20 16:20:56,043: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[a74c000e-6c72-46d5-9354-2b03de92b3a8] received
-[2026-07-20 16:20:56,052: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[a74c000e-6c72-46d5-9354-2b03de92b3a8] succeeded in 0.006973998999910691s: 0
-[2026-07-20 16:21:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[7c9c665a-c3bb-4494-b471-1ea25d2bf2e4] received
-[2026-07-20 16:21:56,033: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[7c9c665a-c3bb-4494-b471-1ea25d2bf2e4] succeeded in 0.004104317999917839s: 0
-[2026-07-20 16:21:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[ad2b5c84-d9ab-48e1-a2f2-af177d8d552a] received
-[2026-07-20 16:21:56,046: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[ad2b5c84-d9ab-48e1-a2f2-af177d8d552a] succeeded in 0.0035808210000141116s: 0
-[2026-07-20 16:22:56,027: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[f2e9aeed-2609-4c78-8757-9fbdced92e80] received
-[2026-07-20 16:22:56,031: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[f2e9aeed-2609-4c78-8757-9fbdced92e80] succeeded in 0.0027716180002244073s: 0
-[2026-07-20 16:22:56,041: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[3ebe20e5-623d-422e-8f40-7459811f6769] received
-[2026-07-20 16:22:56,045: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[3ebe20e5-623d-422e-8f40-7459811f6769] succeeded in 0.0027328030000717263s: 0
-[2026-07-20 16:23:56,027: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[09620baa-f70f-4109-a9af-b19dfa64a891] received
-[2026-07-20 16:23:56,031: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[09620baa-f70f-4109-a9af-b19dfa64a891] succeeded in 0.0032329820000995824s: 0
-[2026-07-20 16:23:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[48c72df2-fd6b-470e-a4a6-aeaea4530f72] received
-[2026-07-20 16:23:56,045: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[48c72df2-fd6b-470e-a4a6-aeaea4530f72] succeeded in 0.0031750789999023254s: 0
-[2026-07-20 16:24:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[c71afe5b-f0c8-438f-a001-719796461030] received
-[2026-07-20 16:24:56,031: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[c71afe5b-f0c8-438f-a001-719796461030] succeeded in 0.003085578000082023s: 0
-[2026-07-20 16:24:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[c5fd6397-a46c-48bb-a446-93ab3aeb41d5] received
-[2026-07-20 16:24:56,045: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[c5fd6397-a46c-48bb-a446-93ab3aeb41d5] succeeded in 0.002808056000048964s: 0
-[2026-07-20 16:25:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[0708533a-78c7-4f36-a9f7-73c9564bdc40] received
-[2026-07-20 16:25:56,032: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[0708533a-78c7-4f36-a9f7-73c9564bdc40] succeeded in 0.003381349999926897s: 0
-[2026-07-20 16:25:56,043: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[8c8b1de6-6959-4b7a-b641-1079fd80e78f] received
-[2026-07-20 16:25:56,051: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[8c8b1de6-6959-4b7a-b641-1079fd80e78f] succeeded in 0.007553430999905686s: 0
-[2026-07-20 16:26:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[f6106388-ea70-4ada-b5bf-a27c934dc6f2] received
-[2026-07-20 16:26:56,032: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[f6106388-ea70-4ada-b5bf-a27c934dc6f2] succeeded in 0.0040293530000781175s: 0
-[2026-07-20 16:26:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[51c44043-a366-4dc1-a155-5505e52f0c6b] received
-[2026-07-20 16:26:56,045: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[51c44043-a366-4dc1-a155-5505e52f0c6b] succeeded in 0.002724209999996674s: 0
-[2026-07-20 16:27:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[04d8708d-eac2-4afc-8b96-559c52bb1741] received
-[2026-07-20 16:27:56,032: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[04d8708d-eac2-4afc-8b96-559c52bb1741] succeeded in 0.0037680580003325304s: 0
-[2026-07-20 16:27:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[1d69ae7c-d39b-4683-b0dd-a7028da90c7e] received
-[2026-07-20 16:27:56,047: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[1d69ae7c-d39b-4683-b0dd-a7028da90c7e] succeeded in 0.003824217999863322s: 0
-[2026-07-20 16:28:56,027: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[463972c8-ac2a-4a3e-820d-5572902508ef] received
-[2026-07-20 16:28:56,031: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[463972c8-ac2a-4a3e-820d-5572902508ef] succeeded in 0.0032303190000675386s: 0
-[2026-07-20 16:28:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[fab154b5-3bb6-476a-9bf0-1eccebaea1a4] received
-[2026-07-20 16:28:56,045: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[fab154b5-3bb6-476a-9bf0-1eccebaea1a4] succeeded in 0.002680350999980874s: 0
-[2026-07-20 16:29:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[58b136bc-3e85-475b-95c4-6b943a8dd08b] received
-[2026-07-20 16:29:56,032: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[58b136bc-3e85-475b-95c4-6b943a8dd08b] succeeded in 0.003943068999433308s: 0
-[2026-07-20 16:29:56,043: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[49cd91bf-0a5b-4dca-a5fa-41be5fd8b068] received
-[2026-07-20 16:29:56,047: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[49cd91bf-0a5b-4dca-a5fa-41be5fd8b068] succeeded in 0.003620532000240928s: 0
-[2026-07-20 16:30:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[04784746-638c-4f61-b4fc-3c5c8ef6286d] received
-[2026-07-20 16:30:56,031: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[04784746-638c-4f61-b4fc-3c5c8ef6286d] succeeded in 0.0030528470006174757s: 0
-[2026-07-20 16:30:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[51cf0865-50f8-4dab-b47f-694b40a0a3d0] received
-[2026-07-20 16:30:56,046: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[51cf0865-50f8-4dab-b47f-694b40a0a3d0] succeeded in 0.0031832750000830856s: 0
-[2026-07-20 16:31:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[39ef579d-8491-4a3c-9a5a-f674d05ed2c3] received
-[2026-07-20 16:31:56,031: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[39ef579d-8491-4a3c-9a5a-f674d05ed2c3] succeeded in 0.0031569969996780856s: 0
-[2026-07-20 16:31:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[82087948-b328-4959-920a-58a2f7ee33bd] received
-[2026-07-20 16:31:56,045: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[82087948-b328-4959-920a-58a2f7ee33bd] succeeded in 0.0030309670000860933s: 0
-[2026-07-20 16:32:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[81923009-02fe-4100-bf0c-31bb5fb83c2e] received
-[2026-07-20 16:32:56,032: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[81923009-02fe-4100-bf0c-31bb5fb83c2e] succeeded in 0.003178699999807577s: 0
-[2026-07-20 16:32:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[3686707a-856a-4b8c-9d51-7329dd191280] received
-[2026-07-20 16:32:56,045: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[3686707a-856a-4b8c-9d51-7329dd191280] succeeded in 0.0028228669998497935s: 0
-[2026-07-20 16:33:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[d57b3d95-dc9f-4643-a5be-6f9ce55907a5] received
-[2026-07-20 16:33:56,032: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[d57b3d95-dc9f-4643-a5be-6f9ce55907a5] succeeded in 0.0036966320003557485s: 0
-[2026-07-20 16:33:56,043: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[4d524dd8-b9f8-46ea-8ee3-0d67579e74f7] received
-[2026-07-20 16:33:56,047: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[4d524dd8-b9f8-46ea-8ee3-0d67579e74f7] succeeded in 0.003383389000191528s: 0
-[2026-07-20 16:34:56,030: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[8545262c-740c-4e4f-b9be-6f3c18e6f8dc] received
-[2026-07-20 16:34:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[1f58f14d-a133-4fe8-92ee-782bacf843fc] received
-[2026-07-20 16:34:56,043: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[8545262c-740c-4e4f-b9be-6f3c18e6f8dc] succeeded in 0.012033855000481708s: 0
-[2026-07-20 16:34:56,048: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[1f58f14d-a133-4fe8-92ee-782bacf843fc] succeeded in 0.005154350999873714s: 0
-[2026-07-20 16:35:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[2abc82a2-bf8a-4b34-b807-dc4c050d5f49] received
-[2026-07-20 16:35:56,032: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[2abc82a2-bf8a-4b34-b807-dc4c050d5f49] succeeded in 0.003434477999689989s: 0
-[2026-07-20 16:35:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[f7de6c82-856b-4383-8a47-639dd9594d0d] received
-[2026-07-20 16:35:56,046: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[f7de6c82-856b-4383-8a47-639dd9594d0d] succeeded in 0.003547369000443723s: 0
-[2026-07-20 16:36:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[925f36b5-54c5-4afb-aa5e-92a93c16b4ff] received
-[2026-07-20 16:36:56,034: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[925f36b5-54c5-4afb-aa5e-92a93c16b4ff] succeeded in 0.004820712999389798s: 0
-[2026-07-20 16:36:56,044: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[e40be607-a74a-4c37-a1f3-dc062f879397] received
-[2026-07-20 16:36:56,048: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[e40be607-a74a-4c37-a1f3-dc062f879397] succeeded in 0.0037625869999828865s: 0
-[2026-07-20 16:37:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[ccd740c6-c4cf-4512-83ca-9ee546add890] received
-[2026-07-20 16:37:56,036: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[ccd740c6-c4cf-4512-83ca-9ee546add890] succeeded in 0.006504666999717301s: 0
-[2026-07-20 16:37:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[60844414-77de-4069-8b98-ba850b82f2b5] received
-[2026-07-20 16:37:56,045: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[60844414-77de-4069-8b98-ba850b82f2b5] succeeded in 0.0025046719993042643s: 0
-[2026-07-20 16:38:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[c0b9e466-c564-4235-a858-0cb82e3c3379] received
-[2026-07-20 16:38:56,032: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[c0b9e466-c564-4235-a858-0cb82e3c3379] succeeded in 0.003021503000127268s: 0
-[2026-07-20 16:38:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[3e5f5bc7-f1b4-4090-a1ab-9fe2a05fa005] received
-[2026-07-20 16:38:56,045: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[3e5f5bc7-f1b4-4090-a1ab-9fe2a05fa005] succeeded in 0.0031026930000734865s: 0
-[2026-07-20 16:39:56,027: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[24521dd4-7085-42fd-b684-313156bc79d9] received
-[2026-07-20 16:39:56,030: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[24521dd4-7085-42fd-b684-313156bc79d9] succeeded in 0.0023435459997926955s: 0
-[2026-07-20 16:39:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[ac63c123-301c-42cf-ac0d-220d16768b60] received
-[2026-07-20 16:39:56,044: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[ac63c123-301c-42cf-ac0d-220d16768b60] succeeded in 0.002332277000277827s: 0
-[2026-07-20 16:40:56,029: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[0825086d-1d6e-454a-996a-6293b46a8aff] received
-[2026-07-20 16:40:56,037: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[0825086d-1d6e-454a-996a-6293b46a8aff] succeeded in 0.006685111000479083s: 0
-[2026-07-20 16:40:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[d56a7d4e-a090-4851-8a87-1f2020216a98] received
-[2026-07-20 16:40:56,047: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[d56a7d4e-a090-4851-8a87-1f2020216a98] succeeded in 0.003440282000156003s: 0
-[2026-07-20 16:41:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[00fbdde1-93b7-4020-8d19-234fd6637dd3] received
-[2026-07-20 16:41:56,031: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[00fbdde1-93b7-4020-8d19-234fd6637dd3] succeeded in 0.002512240999749338s: 0
-[2026-07-20 16:41:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[aa3e89b6-00c8-4a6a-b8a0-ceeb457ff835] received
-[2026-07-20 16:41:56,046: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[aa3e89b6-00c8-4a6a-b8a0-ceeb457ff835] succeeded in 0.002648102000421204s: 0
-[2026-07-20 16:42:56,030: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[f120720a-03c5-46c0-8681-db17f19ea917] received
-[2026-07-20 16:42:56,036: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[f120720a-03c5-46c0-8681-db17f19ea917] succeeded in 0.0054151510003066505s: 0
-[2026-07-20 16:42:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[e8ecd342-a76d-4dab-9c54-daa30061cf99] received
-[2026-07-20 16:42:56,044: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[e8ecd342-a76d-4dab-9c54-daa30061cf99] succeeded in 0.0018490050006221281s: 0
-[2026-07-20 16:43:56,030: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[fefb17d9-5c0a-4448-ac5d-2e511046088d] received
-[2026-07-20 16:43:56,033: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[fefb17d9-5c0a-4448-ac5d-2e511046088d] succeeded in 0.0029543440004999866s: 0
-[2026-07-20 16:43:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[d616a2db-386d-45f0-9e2c-796655795f7d] received
-[2026-07-20 16:43:56,045: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[d616a2db-386d-45f0-9e2c-796655795f7d] succeeded in 0.0027457080004751333s: 0
-[2026-07-20 16:44:56,030: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[36529de6-fac9-45c5-9fe6-5a08a116d093] received
-[2026-07-20 16:44:56,040: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[36529de6-fac9-45c5-9fe6-5a08a116d093] succeeded in 0.008190200000171899s: 0
-[2026-07-20 16:44:56,045: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[21626b97-b593-40e6-85d0-5308cefcc5fa] received
-[2026-07-20 16:44:56,055: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[21626b97-b593-40e6-85d0-5308cefcc5fa] succeeded in 0.008535105000191834s: 0
-[2026-07-20 16:45:56,030: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[5cf24f21-e972-48bf-8c9c-a0ed2a2e5ec1] received
-[2026-07-20 16:45:56,037: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[5cf24f21-e972-48bf-8c9c-a0ed2a2e5ec1] succeeded in 0.006221927000297001s: 0
-[2026-07-20 16:45:56,046: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[0441db8b-e913-4d5f-83a1-fd49496bbadb] received
-[2026-07-20 16:45:56,058: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[0441db8b-e913-4d5f-83a1-fd49496bbadb] succeeded in 0.010173617999498674s: 0
-[2026-07-20 16:46:56,030: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[6e5c7e29-ba05-498b-95e3-de1dd310c94c] received
-[2026-07-20 16:46:56,038: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[6e5c7e29-ba05-498b-95e3-de1dd310c94c] succeeded in 0.006774126999516739s: 0
-[2026-07-20 16:46:56,044: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[ec869e05-65d1-4737-af20-e87684f0b83e] received
-[2026-07-20 16:46:56,051: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[ec869e05-65d1-4737-af20-e87684f0b83e] succeeded in 0.00610710300043138s: 0
-[2026-07-20 16:47:56,030: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[45c4a4f0-5070-42ed-9e93-397e807cdce5] received
-[2026-07-20 16:47:56,037: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[45c4a4f0-5070-42ed-9e93-397e807cdce5] succeeded in 0.006496459000118193s: 0
-[2026-07-20 16:47:56,044: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[862889c4-4c75-4c41-a68f-342d69798e20] received
-[2026-07-20 16:47:56,050: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[862889c4-4c75-4c41-a68f-342d69798e20] succeeded in 0.004798478000338946s: 0
-[2026-07-20 16:48:56,030: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[53fc2b90-4429-4e2e-830c-874544e5836d] received
-[2026-07-20 16:48:56,036: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[53fc2b90-4429-4e2e-830c-874544e5836d] succeeded in 0.0048276779998559505s: 0
-[2026-07-20 16:48:56,043: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[7c2f680c-a3be-4ddc-a8cd-b67a48b5cd13] received
-[2026-07-20 16:48:56,050: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[7c2f680c-a3be-4ddc-a8cd-b67a48b5cd13] succeeded in 0.005975749000754149s: 0
-[2026-07-20 16:49:56,028: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[6ee28e79-3e6b-4b94-a022-2ad93f89c9f7] received
-[2026-07-20 16:49:56,035: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[6ee28e79-3e6b-4b94-a022-2ad93f89c9f7] succeeded in 0.005929430999458418s: 0
-[2026-07-20 16:49:56,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[5ac0bf6e-1043-4f74-bb97-8f25809f7951] received
-[2026-07-20 16:49:56,047: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[5ac0bf6e-1043-4f74-bb97-8f25809f7951] succeeded in 0.003940923000300245s: 0
-[2026-07-20 16:50:56,030: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[e9a3aa8d-b5f1-4de8-b57e-46d6e8ea2481] received
-[2026-07-20 16:50:56,038: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[e9a3aa8d-b5f1-4de8-b57e-46d6e8ea2481] succeeded in 0.006688561000373738s: 0
-[2026-07-20 16:50:56,044: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[0584df2f-530e-4b97-aac9-03dd9d90e42e] received
-[2026-07-20 16:50:56,053: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[0584df2f-530e-4b97-aac9-03dd9d90e42e] succeeded in 0.007920243000626215s: 0
-[2026-07-20 16:51:56,030: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[cb51210b-f43d-410e-a73d-988c80a94d63] received
-[2026-07-20 16:51:56,039: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[cb51210b-f43d-410e-a73d-988c80a94d63] succeeded in 0.007500075000280049s: 0
-[2026-07-20 16:51:56,043: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[b97dec89-32c8-41bd-8400-5058207ed19b] received
-[2026-07-20 16:51:56,046: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[b97dec89-32c8-41bd-8400-5058207ed19b] succeeded in 0.0026082379999934346s: 0
-[2026-07-20 16:52:56,030: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[acb2a2c0-c73c-41e2-bb4b-4998eaafbdad] received
-[2026-07-20 16:52:56,038: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[acb2a2c0-c73c-41e2-bb4b-4998eaafbdad] succeeded in 0.006676178999441618s: 0
-[2026-07-20 16:52:56,044: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[c9ace536-bab9-4c96-bced-3e30582dab99] received
-[2026-07-20 16:52:56,053: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[c9ace536-bab9-4c96-bced-3e30582dab99] succeeded in 0.0072219060002680635s: 0
-[2026-07-20 16:53:56,030: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[b3463ce6-b853-4543-ba89-b7f7ba0c0f7d] received
-[2026-07-20 16:53:56,038: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[b3463ce6-b853-4543-ba89-b7f7ba0c0f7d] succeeded in 0.006424535999940417s: 0
-[2026-07-20 16:53:56,044: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[dd555470-3259-462c-8a60-7c45927e8c2d] received
-[2026-07-20 16:53:56,050: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[dd555470-3259-462c-8a60-7c45927e8c2d] succeeded in 0.005809393999697932s: 0
+[2026-07-22 15:07:06,933: INFO/MainProcess] Connected to redis://localhost:6379/1
+[2026-07-22 15:07:06,936: INFO/MainProcess] mingle: searching for neighbors
+[2026-07-22 15:07:07,946: INFO/MainProcess] mingle: all alone
+[2026-07-22 15:07:07,970: INFO/MainProcess] celery@arch ready.
+[2026-07-22 15:07:07,975: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[e35ba761-f701-4c4f-8817-ed5ffe168e6d] received
+[2026-07-22 15:07:07,977: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[64f2bbed-e9fb-40bb-a7ae-3956efa27407] received
+[2026-07-22 15:07:08,049: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[64f2bbed-e9fb-40bb-a7ae-3956efa27407] succeeded in 0.07170987299991793s: 0
+[2026-07-22 15:07:08,049: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[e35ba761-f701-4c4f-8817-ed5ffe168e6d] succeeded in 0.07181732200001534s: 0
+[2026-07-22 15:08:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[1407c848-4eec-41e0-a67b-67e43707256f] received
+[2026-07-22 15:08:05,959: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[1407c848-4eec-41e0-a67b-67e43707256f] succeeded in 0.011459472000069582s: 0
+[2026-07-22 15:08:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[9d7bd1a0-04fd-41e7-8aac-ec0822da9a0c] received
+[2026-07-22 15:08:05,972: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[9d7bd1a0-04fd-41e7-8aac-ec0822da9a0c] succeeded in 0.010029110999994373s: 0
+[2026-07-22 15:09:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[62e373fa-d108-446f-b38e-aa4a8d86b915] received
+[2026-07-22 15:09:05,952: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[62e373fa-d108-446f-b38e-aa4a8d86b915] succeeded in 0.006302316999835966s: 0
+[2026-07-22 15:09:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[47e126a1-cbe8-40da-a70e-fcb1698b1c83] received
+[2026-07-22 15:09:05,968: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[47e126a1-cbe8-40da-a70e-fcb1698b1c83] succeeded in 0.00601814599986028s: 0
+[2026-07-22 15:10:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[fa39b421-a620-42fd-ac1c-e369cb155897] received
+[2026-07-22 15:10:05,954: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[fa39b421-a620-42fd-ac1c-e369cb155897] succeeded in 0.008046193000154744s: 0
+[2026-07-22 15:10:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[28b5d544-cbdd-4a0b-801d-c77a9ff32e1d] received
+[2026-07-22 15:10:05,968: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[28b5d544-cbdd-4a0b-801d-c77a9ff32e1d] succeeded in 0.006555279999929553s: 0
+[2026-07-22 15:11:05,944: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[fadfe818-1030-470e-be6a-985779939220] received
+[2026-07-22 15:11:05,949: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[fadfe818-1030-470e-be6a-985779939220] succeeded in 0.004775482000013653s: 0
+[2026-07-22 15:11:05,960: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[b5f07ff5-7dd5-4dda-ad42-29a0a91dcf44] received
+[2026-07-22 15:11:05,964: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[b5f07ff5-7dd5-4dda-ad42-29a0a91dcf44] succeeded in 0.0035951899999417947s: 0
+[2026-07-22 15:12:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[5829bfbb-8e9e-41af-8441-c0fd5b195b52] received
+[2026-07-22 15:12:05,953: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[5829bfbb-8e9e-41af-8441-c0fd5b195b52] succeeded in 0.0068671839999296935s: 0
+[2026-07-22 15:12:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[ecef9f64-10b5-45b2-a5f1-a0945c8eea96] received
+[2026-07-22 15:12:05,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[ecef9f64-10b5-45b2-a5f1-a0945c8eea96] succeeded in 0.005239044000063586s: 0
+[2026-07-22 15:13:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[876d47b2-31f5-49e5-8453-5907a6bb0fb7] received
+[2026-07-22 15:13:05,954: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[876d47b2-31f5-49e5-8453-5907a6bb0fb7] succeeded in 0.007309631999987687s: 0
+[2026-07-22 15:13:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[80a8e3fa-e945-4ce3-82ac-a2a4c9b08e2c] received
+[2026-07-22 15:13:05,968: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[80a8e3fa-e945-4ce3-82ac-a2a4c9b08e2c] succeeded in 0.005893770999819026s: 0
+[2026-07-22 15:14:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[3ce5db62-f195-47e4-a6e4-e1e29c312db6] received
+[2026-07-22 15:14:05,954: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[3ce5db62-f195-47e4-a6e4-e1e29c312db6] succeeded in 0.008168219999788562s: 0
+[2026-07-22 15:14:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[a0634da9-0ffa-4ec4-a4a8-0630b92ad265] received
+[2026-07-22 15:14:05,969: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[a0634da9-0ffa-4ec4-a4a8-0630b92ad265] succeeded in 0.0065939280000293365s: 0
+[2026-07-22 15:15:05,944: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[a89bb3fc-e26e-40a5-a1c6-6cbf64284bf6] received
+[2026-07-22 15:15:05,949: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[a89bb3fc-e26e-40a5-a1c6-6cbf64284bf6] succeeded in 0.003599080000185495s: 0
+[2026-07-22 15:15:05,960: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[200bf8af-48d5-4a79-9e3d-8590a0992d29] received
+[2026-07-22 15:15:05,966: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[200bf8af-48d5-4a79-9e3d-8590a0992d29] succeeded in 0.004568779000010181s: 0
+[2026-07-22 15:16:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[88ae3d04-0792-40e9-9f4b-eeb20d98da36] received
+[2026-07-22 15:16:05,954: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[88ae3d04-0792-40e9-9f4b-eeb20d98da36] succeeded in 0.006437414999936664s: 0
+[2026-07-22 15:16:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[deb4a4ef-cfd8-45c6-b159-1ada27e8f0aa] received
+[2026-07-22 15:16:05,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[deb4a4ef-cfd8-45c6-b159-1ada27e8f0aa] succeeded in 0.005228493999993589s: 0
+[2026-07-22 15:17:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[1b4add06-fe7e-486b-bfed-df6fe2c8cb97] received
+[2026-07-22 15:17:05,954: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[1b4add06-fe7e-486b-bfed-df6fe2c8cb97] succeeded in 0.007473269999991317s: 0
+[2026-07-22 15:17:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[82663503-c4b5-4187-9747-f31aa3948fd3] received
+[2026-07-22 15:17:05,964: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[82663503-c4b5-4187-9747-f31aa3948fd3] succeeded in 0.0028596760000709764s: 0
+[2026-07-22 15:18:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[3216b244-11a1-4399-8bba-6c6d07ccdf41] received
+[2026-07-22 15:18:05,954: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[3216b244-11a1-4399-8bba-6c6d07ccdf41] succeeded in 0.007818399999905523s: 0
+[2026-07-22 15:18:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[8e073bff-5c13-4767-882c-b744b91777d2] received
+[2026-07-22 15:18:05,969: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[8e073bff-5c13-4767-882c-b744b91777d2] succeeded in 0.006382574000099339s: 0
+[2026-07-22 15:19:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[38feed95-17e8-4c7b-a673-bdf3f622b5e4] received
+[2026-07-22 15:19:05,954: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[38feed95-17e8-4c7b-a673-bdf3f622b5e4] succeeded in 0.007553216999895085s: 0
+[2026-07-22 15:19:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[7f08c1f7-f3cf-4e42-876b-6c03bb1ab17a] received
+[2026-07-22 15:19:05,964: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[7f08c1f7-f3cf-4e42-876b-6c03bb1ab17a] succeeded in 0.0027523010001004877s: 0
+[2026-07-22 15:20:05,944: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[354acb91-ecf0-41bb-bcdc-c2734adef350] received
+[2026-07-22 15:20:05,949: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[354acb91-ecf0-41bb-bcdc-c2734adef350] succeeded in 0.003981350999993083s: 0
+[2026-07-22 15:20:05,960: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[290084c8-5491-41e0-a086-63cf278a5054] received
+[2026-07-22 15:20:05,965: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[290084c8-5491-41e0-a086-63cf278a5054] succeeded in 0.0037615940000250703s: 0
+[2026-07-22 15:21:05,944: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[b4cee2c2-c75c-4e4f-bcbf-36480e4fb5a1] received
+[2026-07-22 15:21:05,950: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[b4cee2c2-c75c-4e4f-bcbf-36480e4fb5a1] succeeded in 0.004512097999850084s: 0
+[2026-07-22 15:21:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[aa869792-56b4-4746-8c98-e3b89982d84d] received
+[2026-07-22 15:21:05,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[aa869792-56b4-4746-8c98-e3b89982d84d] succeeded in 0.004673468999953911s: 0
+[2026-07-22 15:22:05,944: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[b5e6aa51-7e03-4480-af3a-e7a332f78688] received
+[2026-07-22 15:22:05,949: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[b5e6aa51-7e03-4480-af3a-e7a332f78688] succeeded in 0.003576718999966033s: 0
+[2026-07-22 15:22:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[767fc17f-9f00-41d4-95c2-c2107fd11a4e] received
+[2026-07-22 15:22:05,968: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[767fc17f-9f00-41d4-95c2-c2107fd11a4e] succeeded in 0.0059640590000071825s: 0
+[2026-07-22 15:23:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[fe36107e-9253-4f1c-91c2-fa2a3b682bc7] received
+[2026-07-22 15:23:05,954: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[fe36107e-9253-4f1c-91c2-fa2a3b682bc7] succeeded in 0.007743113999822526s: 0
+[2026-07-22 15:23:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[24448a18-ee06-4392-b8e2-62f02879e4f4] received
+[2026-07-22 15:23:05,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[24448a18-ee06-4392-b8e2-62f02879e4f4] succeeded in 0.0055340880001040205s: 0
+[2026-07-22 15:24:05,946: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[5a2f6e9d-3ad8-447b-ba09-884a747b6b1e] received
+[2026-07-22 15:24:05,954: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[5a2f6e9d-3ad8-447b-ba09-884a747b6b1e] succeeded in 0.007534953000231326s: 0
+[2026-07-22 15:24:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[ebd9adee-3d67-4d0c-acea-6d1a617dfa2a] received
+[2026-07-22 15:24:05,968: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[ebd9adee-3d67-4d0c-acea-6d1a617dfa2a] succeeded in 0.006164738000279613s: 0
+[2026-07-22 15:25:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[374d030a-4c3d-4b7d-98f8-1f806a635de6] received
+[2026-07-22 15:25:05,954: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[374d030a-4c3d-4b7d-98f8-1f806a635de6] succeeded in 0.007786072000271815s: 0
+[2026-07-22 15:25:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[1117dab7-9439-4c38-9ad4-067283a936eb] received
+[2026-07-22 15:25:05,970: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[1117dab7-9439-4c38-9ad4-067283a936eb] succeeded in 0.007031972000277165s: 0
+[2026-07-22 15:26:05,946: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[e23c0ee8-05b1-456c-8a22-0d2d1a5995e5] received
+[2026-07-22 15:26:05,954: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[e23c0ee8-05b1-456c-8a22-0d2d1a5995e5] succeeded in 0.007285214999683376s: 0
+[2026-07-22 15:26:05,965: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[43f4f4aa-e978-4b5a-b312-44b2d69baff5] received
+[2026-07-22 15:26:05,973: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[43f4f4aa-e978-4b5a-b312-44b2d69baff5] succeeded in 0.006840714999725606s: 0
+[2026-07-22 15:27:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[394e9937-9e09-4d09-ad71-ac6d4969703a] received
+[2026-07-22 15:27:05,951: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[394e9937-9e09-4d09-ad71-ac6d4969703a] succeeded in 0.004587649999848509s: 0
+[2026-07-22 15:27:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[ac94214a-f727-4a7a-996a-5ac9cb060de0] received
+[2026-07-22 15:27:05,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[ac94214a-f727-4a7a-996a-5ac9cb060de0] succeeded in 0.004629690000001574s: 0
+[2026-07-22 15:28:05,948: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[3966dd76-c229-42fd-9b28-042c5b90e54c] received
+[2026-07-22 15:28:05,959: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[3966dd76-c229-42fd-9b28-042c5b90e54c] succeeded in 0.008615042000201356s: 0
+[2026-07-22 15:28:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[5086a6e4-a1a9-440c-888e-ddf052ecfa20] received
+[2026-07-22 15:28:05,968: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[5086a6e4-a1a9-440c-888e-ddf052ecfa20] succeeded in 0.006021769999733806s: 0
+[2026-07-22 15:29:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[6391c2e7-d4b1-47ac-97a3-e3c7f8feb4b2] received
+[2026-07-22 15:29:05,953: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[6391c2e7-d4b1-47ac-97a3-e3c7f8feb4b2] succeeded in 0.006176503000006051s: 0
+[2026-07-22 15:29:05,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[e4ac3140-0da1-4e4e-b780-4ed243b69e1d] received
+[2026-07-22 15:29:05,970: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[e4ac3140-0da1-4e4e-b780-4ed243b69e1d] succeeded in 0.007017757000085112s: 0
+[2026-07-22 15:30:05,946: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[5fa5452e-8c99-4b6c-8ec0-8cd668edc26d] received
+[2026-07-22 15:30:05,953: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[5fa5452e-8c99-4b6c-8ec0-8cd668edc26d] succeeded in 0.006664551999620016s: 0
+[2026-07-22 15:30:05,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[523d6c80-7846-4750-998a-8e8dea0cd13b] received
+[2026-07-22 15:30:05,970: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[523d6c80-7846-4750-998a-8e8dea0cd13b] succeeded in 0.006603572000130953s: 0
+[2026-07-22 15:31:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[73194459-7fa4-4fd0-b355-30620f52d0a5] received
+[2026-07-22 15:31:05,950: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[73194459-7fa4-4fd0-b355-30620f52d0a5] succeeded in 0.003716737999639008s: 0
+[2026-07-22 15:31:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[146a83e4-f36c-46b1-9852-373f91b5aafc] received
+[2026-07-22 15:31:05,964: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[146a83e4-f36c-46b1-9852-373f91b5aafc] succeeded in 0.0026606149999679474s: 0
+[2026-07-22 15:32:05,946: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[66a48ec2-69aa-4f02-a14e-e9df0bb94123] received
+[2026-07-22 15:32:05,952: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[66a48ec2-69aa-4f02-a14e-e9df0bb94123] succeeded in 0.004832878999877721s: 0
+[2026-07-22 15:32:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[9cc1f081-6ce6-4937-b561-1da175491097] received
+[2026-07-22 15:32:05,965: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[9cc1f081-6ce6-4937-b561-1da175491097] succeeded in 0.0028842690003330063s: 0
+[2026-07-22 15:33:05,944: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[ef5a34ba-cb31-4317-b2cf-7a30ee86d12c] received
+[2026-07-22 15:33:05,950: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[ef5a34ba-cb31-4317-b2cf-7a30ee86d12c] succeeded in 0.005056311999851459s: 0
+[2026-07-22 15:33:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[ce141441-a2a8-409c-982b-e709fbfe6b3c] received
+[2026-07-22 15:33:05,966: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[ce141441-a2a8-409c-982b-e709fbfe6b3c] succeeded in 0.004266829000243888s: 0
+[2026-07-22 15:34:05,946: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[99c25082-d99a-44d9-970e-b511c236b051] received
+[2026-07-22 15:34:05,955: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[99c25082-d99a-44d9-970e-b511c236b051] succeeded in 0.007760415000120702s: 0
+[2026-07-22 15:34:05,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[92fc5089-4f31-420a-9c70-4b3fe1b23be2] received
+[2026-07-22 15:34:05,970: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[92fc5089-4f31-420a-9c70-4b3fe1b23be2] succeeded in 0.006793670000206475s: 0
+[2026-07-22 15:35:05,946: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[857cb36b-fe1c-436f-8394-6aa030ea879c] received
+[2026-07-22 15:35:05,955: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[857cb36b-fe1c-436f-8394-6aa030ea879c] succeeded in 0.007872624999890832s: 0
+[2026-07-22 15:35:05,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[60c910eb-1480-457f-9e49-daefac69714e] received
+[2026-07-22 15:35:05,969: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[60c910eb-1480-457f-9e49-daefac69714e] succeeded in 0.006360251999922184s: 0
+[2026-07-22 15:36:05,946: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[237ffa76-b54f-4f35-853a-ee712ef4fcc1] received
+[2026-07-22 15:36:05,955: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[237ffa76-b54f-4f35-853a-ee712ef4fcc1] succeeded in 0.0073666569996930775s: 0
+[2026-07-22 15:36:05,963: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[6653444e-883f-4d73-8291-ae8489cc42ab] received
+[2026-07-22 15:36:05,972: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[6653444e-883f-4d73-8291-ae8489cc42ab] succeeded in 0.007620735000273271s: 0
+[2026-07-22 15:37:05,946: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[d6bf7e45-1a35-4477-b1c9-04dadeef4a15] received
+[2026-07-22 15:37:05,954: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[d6bf7e45-1a35-4477-b1c9-04dadeef4a15] succeeded in 0.006447129000207497s: 0
+[2026-07-22 15:37:05,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[b90d33f5-5874-40d1-bf67-1dfad209f278] received
+[2026-07-22 15:37:05,969: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[b90d33f5-5874-40d1-bf67-1dfad209f278] succeeded in 0.006429614999888145s: 0
+[2026-07-22 15:38:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[a6687bdc-36b6-447d-a61a-08e8208c8a4b] received
+[2026-07-22 15:38:05,951: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[a6687bdc-36b6-447d-a61a-08e8208c8a4b] succeeded in 0.005473045000144339s: 0
+[2026-07-22 15:38:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[3213b980-2763-4d38-8bf2-d7e176df01f3] received
+[2026-07-22 15:38:05,966: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[3213b980-2763-4d38-8bf2-d7e176df01f3] succeeded in 0.0043831670000145095s: 0
+[2026-07-22 15:39:05,948: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[3e53c566-4bed-46e9-89ae-1ed94236a778] received
+[2026-07-22 15:39:05,955: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[3e53c566-4bed-46e9-89ae-1ed94236a778] succeeded in 0.005645483999614953s: 0
+[2026-07-22 15:39:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[633fc3f7-a07d-49ba-894e-b047ae9a72db] received
+[2026-07-22 15:39:05,966: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[633fc3f7-a07d-49ba-894e-b047ae9a72db] succeeded in 0.003954817000249022s: 0
+[2026-07-22 15:40:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[4601d624-b995-4e2d-a0cb-ea7ad82bbf44] received
+[2026-07-22 15:40:05,949: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[4601d624-b995-4e2d-a0cb-ea7ad82bbf44] succeeded in 0.0034729180001704663s: 0
+[2026-07-22 15:40:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[bc1ad73b-3b4e-4eff-875a-0b0af55b9651] received
+[2026-07-22 15:40:05,965: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[bc1ad73b-3b4e-4eff-875a-0b0af55b9651] succeeded in 0.003286614999979065s: 0
+[2026-07-22 15:41:05,945: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[1efdc680-b3c6-4cd4-99de-6da76d21b23b] received
+[2026-07-22 15:41:05,951: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[1efdc680-b3c6-4cd4-99de-6da76d21b23b] succeeded in 0.004944439000155398s: 0
+[2026-07-22 15:41:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[0b35a502-a400-4952-b932-a0e129f2f520] received
+[2026-07-22 15:41:05,966: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[0b35a502-a400-4952-b932-a0e129f2f520] succeeded in 0.004452645999663218s: 0
+[2026-07-22 15:42:05,947: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[2114f0a9-39d2-4c36-afa8-748cf37a1ad8] received
+[2026-07-22 15:42:05,956: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[2114f0a9-39d2-4c36-afa8-748cf37a1ad8] succeeded in 0.006928380999852379s: 0
+[2026-07-22 15:42:05,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[4dc39fde-ed22-40c7-86b5-b08a9ebb107a] received
+[2026-07-22 15:42:05,969: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[4dc39fde-ed22-40c7-86b5-b08a9ebb107a] succeeded in 0.006009713999901578s: 0
+[2026-07-22 15:43:05,946: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[a61a5e1d-05f5-4323-9189-31681dbcf9e7] received
+[2026-07-22 15:43:05,955: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[a61a5e1d-05f5-4323-9189-31681dbcf9e7] succeeded in 0.006968882000364829s: 0
+[2026-07-22 15:43:05,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[eb305d38-d8cb-42e1-abdb-74184d6bbd6d] received
+[2026-07-22 15:43:05,966: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[eb305d38-d8cb-42e1-abdb-74184d6bbd6d] succeeded in 0.0028938209998159437s: 0
+[2026-07-22 15:44:05,946: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[c4f3e8a8-df8b-4520-b4c7-af73d669e6b3] received
+[2026-07-22 15:44:05,955: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[c4f3e8a8-df8b-4520-b4c7-af73d669e6b3] succeeded in 0.007035153999822796s: 0
+[2026-07-22 15:44:05,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[89c7d2c5-2766-4d64-a1a2-617c05082031] received
+[2026-07-22 15:44:05,970: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[89c7d2c5-2766-4d64-a1a2-617c05082031] succeeded in 0.006496721000075922s: 0
+[2026-07-22 15:45:05,950: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[2b69fd38-91df-48de-8e37-1431ad46df70] received
+[2026-07-22 15:45:05,958: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[2b69fd38-91df-48de-8e37-1431ad46df70] succeeded in 0.007118892000107735s: 0
+[2026-07-22 15:45:05,963: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[4b369643-8ba3-4ed2-9ac5-4e486ae27cfb] received
+[2026-07-22 15:45:05,970: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[4b369643-8ba3-4ed2-9ac5-4e486ae27cfb] succeeded in 0.006721517000187305s: 0
+[2026-07-22 15:46:05,948: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[e03e70a9-2a31-4eca-beae-9ea0f78643c7] received
+[2026-07-22 15:46:05,954: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[e03e70a9-2a31-4eca-beae-9ea0f78643c7] succeeded in 0.005211770000187244s: 0
+[2026-07-22 15:46:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[ce0de23f-eb4f-4b44-8590-e1bc2b506a24] received
+[2026-07-22 15:46:05,966: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[ce0de23f-eb4f-4b44-8590-e1bc2b506a24] succeeded in 0.0037935400000606023s: 0
+[2026-07-22 15:47:05,946: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[ecd5b9ec-1ec7-449f-9f94-2ddd001a0acd] received
+[2026-07-22 15:47:05,952: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[ecd5b9ec-1ec7-449f-9f94-2ddd001a0acd] succeeded in 0.005608662000213371s: 0
+[2026-07-22 15:47:05,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[d3b4208d-9a2f-48d3-9f2f-6ff7e1901d2c] received
+[2026-07-22 15:47:05,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[d3b4208d-9a2f-48d3-9f2f-6ff7e1901d2c] succeeded in 0.004545892999885837s: 0
+[2026-07-22 15:48:05,947: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[aca5022e-4372-4f75-811e-6f521d1ab70c] received
+[2026-07-22 15:48:05,955: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[aca5022e-4372-4f75-811e-6f521d1ab70c] succeeded in 0.006754012999863335s: 0
+[2026-07-22 15:48:05,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[52983cea-927c-455c-871f-dc50ca6b9968] received
+[2026-07-22 15:48:05,969: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[52983cea-927c-455c-871f-dc50ca6b9968] succeeded in 0.005673718999787525s: 0
+[2026-07-22 15:49:05,946: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[3a8ea89f-d6dd-4728-8431-bf8010d9487f] received
+[2026-07-22 15:49:05,952: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[3a8ea89f-d6dd-4728-8431-bf8010d9487f] succeeded in 0.004333453000072041s: 0
+[2026-07-22 15:49:05,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[edb93a1a-401e-4c0a-9ab5-8f516ff7153f] received
+[2026-07-22 15:49:05,968: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[edb93a1a-401e-4c0a-9ab5-8f516ff7153f] succeeded in 0.005176236999886896s: 0
+[2026-07-22 15:50:05,946: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[dd6a30d3-ccce-439e-81d6-85acb98a49d3] received
+[2026-07-22 15:50:05,952: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[dd6a30d3-ccce-439e-81d6-85acb98a49d3] succeeded in 0.005701965999833192s: 0
+[2026-07-22 15:50:05,961: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[63f9b4e6-0a2f-4971-83fc-f4576216e48e] received
+[2026-07-22 15:50:05,966: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[63f9b4e6-0a2f-4971-83fc-f4576216e48e] succeeded in 0.004383519999919372s: 0
+[2026-07-22 15:51:05,946: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[7925e9f8-f170-4669-ab46-eb576b8bbeba] received
+[2026-07-22 15:51:05,953: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[7925e9f8-f170-4669-ab46-eb576b8bbeba] succeeded in 0.004972645999714587s: 0
+[2026-07-22 15:51:05,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[9d5b320c-d2de-4689-961a-08c6274b7433] received
+[2026-07-22 15:51:05,966: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[9d5b320c-d2de-4689-961a-08c6274b7433] succeeded in 0.003033914999832632s: 0
+[2026-07-22 15:52:05,947: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[9d2f00db-5101-46b3-a4f9-ce43311f60f2] received
+[2026-07-22 15:52:05,955: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[9d2f00db-5101-46b3-a4f9-ce43311f60f2] succeeded in 0.00750315799996315s: 0
+[2026-07-22 15:52:05,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[ed2d87a5-c65c-451d-b7a9-ab2e1af33cc4] received
+[2026-07-22 15:52:05,970: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[ed2d87a5-c65c-451d-b7a9-ab2e1af33cc4] succeeded in 0.006470338999861269s: 0
+[2026-07-22 15:53:23,099: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[2d6f0e9d-6953-4c9a-8707-c60312ae2275] received
+[2026-07-22 15:53:23,102: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[ca9f71bb-8e3b-4171-b847-c6ce3dc52a25] received
+[2026-07-22 15:53:23,108: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[2d6f0e9d-6953-4c9a-8707-c60312ae2275] succeeded in 0.00725690300032511s: 0
+[2026-07-22 15:53:23,193: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[ca9f71bb-8e3b-4171-b847-c6ce3dc52a25] succeeded in 0.0758320449999701s: 0
+[2026-07-22 15:54:23,099: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[9413e7c7-2c3d-43e5-bf5c-c79a7e1289ca] received
+[2026-07-22 15:54:23,100: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[7eb8fb0b-ab1d-451e-9dc5-7673fef1d2db] received
+[2026-07-22 15:54:23,104: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[9413e7c7-2c3d-43e5-bf5c-c79a7e1289ca] succeeded in 0.003579759999865928s: 0
+[2026-07-22 15:54:23,104: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[7eb8fb0b-ab1d-451e-9dc5-7673fef1d2db] succeeded in 0.0039020119997985603s: 0
+[2026-07-22 15:55:23,101: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[a0743c23-7f75-4eac-a7b2-2dd4c32cb4de] received
+[2026-07-22 15:55:23,103: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[60dcdfc6-4a44-48ed-beca-76e8d23ddd68] received
+[2026-07-22 15:55:23,107: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[a0743c23-7f75-4eac-a7b2-2dd4c32cb4de] succeeded in 0.0036884020000798046s: 0
+[2026-07-22 15:55:23,108: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[60dcdfc6-4a44-48ed-beca-76e8d23ddd68] succeeded in 0.004366075999769237s: 0
+[2026-07-22 15:56:38,208: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[3f2c6f35-7af9-449a-a271-e1dd3046ab31] received
+[2026-07-22 15:56:38,232: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[9defd793-16eb-4b95-94d4-4d75b6148c5c] received
+[2026-07-22 15:56:38,241: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[3f2c6f35-7af9-449a-a271-e1dd3046ab31] succeeded in 0.007224408999718435s: 0
+[2026-07-22 15:56:38,241: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[9defd793-16eb-4b95-94d4-4d75b6148c5c] succeeded in 0.007438889999775711s: 0
+[2026-07-22 15:57:38,204: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[e30405bb-2a5a-4351-a616-eeae9bd41d48] received
+[2026-07-22 15:57:38,205: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[a77954ec-4b06-41b2-b45c-111bdefb6e33] received
+[2026-07-22 15:57:38,209: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[e30405bb-2a5a-4351-a616-eeae9bd41d48] succeeded in 0.004106304999822896s: 0
+[2026-07-22 15:57:38,210: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[a77954ec-4b06-41b2-b45c-111bdefb6e33] succeeded in 0.004696770999998989s: 0
+[2026-07-22 15:58:56,704: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[ee964e00-bd95-45c9-9e48-4d72fcf99ac1] received
+[2026-07-22 15:58:56,712: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[e1195612-9433-45c9-a076-90e70254eb0c] received
+[2026-07-22 15:58:56,725: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[ee964e00-bd95-45c9-9e48-4d72fcf99ac1] succeeded in 0.011586015999455412s: 0
+[2026-07-22 15:58:56,726: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[e1195612-9433-45c9-a076-90e70254eb0c] succeeded in 0.012627803999748721s: 0
+[2026-07-22 16:00:09,961: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[375b7247-3137-4b20-806e-33096fb9bf9c] received
+[2026-07-22 16:00:09,967: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[e644b689-1b3d-407e-9baf-e875f92a62a6] received
+[2026-07-22 16:00:09,979: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[375b7247-3137-4b20-806e-33096fb9bf9c] succeeded in 0.007384737999927893s: 0
+[2026-07-22 16:00:09,986: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[e644b689-1b3d-407e-9baf-e875f92a62a6] succeeded in 0.013318235000042478s: 0
+[2026-07-22 16:01:09,960: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[784bc815-3abe-4e1a-886f-4f29ddc55e46] received
+[2026-07-22 16:01:09,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[708ad5dd-4101-4860-8bd7-4d1e6870ecbe] received
+[2026-07-22 16:01:09,965: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[784bc815-3abe-4e1a-886f-4f29ddc55e46] succeeded in 0.0037976890007485054s: 0
+[2026-07-22 16:01:09,966: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[708ad5dd-4101-4860-8bd7-4d1e6870ecbe] succeeded in 0.0034643110002434696s: 0
+[2026-07-22 16:02:09,958: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[866acb14-fb3b-4668-bf90-cee793df7680] received
+[2026-07-22 16:02:09,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[83a57f99-2f98-4e0c-a618-72af6e268684] received
+[2026-07-22 16:02:09,962: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[866acb14-fb3b-4668-bf90-cee793df7680] succeeded in 0.003099493999798142s: 0
+[2026-07-22 16:02:09,964: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[83a57f99-2f98-4e0c-a618-72af6e268684] succeeded in 0.001896138999654795s: 0
+[2026-07-22 16:03:09,958: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[a5a7cdba-aad2-45d8-8881-df874e577a58] received
+[2026-07-22 16:03:09,961: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[a5a7cdba-aad2-45d8-8881-df874e577a58] succeeded in 0.002569882999523543s: 0
+[2026-07-22 16:03:09,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[0d674046-1003-4eea-aca6-3af87c9c5ca2] received
+[2026-07-22 16:03:09,964: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[0d674046-1003-4eea-aca6-3af87c9c5ca2] succeeded in 0.0015238879996104515s: 0
+[2026-07-22 16:04:09,958: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[cc2e03e6-f186-4171-bf34-97b32a1a7e17] received
+[2026-07-22 16:04:09,961: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[cc2e03e6-f186-4171-bf34-97b32a1a7e17] succeeded in 0.0026241349996780627s: 0
+[2026-07-22 16:04:09,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[f78d275e-41cb-47cc-8fae-5d1e89823146] received
+[2026-07-22 16:04:09,964: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[f78d275e-41cb-47cc-8fae-5d1e89823146] succeeded in 0.0017452850006520748s: 0
+[2026-07-22 16:05:09,958: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[e27f8372-9df8-411d-b542-5cb324c8d5a1] received
+[2026-07-22 16:05:09,963: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[e27f8372-9df8-411d-b542-5cb324c8d5a1] succeeded in 0.0037149339996176423s: 0
+[2026-07-22 16:05:09,963: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[e63f1bf1-cc20-4c3d-b560-3ea3681e1477] received
+[2026-07-22 16:05:09,966: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[e63f1bf1-cc20-4c3d-b560-3ea3681e1477] succeeded in 0.002263076999952318s: 0
+[2026-07-22 16:06:09,958: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[b13c2981-ba2b-48c2-869c-fdcf3a803870] received
+[2026-07-22 16:06:09,962: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[b13c2981-ba2b-48c2-869c-fdcf3a803870] succeeded in 0.0027706930004569585s: 0
+[2026-07-22 16:06:09,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[d74e32be-c473-4ebc-9729-1c3321a13ffa] received
+[2026-07-22 16:06:09,964: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[d74e32be-c473-4ebc-9729-1c3321a13ffa] succeeded in 0.0019032059999517514s: 0
+[2026-07-22 16:07:09,959: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[c8286e8e-4c3e-4a36-8b15-693b71f5c476] received
+[2026-07-22 16:07:09,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[f4134ffc-2f19-470a-8918-678ad2a6fd7a] received
+[2026-07-22 16:07:09,963: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[c8286e8e-4c3e-4a36-8b15-693b71f5c476] succeeded in 0.0032585480003035627s: 0
+[2026-07-22 16:07:09,965: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[f4134ffc-2f19-470a-8918-678ad2a6fd7a] succeeded in 0.0020211490000292542s: 0
+[2026-07-22 16:08:09,959: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[8fca9a3d-b7cb-41bb-a6d8-cef58dc1a99b] received
+[2026-07-22 16:08:09,963: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[6b8f6033-59b8-432d-b549-9e1dd0df220f] received
+[2026-07-22 16:08:09,963: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[8fca9a3d-b7cb-41bb-a6d8-cef58dc1a99b] succeeded in 0.0034536690000095405s: 0
+[2026-07-22 16:08:09,965: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[6b8f6033-59b8-432d-b549-9e1dd0df220f] succeeded in 0.002038954000454396s: 0
+[2026-07-22 16:09:09,959: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[87568a44-f579-47db-bd3b-242e790a86ab] received
+[2026-07-22 16:09:09,962: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[87568a44-f579-47db-bd3b-242e790a86ab] succeeded in 0.002611242999591923s: 0
+[2026-07-22 16:09:09,963: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[2f8e3c1c-300e-4a00-a1fc-6513159d1b5e] received
+[2026-07-22 16:09:09,965: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[2f8e3c1c-300e-4a00-a1fc-6513159d1b5e] succeeded in 0.0017965400002140086s: 0
+[2026-07-22 16:10:09,959: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[784d3874-263a-4e87-afc6-a897415eefa9] received
+[2026-07-22 16:10:09,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[6b626ca8-5fa7-436f-8bf4-8d67631489bb] received
+[2026-07-22 16:10:09,964: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[784d3874-263a-4e87-afc6-a897415eefa9] succeeded in 0.0036048880001544603s: 0
+[2026-07-22 16:10:09,966: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[6b626ca8-5fa7-436f-8bf4-8d67631489bb] succeeded in 0.002996643999722437s: 0
+[2026-07-22 16:11:09,959: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[542c0da8-c3d7-440a-97c7-7f8ab3be3b5e] received
+[2026-07-22 16:11:09,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[4b8c5bab-409f-4ea6-9e65-88ac562779e5] received
+[2026-07-22 16:11:09,963: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[542c0da8-c3d7-440a-97c7-7f8ab3be3b5e] succeeded in 0.0032313330002580187s: 0
+[2026-07-22 16:11:09,965: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[4b8c5bab-409f-4ea6-9e65-88ac562779e5] succeeded in 0.0022239520003495272s: 0
+[2026-07-22 16:12:09,958: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[57331217-a4cd-4b69-bd11-414978dd48d1] received
+[2026-07-22 16:12:09,961: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[57331217-a4cd-4b69-bd11-414978dd48d1] succeeded in 0.002509879000172077s: 0
+[2026-07-22 16:12:09,962: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[5fcef599-6eef-4672-aa1b-a53246949dc3] received
+[2026-07-22 16:12:09,965: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[5fcef599-6eef-4672-aa1b-a53246949dc3] succeeded in 0.0019501579999996466s: 0
+[2026-07-22 16:13:09,961: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[a536afc6-effb-4b32-a8ea-ff5d4e3a4d78] received
+[2026-07-22 16:13:09,964: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[a536afc6-effb-4b32-a8ea-ff5d4e3a4d78] succeeded in 0.002572293999946851s: 0
+[2026-07-22 16:13:09,967: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[3e5373fb-be27-4112-84b7-9d4c45f0640d] received
+[2026-07-22 16:13:09,969: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[3e5373fb-be27-4112-84b7-9d4c45f0640d] succeeded in 0.0020077090002814657s: 0
+[2026-07-22 16:14:09,958: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[b770e5b2-9c9f-4e57-b67e-7b5ea47eb6f9] received
+[2026-07-22 16:14:09,961: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[b770e5b2-9c9f-4e57-b67e-7b5ea47eb6f9] succeeded in 0.0023988240000107908s: 0
+[2026-07-22 16:14:09,965: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[70c0b102-f220-4852-b317-47cdac90a608] received
+[2026-07-22 16:14:09,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[70c0b102-f220-4852-b317-47cdac90a608] succeeded in 0.0016710549998606439s: 0
+[2026-07-22 16:15:09,959: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[e6ed1192-4a7f-4b7e-b447-38150be5fe00] received
+[2026-07-22 16:15:09,962: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[e6ed1192-4a7f-4b7e-b447-38150be5fe00] succeeded in 0.002269557000545319s: 0
+[2026-07-22 16:15:09,965: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[b2dfdeaf-9dc2-420b-8b14-b3466ff61534] received
+[2026-07-22 16:15:09,968: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[b2dfdeaf-9dc2-420b-8b14-b3466ff61534] succeeded in 0.0023871389994383208s: 0
+[2026-07-22 16:16:09,959: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[cfafde63-e452-40a8-9329-e2d3d0bce234] received
+[2026-07-22 16:16:09,963: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[cfafde63-e452-40a8-9329-e2d3d0bce234] succeeded in 0.002691628000320634s: 0
+[2026-07-22 16:16:09,967: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[73ac5485-6043-4f0e-9fb8-e47ab6a66d69] received
+[2026-07-22 16:16:09,972: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[73ac5485-6043-4f0e-9fb8-e47ab6a66d69] succeeded in 0.003259090999563341s: 0
+[2026-07-22 16:17:09,958: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[d0422f40-7baf-4ed6-a60f-47f0bd59d7ce] received
+[2026-07-22 16:17:09,961: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[d0422f40-7baf-4ed6-a60f-47f0bd59d7ce] succeeded in 0.0019017280001207837s: 0
+[2026-07-22 16:17:09,965: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[ea76d24b-64a2-4216-a551-d13eb07a6f01] received
+[2026-07-22 16:17:09,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[ea76d24b-64a2-4216-a551-d13eb07a6f01] succeeded in 0.0016508259996044217s: 0
+[2026-07-22 16:18:09,959: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[0528cfd2-317b-46a3-b1be-d027e81254b3] received
+[2026-07-22 16:18:09,962: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[0528cfd2-317b-46a3-b1be-d027e81254b3] succeeded in 0.0022816040000179783s: 0
+[2026-07-22 16:18:09,965: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[5de6d48c-e082-45bb-8ec0-19a0d65d3d36] received
+[2026-07-22 16:18:09,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[5de6d48c-e082-45bb-8ec0-19a0d65d3d36] succeeded in 0.0017382890000590123s: 0
+[2026-07-22 16:19:09,959: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[b5305db0-8438-4f47-8534-d6373a177463] received
+[2026-07-22 16:19:09,962: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[b5305db0-8438-4f47-8534-d6373a177463] succeeded in 0.0026427980001244578s: 0
+[2026-07-22 16:19:09,965: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[4167e2f5-fba1-4a50-9b32-0048047a7827] received
+[2026-07-22 16:19:09,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[4167e2f5-fba1-4a50-9b32-0048047a7827] succeeded in 0.0015800299997863476s: 0
+[2026-07-22 16:20:09,958: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[6ab99342-206d-4911-9592-965c66ad9abb] received
+[2026-07-22 16:20:09,962: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[6ab99342-206d-4911-9592-965c66ad9abb] succeeded in 0.0026868229997489834s: 0
+[2026-07-22 16:20:09,965: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[e28de0f6-9f09-44c7-8e9f-2742c1832903] received
+[2026-07-22 16:20:09,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[e28de0f6-9f09-44c7-8e9f-2742c1832903] succeeded in 0.0017891010002131225s: 0
+[2026-07-22 16:21:09,959: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[cec5a972-5e55-46b8-831b-053cf7f76140] received
+[2026-07-22 16:21:09,961: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[cec5a972-5e55-46b8-831b-053cf7f76140] succeeded in 0.002039963000243006s: 0
+[2026-07-22 16:21:09,966: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[7a979daf-77ce-4181-8667-9477ef007916] received
+[2026-07-22 16:21:09,969: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[7a979daf-77ce-4181-8667-9477ef007916] succeeded in 0.0026813469994522166s: 0
+[2026-07-22 16:22:09,962: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[d64c1469-1cd5-4cdb-b9d5-4698fcd3f03c] received
+[2026-07-22 16:22:09,967: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[77c43d98-ebe9-483d-bb2e-4212b9792086] received
+[2026-07-22 16:22:09,971: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[d64c1469-1cd5-4cdb-b9d5-4698fcd3f03c] succeeded in 0.008357058000001416s: 0
+[2026-07-22 16:22:09,977: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[77c43d98-ebe9-483d-bb2e-4212b9792086] succeeded in 0.0058774680001079105s: 0
+[2026-07-22 16:23:09,959: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[40c38e1e-81d9-4791-8b2e-45453c62afdb] received
+[2026-07-22 16:23:09,962: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[40c38e1e-81d9-4791-8b2e-45453c62afdb] succeeded in 0.0022303410005406477s: 0
+[2026-07-22 16:23:09,965: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[4956fe24-7006-433c-b324-bbcb4d0d180a] received
+[2026-07-22 16:23:09,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[4956fe24-7006-433c-b324-bbcb4d0d180a] succeeded in 0.0015731089997643721s: 0
+[2026-07-22 16:24:09,959: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[971313d8-bab3-4251-9e6a-bf4913d2f9d8] received
+[2026-07-22 16:24:09,962: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[971313d8-bab3-4251-9e6a-bf4913d2f9d8] succeeded in 0.0021512359999178443s: 0
+[2026-07-22 16:24:09,965: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[a54c4e63-beb7-4ace-925a-474c00644a50] received
+[2026-07-22 16:24:09,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[a54c4e63-beb7-4ace-925a-474c00644a50] succeeded in 0.0018544779995863792s: 0
+[2026-07-22 16:25:09,959: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[e77483e5-99e1-4fb1-87c3-1c017cd21ac1] received
+[2026-07-22 16:25:09,962: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[e77483e5-99e1-4fb1-87c3-1c017cd21ac1] succeeded in 0.0021773999997094506s: 0
+[2026-07-22 16:25:09,965: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[36a64d68-f12a-4e43-9b94-acae56f25ba1] received
+[2026-07-22 16:25:09,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[36a64d68-f12a-4e43-9b94-acae56f25ba1] succeeded in 0.0016460999995615566s: 0
+[2026-07-22 16:26:09,960: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[012cb9ba-ce64-4d8a-b425-dbceec5e2ee2] received
+[2026-07-22 16:26:09,963: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[012cb9ba-ce64-4d8a-b425-dbceec5e2ee2] succeeded in 0.0026219450001008227s: 0
+[2026-07-22 16:26:09,965: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[fa0eaa01-47aa-4572-8347-33a1f747ca29] received
+[2026-07-22 16:26:09,968: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[fa0eaa01-47aa-4572-8347-33a1f747ca29] succeeded in 0.002216938999481499s: 0
+[2026-07-22 16:27:09,959: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[2192d856-1527-4c4c-97d6-4d38e74efeab] received
+[2026-07-22 16:27:09,962: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[2192d856-1527-4c4c-97d6-4d38e74efeab] succeeded in 0.002542731999710668s: 0
+[2026-07-22 16:27:09,965: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[f95186fa-e964-40b6-978a-07a078ae690c] received
+[2026-07-22 16:27:09,967: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[f95186fa-e964-40b6-978a-07a078ae690c] succeeded in 0.0019397370006117853s: 0
+[2026-07-22 16:28:09,960: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[372faa7e-e1e8-468f-988f-821d3e540463] received
+[2026-07-22 16:28:09,965: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[372faa7e-e1e8-468f-988f-821d3e540463] succeeded in 0.003693039000609133s: 0
+[2026-07-22 16:28:09,966: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[42871f67-409a-45a7-8485-7ec88c6922b5] received
+[2026-07-22 16:28:09,971: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[42871f67-409a-45a7-8485-7ec88c6922b5] succeeded in 0.0035110829994664527s: 0
+[2026-07-22 16:29:13,675: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[b5420792-3954-46ef-b636-c93d18116541] received
+[2026-07-22 16:29:13,680: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[75d5f2fe-bad6-477c-94f5-30172b58c3be] received
+[2026-07-22 16:29:13,691: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[75d5f2fe-bad6-477c-94f5-30172b58c3be] succeeded in 0.009674769999946875s: 0
+[2026-07-22 16:29:13,695: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[b5420792-3954-46ef-b636-c93d18116541] succeeded in 0.014042142999642238s: 0
+[2026-07-22 16:30:27,040: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[7dfbfefc-4f01-4aa2-b984-a9d55c4bc43e] received
+[2026-07-22 16:30:27,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[85915848-6a75-44c2-b9dd-0ad2aa9f7805] received
+[2026-07-22 16:30:27,047: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[7dfbfefc-4f01-4aa2-b984-a9d55c4bc43e] succeeded in 0.004051719999552006s: 0
+[2026-07-22 16:30:27,049: INFO/ForkPoolWorker-14] Task app.tasks.slot_tasks.send_slot_reminders[85915848-6a75-44c2-b9dd-0ad2aa9f7805] succeeded in 0.005225240000072517s: 0
+[2026-07-22 16:31:26,949: INFO/MainProcess] Task app.tasks.slot_tasks.check_absences[2e543e9b-8c92-4406-be5e-661156033c79] received
+[2026-07-22 16:31:26,953: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.check_absences[2e543e9b-8c92-4406-be5e-661156033c79] succeeded in 0.0037569680007436546s: 0
+[2026-07-22 16:31:27,042: INFO/MainProcess] Task app.tasks.slot_tasks.send_slot_reminders[06954ed8-9bd9-4f04-bac7-ce3521c53d85] received
+[2026-07-22 16:31:27,046: INFO/ForkPoolWorker-13] Task app.tasks.slot_tasks.send_slot_reminders[06954ed8-9bd9-4f04-bac7-ce3521c53d85] succeeded in 0.003412981000110449s: 0
+
+worker: Hitting Ctrl+C again will initiate cold shutdown, terminating all running tasks!
+
+worker: Warm shutdown (MainProcess)

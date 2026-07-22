@@ -1,163 +1,2633 @@
 INFO:     Will watch for changes in these directories: ['/home/farrukh/Frontend/p2p/backend']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [18133] using WatchFiles
-INFO:     Started server process [18161]
+INFO:     Started reloader process [14684] using WatchFiles
+INFO:     Started server process [14712]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     127.0.0.1:58716 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54232 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54234 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
-INFO:     127.0.0.1:54250 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     127.0.0.1:48278 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     127.0.0.1:48284 - "GET /api/v1/auth/me HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:48304 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" 403
+INFO:     127.0.0.1:48300 - "GET /api/v1/dashboard/ HTTP/1.1" 401 Unauthorized
+INFO:     connection closed
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     127.0.0.1:48308 - "POST /api/v1/auth/refresh HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48330 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48332 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
 INFO:     connection open
+INFO:     127.0.0.1:48334 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48338 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+S21 projects HTTP 401 — qisman qaytarilmoqda
+INFO:     127.0.0.1:48344 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48322 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+S21 projects HTTP 401 — qisman qaytarilmoqda
+INFO:     127.0.0.1:48350 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47042 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43850 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:56712 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:56716 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:56728 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:56734 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56724 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56738 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+S21 projects HTTP 401 — qisman qaytarilmoqda
+INFO:     127.0.0.1:56748 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+S21 projects HTTP 401 — qisman qaytarilmoqda
+INFO:     127.0.0.1:56760 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:46410 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46406 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
 INFO:     connection open
 INFO:     connection closed
-INFO:     127.0.0.1:54266 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54276 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54298 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54282 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54248 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54324 - "GET /api/v1/leaderboard/most-taught HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54336 - "GET /api/v1/leaderboard/most-learned HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54308 - "GET /api/v1/leaderboard/most-xp HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49594 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49602 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49616 - "GET /api/v1/settings/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44544 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44532 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50064 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50060 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50076 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50052 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-INFO:     connection closed
-INFO:     127.0.0.1:32816 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:32802 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     127.0.0.1:46442 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46454 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46460 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46436 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
 INFO:     connection open
-INFO:     127.0.0.1:32836 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     127.0.0.1:46468 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46422 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:34518 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
 INFO:     connection open
+INFO:     127.0.0.1:34520 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
 INFO:     connection closed
-INFO:     127.0.0.1:32844 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:32856 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:32832 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-S21 429 rate-limit (projects) — qisman natija (600 ta)
-INFO:     127.0.0.1:32866 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:32860 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:32882 - "GET /api/v1/leaderboard/most-xp HTTP/1.1" 200 OK
-INFO:     127.0.0.1:32902 - "GET /api/v1/leaderboard/most-learned HTTP/1.1" 200 OK
-INFO:     127.0.0.1:32898 - "GET /api/v1/leaderboard/most-taught HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54152 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54162 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46054 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46048 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52618 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52610 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52604 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52638 - "GET /api/v1/leaderboard/most-taught HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52622 - "GET /api/v1/leaderboard/most-xp HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52644 - "GET /api/v1/leaderboard/most-learned HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52646 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52666 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52662 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49654 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49650 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
-INFO:     connection closed
-INFO:     127.0.0.1:41884 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     127.0.0.1:34548 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
 INFO:     connection open
-INFO:     127.0.0.1:41892 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34534 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34556 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34564 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34574 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34570 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
 INFO:     connection closed
-INFO:     127.0.0.1:41904 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     127.0.0.1:34582 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
 INFO:     connection open
-INFO:     127.0.0.1:41918 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41924 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41902 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41926 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34596 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
 INFO:     connection closed
-INFO:     127.0.0.1:60696 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60722 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     127.0.0.1:34606 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:34620 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34628 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34626 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34640 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34604 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:47020 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:47036 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47056 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
 INFO:     connection open
 INFO:     connection closed
-INFO:     127.0.0.1:60736 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     127.0.0.1:47066 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47078 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47090 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47100 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47050 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:58002 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:58006 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:58024 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:58032 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58034 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58062 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58046 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58022 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:41600 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:41602 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:41618 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:41620 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41626 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41604 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+S21 projects HTTP 401 — qisman qaytarilmoqda
+INFO:     127.0.0.1:41644 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+S21 projects HTTP 401 — qisman qaytarilmoqda
+INFO:     127.0.0.1:41630 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:40378 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40392 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40364 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:40412 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40396 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40414 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40428 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDEyNzQsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.BBUNJ0p_BRx3ReNyrweZKkgQhhIQ5xzGkLcy4cnoSVY" [accepted]
 INFO:     connection open
 INFO:     connection closed
-INFO:     127.0.0.1:60708 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60740 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
-INFO:     connection open
-INFO:     127.0.0.1:60750 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40372 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36576 - "GET /api/v1/leaderboard/most-learned HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36568 - "GET /api/v1/leaderboard/most-taught HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36586 - "GET /api/v1/leaderboard/most-xp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36596 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36624 - "GET /api/v1/settings/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36610 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 219, in get_skills
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '401 Unauthorized' for url 'https://platform.21-school.ru/services/21-school/api/v1/participants/rrangesi/skills'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+INFO:     127.0.0.1:36632 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 219, in get_skills
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '401 Unauthorized' for url 'https://platform.21-school.ru/services/21-school/api/v1/participants/rrangesi/skills'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+INFO:     127.0.0.1:36640 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 219, in get_skills
+    resp.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '401 Unauthorized' for url 'https://platform.21-school.ru/services/21-school/api/v1/participants/rrangesi/skills'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+INFO:     127.0.0.1:33044 - "POST /api/v1/auth/logout HTTP/1.1" 204 No Content
 INFO:     connection closed
-INFO:     127.0.0.1:60770 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
-INFO:     connection open
-INFO:     127.0.0.1:60782 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60766 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60784 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60794 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
-INFO:     connection closed
-INFO:     127.0.0.1:53984 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53972 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
-INFO:     connection open
-INFO:     127.0.0.1:54000 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54002 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53990 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54004 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
-INFO:     connection closed
-INFO:     127.0.0.1:48632 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
-INFO:     connection open
-INFO:     127.0.0.1:40588 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40608 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40634 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40598 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40612 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40626 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
-INFO:     connection closed
-INFO:     127.0.0.1:43362 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
-INFO:     connection open
-INFO:     127.0.0.1:43376 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:43382 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-INFO:     connection closed
-INFO:     127.0.0.1:43390 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
-INFO:     connection open
-INFO:     127.0.0.1:41820 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41838 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     connection closed
-INFO:     127.0.0.1:41850 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41846 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
-INFO:     connection open
-INFO:     127.0.0.1:41860 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     connection closed
-INFO:     127.0.0.1:41826 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41884 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     127.0.0.1:39752 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39762 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDMxMDgsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.A1GUQAgbS_Gb_jFJmZDyVQxuyTcMWPe1AlK_1iHJnY4" [accepted]
 INFO:     connection open
 INFO:     connection closed
-INFO:     127.0.0.1:41894 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41918 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     127.0.0.1:39766 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39774 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39786 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39784 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39794 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDMxMDgsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.A1GUQAgbS_Gb_jFJmZDyVQxuyTcMWPe1AlK_1iHJnY4" [accepted]
 INFO:     connection open
-INFO:     127.0.0.1:41922 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41874 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41906 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41942 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41956 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41936 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39792 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39768 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60308 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
 INFO:     connection closed
-INFO:     127.0.0.1:46458 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     127.0.0.1:43550 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDMxMDgsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.A1GUQAgbS_Gb_jFJmZDyVQxuyTcMWPe1AlK_1iHJnY4" [accepted]
 INFO:     connection open
-INFO:     127.0.0.1:46468 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43554 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
 INFO:     connection closed
-INFO:     127.0.0.1:46480 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ2MzI3NDYsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.RZDrZJjLZiEv66F1Fm1cP0MCnlAwfloSkHDEddTk0M8" [accepted]
+INFO:     127.0.0.1:43566 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDMxMDgsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.A1GUQAgbS_Gb_jFJmZDyVQxuyTcMWPe1AlK_1iHJnY4" [accepted]
 INFO:     connection open
-INFO:     127.0.0.1:46482 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46502 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46498 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46496 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:46470 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49848 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49864 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49878 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49882 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49888 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49836 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33580 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33586 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33592 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33570 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
-S21 429 rate-limit (projects) — qisman natija (500 ta)
-INFO:     127.0.0.1:33616 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
-S21 429 rate-limit (projects) — qisman natija (500 ta)
-INFO:     127.0.0.1:33606 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43582 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53846 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53848 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53858 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43558 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51152 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51158 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51198 - "GET /api/v1/leaderboard/most-taught HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51186 - "GET /api/v1/leaderboard/most-xp HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51212 - "GET /api/v1/leaderboard/most-learned HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51170 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51180 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51226 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51228 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51234 - "GET /api/v1/settings/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47020 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47006 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57702 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57706 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:38970 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39016 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDMxMDgsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.A1GUQAgbS_Gb_jFJmZDyVQxuyTcMWPe1AlK_1iHJnY4" [accepted]
+INFO:     127.0.0.1:38984 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     connection open
+INFO:     127.0.0.1:38988 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39004 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 213, in get_skills
+    resp = await self.client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1768, in get
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+INFO:     connection closed
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/redis/asyncio/connection.py", line 974, in _connect
+    reader, writer = await asyncio.open_connection(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **self._connection_arguments()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3.14/asyncio/streams.py", line 48, in open_connection
+    transport, _ = await loop.create_connection(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        lambda: protocol, host, port, **kwds)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1979, in create_connection
+  File "/usr/lib/python3.14/asyncio/tasks.py", line 432, in wait
+    return await _wait(fs, timeout, return_when, loop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/asyncio/tasks.py", line 521, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/redis/asyncio/connection.py", line 382, in connect_check_health
+    await self._connect()
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/redis/asyncio/connection.py", line 973, in _connect
+    async with async_timeout(self.socket_connect_timeout):
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/asyncio/timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/websockets/websockets_impl.py", line 239, in run_asgi
+    result = await self.app(self.scope, self.asgi_receive, self.asgi_send)  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 80, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1775, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 350, in handle
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 176, in app
+    await wrap_app_handling_exceptions(app, session)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 173, in app
+    await func(session)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 780, in app
+    await dependant.call(**solved_result.values)
+  File "/home/farrukh/Frontend/p2p/backend/app/ws/slot_ws.py", line 53, in slots_feed_websocket
+    await pubsub.subscribe(channel)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/redis/asyncio/client.py", line 1386, in subscribe
+    ret_val = await self.execute_command("SUBSCRIBE", *new_channels.keys())
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/redis/asyncio/client.py", line 1120, in execute_command
+    await self.connect()
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/redis/asyncio/client.py", line 1130, in connect
+    self.connection = await self.connection_pool.get_connection()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/redis/utils.py", line 249, in async_wrapper
+    return await func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/redis/asyncio/connection.py", line 1591, in get_connection
+    await self.ensure_connection(connection)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/redis/asyncio/connection.py", line 1632, in ensure_connection
+    await connection.connect()
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/redis/asyncio/connection.py", line 351, in connect
+    await self.retry.call_with_retry(
+    ...<7 lines>...
+    )
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/redis/asyncio/retry.py", line 81, in call_with_retry
+    raise error
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/redis/asyncio/retry.py", line 69, in call_with_retry
+    return await do()
+           ^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/redis/asyncio/connection.py", line 396, in connect_check_health
+    raise e
+redis.exceptions.TimeoutError: Timeout connecting to server
+INFO:     127.0.0.1:38634 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDMxMDgsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.A1GUQAgbS_Gb_jFJmZDyVQxuyTcMWPe1AlK_1iHJnY4" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:52446 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDMxMDgsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.A1GUQAgbS_Gb_jFJmZDyVQxuyTcMWPe1AlK_1iHJnY4" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:52462 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52470 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52486 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDMxMDgsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.A1GUQAgbS_Gb_jFJmZDyVQxuyTcMWPe1AlK_1iHJnY4" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:52502 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52514 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 213, in get_skills
+    resp = await self.client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1768, in get
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+INFO:     127.0.0.1:52504 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52516 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 213, in get_skills
+    resp = await self.client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1768, in get
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+INFO:     connection closed
+INFO:     127.0.0.1:44968 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDMxMDgsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.A1GUQAgbS_Gb_jFJmZDyVQxuyTcMWPe1AlK_1iHJnY4" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:44980 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44992 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45004 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDMxMDgsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.A1GUQAgbS_Gb_jFJmZDyVQxuyTcMWPe1AlK_1iHJnY4" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:45020 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45032 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45048 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 213, in get_skills
+    resp = await self.client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1768, in get
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+INFO:     127.0.0.1:45052 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 213, in get_skills
+    resp = await self.client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1768, in get
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+INFO:     connection closed
+INFO:     127.0.0.1:43960 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDMxMDgsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.A1GUQAgbS_Gb_jFJmZDyVQxuyTcMWPe1AlK_1iHJnY4" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:43966 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43978 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43994 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDMxMDgsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.A1GUQAgbS_Gb_jFJmZDyVQxuyTcMWPe1AlK_1iHJnY4" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:44002 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44014 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 213, in get_skills
+    resp = await self.client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1768, in get
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+INFO:     127.0.0.1:44006 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44018 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 213, in get_skills
+    resp = await self.client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1768, in get
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+INFO:     connection closed
+INFO:     127.0.0.1:50246 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDMxMDgsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.A1GUQAgbS_Gb_jFJmZDyVQxuyTcMWPe1AlK_1iHJnY4" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:50252 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50256 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50270 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDMxMDgsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9.A1GUQAgbS_Gb_jFJmZDyVQxuyTcMWPe1AlK_1iHJnY4" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     127.0.0.1:50286 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50290 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50296 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 213, in get_skills
+    resp = await self.client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1768, in get
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+INFO:     127.0.0.1:54804 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 213, in get_skills
+    resp = await self.client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1768, in get
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+INFO:     127.0.0.1:43844 - "POST /api/v1/auth/logout HTTP/1.1" 204 No Content
+INFO:     connection closed
+INFO:     127.0.0.1:43854 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51392 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDQ3MDcsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9._G9y05GkKH-banjl-Kp6VdRNIVsaZ92JJkYq8F_Q9IU" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:51402 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:51418 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDQ3MDcsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9._G9y05GkKH-banjl-Kp6VdRNIVsaZ92JJkYq8F_Q9IU" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:51434 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51414 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51456 - "GET /api/v1/slots/my/in-progress-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51446 - "GET /api/v1/slots/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51450 - "GET /api/v1/slots/my/teachable-projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43640 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43648 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39326 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39334 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40838 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40850 - "GET /api/v1/profile/skills HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36354 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:46558 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDQ3MDcsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9._G9y05GkKH-banjl-Kp6VdRNIVsaZ92JJkYq8F_Q9IU" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:46564 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:46568 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46572 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDQ3MDcsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9._G9y05GkKH-banjl-Kp6VdRNIVsaZ92JJkYq8F_Q9IU" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:46576 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46582 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 213, in get_skills
+    resp = await self.client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1768, in get
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+INFO:     127.0.0.1:46578 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46594 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 213, in get_skills
+    resp = await self.client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1768, in get
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+INFO:     connection closed
+INFO:     127.0.0.1:46484 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDQ3MDcsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9._G9y05GkKH-banjl-Kp6VdRNIVsaZ92JJkYq8F_Q9IU" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:46496 - "GET /api/v1/auth/me HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     127.0.0.1:46498 - "GET /api/v1/dashboard/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46510 - "WebSocket /ws/slots?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZDcwMTE2Yi1hNzUyLTRkZTItOGQwMi1hYTNhNzZlMTljOTgiLCJleHAiOjE3ODQ4MDQ3MDcsInR5cGUiOiJhY2Nlc3MiLCJhZG1pbiI6ZmFsc2V9._G9y05GkKH-banjl-Kp6VdRNIVsaZ92JJkYq8F_Q9IU" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:46526 - "GET /api/v1/notifications/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46536 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 213, in get_skills
+    resp = await self.client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1768, in get
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+INFO:     127.0.0.1:46534 - "GET /api/v1/profile/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55188 - "GET /api/v1/profile/skills HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 101, in handle_async_request
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_async/connection.py", line 124, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_backends/anyio.py", line 113, in connect_tcp
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/protocols/http/httptools_impl.py", line 421, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/uvicorn/middleware/proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/applications.py", line 1163, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/sessions.py", line 88, in __call__
+    await self.app(scope, receive, send_wrapper)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1764, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 1264, in handle
+    await app(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 136, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/fastapi/routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/api/v1/profile.py", line 88, in skills
+    return await school21_client.get_skills(token, user.school21_login)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/app/services/school21_client.py", line 213, in get_skills
+    resp = await self.client.get(
+           ^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1768, in get
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "/home/farrukh/Frontend/p2p/backend/.venv/lib/python3.14/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+INFO:     connection closed
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [14712]
+INFO:     Stopping reloader process [14684]

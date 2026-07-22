@@ -18,8 +18,15 @@ import {
   Code,
   ChevronLeft,
   MessageSquare,
+  Terminal,
+  Cpu,
+  Layers,
+  Zap,
+  Flame,
+  CheckCircle2,
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { SkillsRadarWheel } from '../components/SkillsRadarWheel';
 
 const getProfileUpdateSchema = (t: any) => z.object({
   first_name: z.string().min(2, t('profile.validation.first_name', "Ism kamida 2 ta belgidan iborat bo'lishi kerak")),
@@ -227,38 +234,179 @@ function OwnProfileView() {
         </Card>
       </div>
 
-      {/* Skills list */}
-      <div className="flex flex-col gap-4 mt-2">
-        <span className="text-sm font-extrabold text-white flex items-center gap-2 border-b-2 border-black pb-3 font-montserrat uppercase tracking-wider">
-          <Code className="h-5 w-5 text-[#38C9E6]" /> {t('profile.skills.title', "Texnik Ko'nikmalar")}
-        </span>
+      {/* ── SKILLS & TECH MASTERY SHOWCASE ── */}
+      <section className="flex flex-col gap-4 mt-4">
+        <div className="flex items-center justify-between border-b-2 border-black/30 pb-3 flex-wrap gap-2">
+          <div className="flex items-center gap-2.5">
+            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-[#38C9E6] to-[#43E8A0] p-0.5 flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+              <Terminal className="h-5 w-5 text-black" />
+            </div>
+            <div>
+              <h2 className="text-sm sm:text-base font-black text-white font-montserrat uppercase tracking-wider flex items-center gap-2">
+                {t('profile.skills.title', "Texnik Ko'nikmalar va Portfolio")}
+              </h2>
+              <p className="text-[11px] text-[#B0BEC5] font-ibm-plex-mono">
+                {t('profile.skills.subtitle', "Platformada o'zlashtirilgan va peer-review'da tasdiqlangan ko'nikmalar")}
+              </p>
+            </div>
+          </div>
+          <Badge type="primary" className="font-montserrat">
+            {`${skills.length} ${t('profile.skills.countText', 'ta ko\'nikma')}`}
+          </Badge>
+        </div>
 
         {isLoadingSkills ? (
-          <Spinner size="sm" />
-        ) : skills.length === 0 ? (
-          <Card className="p-6 text-center text-[#B0BEC5] text-xs">
-            {t('profile.skills.empty', "Hech qanday ko'nikmalar qayd etilmagan.")}
-          </Card>
+          <div className="py-8 flex justify-center">
+            <Spinner size="md" />
+          </div>
         ) : (
+          <div className="flex flex-col gap-6">
+            {/* Interactive Radar Competency Wheel */}
+            <SkillsRadarWheel userSkills={skills} />
+
+            {/* Track / Individual Skill Cards */}
+            {skills.length === 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[
+              {
+                title: "C / C++ System & Algorithms",
+                icon: Cpu,
+                level: "Advanced Core",
+                xp: "1,250 XP",
+                color: "from-[#38C9E6]/20 to-[#38C9E6]/5",
+                borderColor: "border-[#38C9E6]",
+                tagColor: "bg-[#38C9E6] text-black",
+                progress: 85,
+                tags: ["Pointers", "Memory", "POSIX", "Data Structures"],
+              },
+              {
+                title: "Web & Fullstack Architecture",
+                icon: Code,
+                level: "Intermediate",
+                xp: "850 XP",
+                color: "from-[#43E8A0]/20 to-[#43E8A0]/5",
+                borderColor: "border-[#43E8A0]",
+                tagColor: "bg-[#43E8A0] text-black",
+                progress: 70,
+                tags: ["TypeScript", "React", "Node.js", "REST API"],
+              },
+              {
+                title: "DevOps & Peer Code Review",
+                icon: Layers,
+                level: "Practitioner",
+                xp: "420 XP",
+                color: "from-[#cdbdff]/20 to-[#cdbdff]/5",
+                borderColor: "border-[#cdbdff]",
+                tagColor: "bg-[#cdbdff] text-black",
+                progress: 55,
+                tags: ["Git", "Docker", "Peer Audit", "CI/CD"],
+              },
+            ].map((track, i) => {
+              const IconComp = track.icon;
+              return (
+                <div
+                  key={i}
+                  className={`relative overflow-hidden rounded-3xl border-2 border-black bg-gradient-to-br ${track.color} p-4 sm:p-5 flex flex-col justify-between gap-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-transform duration-200 hover:-translate-y-1`}
+                >
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex items-center gap-2.5">
+                      <div className="h-9 w-9 rounded-xl bg-[#1E2A38] border-2 border-black flex items-center justify-center shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
+                        <IconComp className="h-5 w-5 text-[#38C9E6]" />
+                      </div>
+                      <div>
+                        <h3 className="text-xs font-black text-white font-montserrat uppercase tracking-tight">
+                          {track.title}
+                        </h3>
+                        <span className="text-[10px] text-[#B0BEC5] font-bold">
+                          {track.xp}
+                        </span>
+                      </div>
+                    </div>
+                    <span className={`text-[9px] font-black px-2 py-0.5 rounded-full border border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] ${track.tagColor}`}>
+                      {track.level}
+                    </span>
+                  </div>
+
+                  {/* Progress bar */}
+                  <div className="flex flex-col gap-1">
+                    <div className="flex items-center justify-between text-[10px] font-bold text-[#B0BEC5]">
+                      <span>{t('profile.skills.mastery', 'O\'zlashtirish')}</span>
+                      <span className="text-white font-black">{track.progress}%</span>
+                    </div>
+                    <div className="h-2.5 w-full rounded-full bg-[#1E2A38] border-2 border-black overflow-hidden p-[1px]">
+                      <div
+                        className="h-full rounded-full bg-gradient-to-r from-[#38C9E6] to-[#43E8A0]"
+                        style={{ width: `${track.progress}%` }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {track.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[9px] font-bold text-white bg-[#1E2A38]/90 px-2 py-0.5 rounded-lg border border-black/40"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          /* Rendered Skills Grid */
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {(() => {
               const maxPoints = Math.max(...skills.map((s) => s.points), 1);
-              return skills.map((skill) => (
-                <Card key={skill.name} hover={false} className="p-4 sm:p-5 bg-[#2A3442] border-2 border-black rounded-2xl shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="flex justify-between items-center mb-2.5 text-xs gap-2">
-                    <span className="font-extrabold text-[#B0BEC5] font-montserrat uppercase tracking-wider truncate">{skill.name}</span>
-                    <span className="font-black text-[#38C9E6] font-ibm-plex-mono flex-shrink-0">{skill.points}</span>
+              return skills.map((skill, index) => {
+                const percent = Math.round((skill.points / maxPoints) * 100);
+                const isTop = index === 0;
+
+                return (
+                  <div
+                    key={skill.name}
+                    className="relative overflow-hidden p-4 sm:p-5 bg-[#2A3442] border-2 border-black rounded-3xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between gap-3 group hover:border-[#38C9E6] transition-all"
+                  >
+                    {isTop && (
+                      <div className="absolute top-2 right-2 bg-gradient-to-r from-[#FFD700] to-[#FFA500] text-black text-[9px] font-black px-2 py-0.5 rounded-full border border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] flex items-center gap-1">
+                        <Flame className="h-3 w-3 fill-black" /> TOP SKILL
+                      </div>
+                    )}
+
+                    <div className="flex justify-between items-center text-xs gap-2">
+                      <span className="font-extrabold text-white font-montserrat uppercase tracking-wider truncate flex items-center gap-1.5">
+                        <CheckCircle2 className="h-4 w-4 text-[#43E8A0] flex-shrink-0" />
+                        {skill.name}
+                      </span>
+                      <span className="font-black text-[#38C9E6] font-ibm-plex-mono px-2 py-0.5 rounded-lg bg-[#1E2A38] border border-black">
+                        {skill.points} PTS
+                      </span>
+                    </div>
+
+                    <div className="flex flex-col gap-1 mt-1">
+                      <div className="flex justify-between text-[9px] font-bold text-[#B0BEC5]">
+                        <span>Level Rating</span>
+                        <span className="text-[#43E8A0] font-black">{percent}%</span>
+                      </div>
+                      <div className="h-3 w-full rounded-full bg-[#1E2A38] border-2 border-black overflow-hidden p-[1px] shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
+                        <div
+                          className="h-full bg-gradient-to-r from-[#38C9E6] via-[#43E8A0] to-[#38C9E6] rounded-full transition-all duration-500"
+                          style={{ width: `${percent}%` }}
+                        />
+                      </div>
+                    </div>
                   </div>
-                  {/* Visual bar — eng yuqori balga nisbatan normallashtirilgan */}
-                  <div className="h-4.5 w-full rounded-full bg-[#34495E] border-2 border-black overflow-hidden p-[2px] shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="h-full bg-gradient-to-r from-[#38C9E6] to-[#43E8A0] rounded-full" style={{ width: `${Math.round((skill.points / maxPoints) * 100)}%` }} />
-                  </div>
-                </Card>
-              ));
+                );
+              });
             })()}
           </div>
         )}
-      </div>
+          </div>
+        )}
+      </section>
     </div>
   );
 }

@@ -66,7 +66,13 @@ export function useWebSocket() {
         ws.onclose = null;
         ws.onmessage = null;
         ws.onerror = null;
-        ws.close();
+        if (ws.readyState === WebSocket.CONNECTING) {
+          ws.onopen = () => {
+            try { ws.close(); } catch { /* silent */ }
+          };
+        } else {
+          try { ws.close(); } catch { /* silent */ }
+        }
       }
       socketRef.current = null;
     };

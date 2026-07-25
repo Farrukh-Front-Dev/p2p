@@ -14,6 +14,8 @@ VENV="$BACKEND_DIR/.venv"
 PID_DIR="$ROOT_DIR/.pids"
 LOG_DIR="$ROOT_DIR/.logs"
 
+export LD_LIBRARY_PATH=/home/rrangesi/goinfre/db_servers/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -139,11 +141,11 @@ log "Migratsiyalar bajarildi"
 
 # ── 8. Backend API ────────────────────────────────────────────────
 echo ""
-info "Backend API ishga tushirilmoqda (port 8000)..."
-(cd "$BACKEND_DIR" && "$VENV/bin/uvicorn" app.main:app --host 0.0.0.0 --port 8000 --reload \
+info "Backend API ishga tushirilmoqda (port 18000)..."
+(cd "$BACKEND_DIR" && "$VENV/bin/uvicorn" app.main:app --host 0.0.0.0 --port 18000 --reload \
     > "$LOG_DIR/api.log" 2>&1) &
 echo $! > "$PID_DIR/api.pid"
-wait_for_port 8000 "Backend API"
+wait_for_port 18000 "Backend API"
 
 # ── 9. Celery Worker ─────────────────────────────────────────────
 info "Celery Worker ishga tushirilmoqda..."
@@ -166,6 +168,13 @@ info "Frontend dev server ishga tushirilmoqda (port 5173)..."
 echo $! > "$PID_DIR/frontend.pid"
 wait_for_port 5173 "Frontend"
 
+# ── 12. Telegram Bot ──────────────────────────────────────────────
+info "Telegram Bot ishga tushirilmoqda..."
+(cd "$BACKEND_DIR" && "$VENV/bin/python" -m bot.main \
+    > "$LOG_DIR/bot.log" 2>&1) &
+echo $! > "$PID_DIR/bot.pid"
+log "Telegram Bot ishga tushdi"
+
 # ── Done ──────────────────────────────────────────────────────────
 echo ""
 echo -e "${GREEN}══════════════════════════════════════════════════════${NC}"
@@ -173,9 +182,9 @@ echo -e "${GREEN}   Barcha servislar muvaffaqiyatli ishga tushdi!${NC}"
 echo -e "${GREEN}══════════════════════════════════════════════════════${NC}"
 echo ""
 echo -e "  ${BLUE}Frontend:${NC}    http://localhost:5173"
-echo -e "  ${BLUE}Backend API:${NC} http://localhost:8000"
-echo -e "  ${BLUE}Swagger:${NC}     http://localhost:8000/docs"
-echo -e "  ${BLUE}Admin:${NC}       http://localhost:8000/admin"
+echo -e "  ${BLUE}Backend API:${NC} http://localhost:18000"
+echo -e "  ${BLUE}Swagger:${NC}     http://localhost:18000/docs"
+echo -e "  ${BLUE}Admin:${NC}       http://localhost:18000/admin"
 echo ""
 echo -e "  ${YELLOW}Loglar:${NC}      $LOG_DIR/"
 echo -e "  ${YELLOW}To'xtatish:${NC}  Ctrl+C"

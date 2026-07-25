@@ -37,3 +37,15 @@ cp backend/.env.example backend/.env
 - [backend/README.md](backend/README.md) — API, migratsiya, Celery
 - API Swagger: `http://localhost:8000/docs`
 - Admin panel: `http://localhost:8000/admin`
+
+
+
+
+
+
+
+teacher va pupil niki ko'rinsin oxirgi 15 minutda bir biriga
+
+
+
+nechtadir proverkada auto badge berish kerak 
